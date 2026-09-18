@@ -1,0 +1,981 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Persepolis — IELTS Feedback & Grammar</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+:root {
+  --bg: #f8f7f3;
+  --surface: #ffffff;
+  --surface-2: #f0ede6;
+  --border: #e0dbd0;
+  --text: #1c1a14;
+  --text-2: #4a4640;
+  --text-3: #88827a;
+  --accent: #c04a1c;
+  --accent-light: #fceee8;
+  --green: #2d6a4f;
+  --green-light: #e6f4ec;
+  --blue: #1a4e8a;
+  --blue-light: #e8f0fb;
+  --amber: #7a4f0a;
+  --amber-light: #fef5e0;
+  --error-bg: #fff0ec;
+  --error-text: #c0320a;
+  --error-border: #f5c4b4;
+  --nav-h: 52px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #16140e;
+    --surface: #201d16;
+    --surface-2: #2a261c;
+    --border: #38342a;
+    --text: #f0ece2;
+    --text-2: #c2bdb0;
+    --text-3: #7a7468;
+    --accent: #e06840;
+    --accent-light: #2c1508;
+    --green: #52b788;
+    --green-light: #0d2418;
+    --blue: #6daaf0;
+    --blue-light: #0e1f38;
+    --amber: #fbbf24;
+    --amber-light: #1c1200;
+    --error-bg: #2a0c04;
+    --error-text: #f08060;
+    --error-border: #6a2010;
+    --nav-h: 52px;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #16140e;
+  --surface: #201d16;
+  --surface-2: #2a261c;
+  --border: #38342a;
+  --text: #f0ece2;
+  --text-2: #c2bdb0;
+  --text-3: #7a7468;
+  --accent: #e06840;
+  --accent-light: #2c1508;
+  --green: #52b788;
+  --green-light: #0d2418;
+  --blue: #6daaf0;
+  --blue-light: #0e1f38;
+  --amber: #fbbf24;
+  --amber-light: #1c1200;
+  --error-bg: #2a0c04;
+  --error-text: #f08060;
+  --error-border: #6a2010;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  padding-inline: 16px;
+}
+
+/* NAV */
+.sticky-nav {
+  position: sticky;
+  top: env(safe-area-inset-top, 0px);
+  z-index: 100;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 0 16px;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  overflow-x: auto;
+  margin-inline: -16px;
+  scrollbar-width: none;
+}
+.sticky-nav::-webkit-scrollbar { display: none; }
+.nav-pill {
+  flex-shrink: 0;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--text-3);
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .15s, color .15s;
+}
+.nav-pill:hover { background: var(--surface-2); color: var(--text); }
+.nav-pill.active { background: var(--accent); color: #fff; }
+
+/* LAYOUT */
+.wrapper { max-width: 800px; margin: 0 auto; padding-block: 36px; }
+
+/* SECTION */
+.section { margin-bottom: 64px; scroll-margin-top: calc(var(--nav-h) + 20px); }
+.section-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.section-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(22px, 4vw, 30px);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text);
+  margin-bottom: 20px;
+  text-wrap: balance;
+}
+.section-title + p, .section-intro { color: var(--text-2); margin-bottom: 20px; }
+
+/* ESSAY */
+.essay-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 28px 32px;
+  line-height: 1.9;
+  color: var(--text-2);
+}
+.essay-card p { margin-bottom: 18px; }
+.essay-card p:last-child { margin-bottom: 0; }
+.err {
+  color: var(--error-text);
+  background: var(--error-bg);
+  border-bottom: 2px solid var(--error-text);
+  border-radius: 2px;
+  padding: 0 2px;
+  cursor: help;
+  position: relative;
+}
+sup.err-num {
+  font-size: 9px;
+  font-weight: 700;
+  color: var(--error-text);
+  vertical-align: super;
+  margin-left: 1px;
+}
+
+/* CORRECTION TABLE */
+.corr-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13.5px;
+  margin-top: 4px;
+  overflow-x: auto;
+  display: block;
+}
+.corr-table th {
+  background: var(--surface-2);
+  color: var(--text-3);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  padding: 10px 14px;
+  text-align: left;
+}
+.corr-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+  color: var(--text-2);
+}
+.corr-table tr:last-child td { border-bottom: none; }
+.corr-table td:first-child {
+  font-weight: 700;
+  color: var(--text);
+  width: 28px;
+  text-align: center;
+}
+.corr-table .wrong { color: var(--error-text); font-family: 'JetBrains Mono', monospace; font-size: 12.5px; }
+.corr-table .right { color: var(--green); font-family: 'JetBrains Mono', monospace; font-size: 12.5px; }
+
+/* GRAMMAR */
+.grammar-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px 28px;
+  margin-bottom: 20px;
+}
+.grammar-card h3 {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+}
+.grammar-card p { color: var(--text-2); margin-bottom: 12px; }
+.grammar-card p:last-child { margin-bottom: 0; }
+
+.tense-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  overflow-x: auto;
+  display: block;
+}
+.tense-table th {
+  background: var(--surface-2);
+  padding: 9px 14px;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  white-space: nowrap;
+}
+.tense-table td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-2);
+}
+.tense-table tr:last-child td { border-bottom: none; }
+.tense-table td:first-child { font-weight: 600; color: var(--text); white-space: nowrap; }
+.tense-table td code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  background: var(--surface-2);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+.highlight-formula {
+  background: var(--blue-light);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 20px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: .02em;
+  margin: 16px 0;
+}
+
+/* EXERCISES */
+.exercise-block {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.exercise-header {
+  background: var(--surface-2);
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.exercise-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+.exercise-title {
+  font-weight: 600;
+  font-size: 14.5px;
+  color: var(--text);
+  margin-top: 2px;
+}
+.exercise-body { padding: 20px 24px; }
+.exercise-item {
+  display: flex;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+  align-items: flex-start;
+  color: var(--text-2);
+  font-size: 14px;
+}
+.exercise-item:last-child { border-bottom: none; }
+.exercise-num {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-3);
+}
+.blank {
+  display: inline-block;
+  width: 110px;
+  border-bottom: 1.5px solid var(--text-3);
+  vertical-align: bottom;
+  margin: 0 4px;
+}
+.answer-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-3);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .15s, color .15s;
+}
+.answer-toggle:hover { background: var(--surface-2); color: var(--text); }
+.answers-panel {
+  display: none;
+  background: var(--green-light);
+  border-top: 1px solid var(--border);
+  padding: 16px 24px;
+}
+.answers-panel.visible { display: block; }
+.answer-row {
+  display: flex;
+  gap: 10px;
+  font-size: 13.5px;
+  padding: 5px 0;
+  color: var(--text-2);
+}
+.answer-row strong { color: var(--green); font-family: 'JetBrains Mono', monospace; font-size: 13px; }
+
+/* SPEAKING */
+.q-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+.q-meta {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.q-badge {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+.q-badge-p1 { background: var(--blue-light); color: var(--blue); }
+.q-badge-p2 { background: var(--amber-light); color: var(--amber); }
+.q-text {
+  font-size: 15px;
+  color: var(--text);
+  font-weight: 500;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+.q-hint { font-size: 13px; color: var(--text-3); margin-bottom: 14px; }
+.cue-card {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+  font-size: 14px;
+  color: var(--text-2);
+}
+.cue-card strong { color: var(--text); display: block; margin-bottom: 8px; }
+.cue-card ul { padding-left: 20px; margin-top: 4px; }
+.cue-card li { padding: 2px 0; }
+
+/* RECORDER */
+.recorder {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+.btn-record {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 18px;
+  border-radius: 8px;
+  border: none;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity .15s, transform .1s;
+}
+.btn-record:active { transform: scale(.97); }
+.btn-start { background: var(--accent); color: #fff; }
+.btn-stop  { background: #555; color: #fff; display: none; }
+.recording-dot {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--error-text);
+}
+.dot-pulse {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--error-text);
+  animation: pulse 1s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+.audio-result { display: none; align-items: center; gap: 8px; font-size: 13px; color: var(--green); }
+.audio-result audio { height: 32px; }
+.tip-box {
+  background: var(--amber-light);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px 18px;
+  font-size: 13.5px;
+  color: var(--text-2);
+  margin-bottom: 20px;
+}
+.tip-box strong { color: var(--amber); }
+
+ul.bullet { padding-left: 22px; color: var(--text-2); margin-bottom: 12px; }
+ul.bullet li { padding: 3px 0; }
+
+@media (max-width: 500px) {
+  .essay-card { padding: 18px; }
+  .exercise-body { padding: 16px; }
+  .q-card { padding: 16px 18px; }
+}
+</style>
+
+<!-- NAV -->
+<nav class="sticky-nav" id="nav">
+  <button class="nav-pill active" onclick="scrollTo('essay')">Essay</button>
+  <button class="nav-pill" onclick="scrollTo('corrections')">Corrections</button>
+  <button class="nav-pill" onclick="scrollTo('grammar')">Passive Voice</button>
+  <button class="nav-pill" onclick="scrollTo('exercises')">Exercises</button>
+  <button class="nav-pill" onclick="scrollTo('speaking')">Speaking</button>
+</nav>
+
+<div class="wrapper">
+
+<!-- ═══════════════════════════════════════════
+     SECTION 1 — ESSAY WITH ERRORS
+══════════════════════════════════════════════ -->
+<div class="section" id="essay">
+  <p class="section-eyebrow">Section 1</p>
+  <h2 class="section-title">Your Essay — Errors Highlighted</h2>
+  <p class="section-intro">Each error is marked in red with a number. Find the full explanation for every number in Section 2.</p>
+
+  <div class="essay-card">
+    <p>"Persepolis" is an autobiographical graphic novel written by Iranian author and artist Marjane Satrapi. It is a coming-of-age story <span class="err" title="Error 1: contraction">that's<sup class="err-num">1</sup></span> told from the childhood memories of the main character, Marji (author's alter ego). Her story starts from the 1979 Islamic Revolution, the establishment of Ayatollah Khomeini's theocratic regime, and the Iran-Iraq war.</p>
+
+    <p>The first part of the novel shows readers a naive, <span class="err" title="Error 2: missing possessive">child<sup class="err-num">2</sup></span> perception of the political and cultural problems that the country faced on the eve of <span class="err" title="Error 3: missing article">revolution<sup class="err-num">3</sup></span>. Marji, as a child, tries to perceive why the familiar world around her is collapsing. She observes the terror unleashed by <span class="err" title="Error 4: missing article before title">Shah's<sup class="err-num">4</sup></span> regime. The novel describes the most significant events of modern Iran from a child's point of view.</p>
+
+    <p>Her story starts when Marji is only 10 years old — she is a smart and inquisitive girl. <span class="err" title="Error 5: 'as' used for comparison — should be 'like'">As<sup class="err-num">5</sup></span> any other child she spends most of her time daydreaming and fantasizing. But everything changes rapidly when a child's immature psyche encounters harsh reality. <span class="err" title="Error 6: sentence fragment — no main clause">As the main character grows up and realizes that something terrible is happening around her, that people are dying, and <span class="err" title="Error 7: wrong word — 'firstly' means 'first in a list', not 'above all/especially'">firstly<sup class="err-num">7</sup></span>, her loved ones.<sup class="err-num">6</sup></span></p>
+
+    <p>The central theme of "Persepolis" is emancipation. Marji always <span class="err" title="Error 8: wrong tense — use literary present">wanted<sup class="err-num">8</sup></span> to become a chemist and to be a progressive, modern woman. She <span class="err" title="Error 9: informal phrasal verb">turns out<sup class="err-num">9</sup></span> to be a very brave girl. She understands that <span class="err" title="Error 10: vague pronoun — who is 'they'?">they<sup class="err-num">10</sup></span> are trying to take away her individuality and lock her in a cage. But still, out of protest, she allows herself to say and do everything she thinks, even to <span class="err" title="Error 11: double article (typo)">the the<sup class="err-num">11</sup></span> guards of the Islamic Revolution. This, of course, leads to many <span class="err" title="Error 12: vague/informal adjective">interesting<sup class="err-num">12</sup></span> consequences.</p>
+
+    <p>Satrapi <span class="err" title="Error 13: wrong tense — use literary present">chose<sup class="err-num">13</sup></span> the comic book format to tell her story <span class="err" title="Error 14: informal filler phrase">for a reason<sup class="err-num">14</sup></span>. <span class="err" title="Error 15: informal register + wrong verb for academic writing">As she said<sup class="err-num">15</sup></span>, this form of presentation <span class="err" title="Error 16: should use literary present, not future">will allow<sup class="err-num">16</sup></span> the reader to break down the one-dimensional image of her country and Iranian women. It helps to overcome the barrier of intolerance and begin a deeper and more meaningful discussion of the problems and the status of women in modern Iranian society.</p>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 2 — CORRECTIONS
+══════════════════════════════════════════════ -->
+<div class="section" id="corrections">
+  <p class="section-eyebrow">Section 2</p>
+  <h2 class="section-title">All Corrections & Explanations</h2>
+
+  <div style="overflow-x:auto;">
+  <table class="corr-table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Error</th>
+        <th>Correction</th>
+        <th>Category</th>
+        <th>Why</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td><span class="wrong">that's</span></td>
+        <td><span class="right">that is</span></td>
+        <td>Register</td>
+        <td>Contractions are never used in IELTS Academic Writing. Expand every apostrophe: it's → it is, she's → she is, that's → that is.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td><span class="wrong">child perception</span></td>
+        <td><span class="right">child's perception</span></td>
+        <td>Grammar</td>
+        <td>A noun modifying another noun needs the possessive ('s) when showing ownership or association. "Child's perception" = the perception belonging to / typical of a child.</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td><span class="wrong">eve of revolution</span></td>
+        <td><span class="right">eve of the revolution</span></td>
+        <td>Article</td>
+        <td>This refers to a specific, known revolution (the 1979 Islamic Revolution mentioned in the previous sentence). Specific nouns already identified take the definite article the.</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td><span class="wrong">Shah's regime</span></td>
+        <td><span class="right">the Shah's regime</span></td>
+        <td>Article</td>
+        <td>Unique historical titles always use the: the Shah, the King, the Pope, the Tsar, the President. Russian has no articles, so this must be applied consciously every time.</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td><span class="wrong">As any other child</span></td>
+        <td><span class="right">Like any other child</span></td>
+        <td>Lexical</td>
+        <td>LIKE + noun = "similar to" (comparison of similarity). AS + clause (subject + verb) = "in the way that / in the role of." Russian как covers both — English splits them. Here we compare similarity → like.</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td><span class="wrong">As the main character grows up… her loved ones.</span></td>
+        <td><span class="right">As the main character grows up, she realises that something terrible is happening — that people are dying, especially her loved ones.</span></td>
+        <td>Grammar</td>
+        <td>SENTENCE FRAGMENT. "As" is a subordinating conjunction — it creates a dependent clause that needs a main clause to complete it. The sentence has no main verb that could stand alone. Add the main clause: "she realises…"</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td><span class="wrong">firstly</span></td>
+        <td><span class="right">especially / above all</span></td>
+        <td>Lexical</td>
+        <td>"Firstly" is used to introduce the first item in a list (firstly… secondly… finally). The student means "most importantly / above all" (Russian: прежде всего). These are different words with different meanings.</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td><span class="wrong">wanted</span></td>
+        <td><span class="right">wants</span></td>
+        <td>Tense</td>
+        <td>LITERARY PRESENT. When analysing a text, all verbs describing what a character does are written in present tense, regardless of when the story is set. The book exists now; what Marji does in it is described in present tense.</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td><span class="wrong">turns out to be</span></td>
+        <td><span class="right">proves to be</span></td>
+        <td>Register</td>
+        <td>Phrasal verbs (turn out, find out, come up with) are informal. Replace with a single formal verb: turns out → proves, finds out → discovers, comes up with → develops/devises.</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td><span class="wrong">they</span></td>
+        <td><span class="right">the regime</span></td>
+        <td>Grammar</td>
+        <td>VAGUE PRONOUN REFERENCE. "They" has no clear antecedent in the previous sentence. An examiner cannot tell who "they" refers to. Always name the subject clearly: the regime, the authorities, the Revolutionary Guards.</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td><span class="wrong">the the</span></td>
+        <td><span class="right">the</span></td>
+        <td>Proofreading</td>
+        <td>Duplicate article — a typo that signals the essay was not proofread. Reserve 5 minutes at the end of every IELTS task for proofreading.</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td><span class="wrong">interesting consequences</span></td>
+        <td><span class="right">significant / serious consequences</span></td>
+        <td>Lexical</td>
+        <td>"Interesting" is vague and journalistic. IELTS Band 7 Lexical Resource requires precise vocabulary. Choose a word that conveys the actual meaning: significant (important), serious (dangerous), profound (deep/lasting).</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td><span class="wrong">chose</span></td>
+        <td><span class="right">chooses</span></td>
+        <td>Tense</td>
+        <td>LITERARY PRESENT. When discussing the author's decisions as they appear in the text, use present tense: Satrapi chooses, depicts, argues, shows, uses.</td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td><span class="wrong">for a reason</span></td>
+        <td><span class="right">deliberately / with clear intent</span></td>
+        <td>Register</td>
+        <td>"For a reason" is a conversational filler that adds no information. Replace with a word that carries actual meaning. If you mean "on purpose" → deliberately. If you mean "not without thought" → with clear intent.</td>
+      </tr>
+      <tr>
+        <td>15</td>
+        <td><span class="wrong">As she said,</span></td>
+        <td><span class="right">As Satrapi has argued,</span></td>
+        <td>Register + Grammar</td>
+        <td>Two issues: (1) "she said" is informal — academic writing uses argues, states, explains, asserts, contends. (2) Use the author's full name or surname, not "she." (3) Present perfect (has argued) is preferred when the idea remains current.</td>
+      </tr>
+      <tr>
+        <td>16</td>
+        <td><span class="wrong">will allow</span></td>
+        <td><span class="right">allows</span></td>
+        <td>Tense</td>
+        <td>With literary present ("has argued"), there is no need for future tense. The book does this now — use present simple: "this format allows the reader to…"</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 3 — PASSIVE VOICE
+══════════════════════════════════════════════ -->
+<div class="section" id="grammar">
+  <p class="section-eyebrow">Section 3 — Grammar Focus</p>
+  <h2 class="section-title">The Passive Voice</h2>
+  <p class="section-intro">Passive voice is one of the most important grammatical structures for IELTS Band 7+. It appears in Task 1 process descriptions, Task 2 academic arguments, and Speaking. Examiners explicitly reward it as evidence of grammatical range.</p>
+
+  <!-- What is passive -->
+  <div class="grammar-card">
+    <h3>What Is Passive Voice?</h3>
+    <p>In <strong>active voice</strong>, the subject performs the action:<br>
+    <em>Satrapi wrote the book.</em> (Satrapi = subject; does the writing)</p>
+    <p>In <strong>passive voice</strong>, the subject receives the action:<br>
+    <em>The book was written by Satrapi.</em> (The book = subject; receives the writing)</p>
+    <p>The agent (who did it) can be omitted when it is unknown, unimportant, or obvious:<br>
+    <em>The book was published in 2000.</em> (We don't need to say "by the publisher")</p>
+  </div>
+
+  <!-- Formula -->
+  <div class="grammar-card">
+    <h3>The Formula</h3>
+    <div class="highlight-formula">Subject &nbsp;+&nbsp; <em>be</em> (correct tense) &nbsp;+&nbsp; past participle &nbsp;+&nbsp; (by + agent)</div>
+    <p>The verb <em>be</em> carries the tense. The main verb is always in past participle form (written, published, introduced, forced, believed…).</p>
+  </div>
+
+  <!-- Tense table -->
+  <div class="grammar-card">
+    <h3>Passive in Every Tense</h3>
+    <div style="overflow-x:auto;">
+    <table class="tense-table">
+      <thead>
+        <tr><th>Tense</th><th>Formula</th><th>Example</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Present Simple</td><td><code>is/are + pp</code></td><td>Women <strong>are expected</strong> to wear the hijab.</td></tr>
+        <tr><td>Past Simple</td><td><code>was/were + pp</code></td><td>The revolution <strong>was described</strong> through a child's eyes.</td></tr>
+        <tr><td>Present Continuous</td><td><code>is/are being + pp</code></td><td>The situation <strong>is being monitored</strong> closely.</td></tr>
+        <tr><td>Past Continuous</td><td><code>was/were being + pp</code></td><td>New laws <strong>were being introduced</strong> every month.</td></tr>
+        <tr><td>Present Perfect</td><td><code>has/have been + pp</code></td><td>The book <strong>has been translated</strong> into many languages.</td></tr>
+        <tr><td>Past Perfect</td><td><code>had been + pp</code></td><td>The regime <strong>had been established</strong> before the war began.</td></tr>
+        <tr><td>Future Simple</td><td><code>will be + pp</code></td><td>More research <strong>will be needed</strong> in future.</td></tr>
+        <tr><td>Modal</td><td><code>modal + be + pp</code></td><td>This issue <strong>must be addressed</strong> urgently.</td></tr>
+        <tr><td>Impersonal</td><td><code>It is + pp + that</code></td><td><strong>It is widely believed that</strong> education is the key to success.</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <!-- When to use -->
+  <div class="grammar-card">
+    <h3>When to Use Passive Voice in IELTS</h3>
+    <ul class="bullet">
+      <li><strong>Task 1 — Process diagrams:</strong> "The material <em>is heated</em> to 400°C, then <em>is cooled</em> rapidly."</li>
+      <li><strong>Task 2 — Academic argument:</strong> "It <em>is widely argued</em> that technology <em>has transformed</em> modern education."</li>
+      <li><strong>When the agent is unknown:</strong> "The law <em>was changed</em> in 1979." (we don't need to say who changed it)</li>
+      <li><strong>When the agent is obvious:</strong> "The suspect <em>was arrested</em>." (obviously by police)</li>
+      <li><strong>To sound more formal:</strong> "Mistakes <em>were made</em>" is more formal than "They made mistakes."</li>
+      <li><strong>To vary sentence structure</strong> and demonstrate grammatical range to the examiner.</li>
+    </ul>
+  </div>
+
+  <!-- Russian speaker note -->
+  <div class="grammar-card">
+    <h3>Note for Russian Speakers</h3>
+    <p>Russian uses passive voice less frequently than English, preferring reflexive constructions (-ся / -сь): <em>Книга была написана</em> (passive) vs <em>книга написана</em> or <em>книга пишется</em> (reflexive).</p>
+    <p>In English academic writing, passive voice is strongly preferred and sounds more formal than active. You should consciously practice building passive sentences until they feel natural.</p>
+    <p><strong>Common Russian-speaker errors:</strong></p>
+    <ul class="bullet">
+      <li>Using active where passive is expected: <em>"People widely believe that…"</em> → <em>"It is widely believed that…"</em></li>
+      <li>Wrong past participle: <em>"was wrote"</em> → <em>"was written"</em></li>
+      <li>Omitting <em>be</em>: <em>"The book published in 2000"</em> → <em>"The book was published in 2000"</em></li>
+      <li>Wrong form of <em>be</em>: <em>"The laws is changed"</em> → <em>"The laws are changed"</em></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 4 — EXERCISES
+══════════════════════════════════════════════ -->
+<div class="section" id="exercises">
+  <p class="section-eyebrow">Section 4 — Practice</p>
+  <h2 class="section-title">Passive Voice Exercises</h2>
+  <p class="section-intro">All exercises use IELTS-level topics and vocabulary. Complete each exercise, then click "Show Answers" to check.</p>
+
+  <!-- Exercise A -->
+  <div class="exercise-block">
+    <div class="exercise-header">
+      <div>
+        <div class="exercise-label">Exercise A</div>
+        <div class="exercise-title">Transform to Passive Voice</div>
+      </div>
+      <button class="answer-toggle" onclick="toggleAnswers('a')">Show Answers</button>
+    </div>
+    <div class="exercise-body">
+      <p style="color:var(--text-3);font-size:13px;margin-bottom:14px;">Rewrite each sentence in passive voice. The agent (by…) is only needed if it adds important information.</p>
+      <div class="exercise-item"><div class="exercise-num">1</div><div>The government <strong>introduced</strong> new education policies last year.</div></div>
+      <div class="exercise-item"><div class="exercise-num">2</div><div>Researchers <strong>have discovered</strong> a new approach to teaching.</div></div>
+      <div class="exercise-item"><div class="exercise-num">3</div><div>Many countries <strong>use</strong> standardised tests to measure student progress.</div></div>
+      <div class="exercise-item"><div class="exercise-num">4</div><div>Climate change <strong>will affect</strong> millions of people in the next decade.</div></div>
+      <div class="exercise-item"><div class="exercise-num">5</div><div>Satrapi <strong>depicts</strong> the revolution through a child's eyes.</div></div>
+      <div class="exercise-item"><div class="exercise-num">6</div><div>Scientists <strong>are currently conducting</strong> new research on air pollution.</div></div>
+      <div class="exercise-item"><div class="exercise-num">7</div><div>Schools <strong>must address</strong> the issue of student mental health.</div></div>
+      <div class="exercise-item"><div class="exercise-num">8</div><div>People <strong>have widely criticised</strong> the government's decision.</div></div>
+    </div>
+    <div class="answers-panel" id="answers-a">
+      <div class="answer-row"><strong>1.</strong>&nbsp; <strong>New education policies were introduced</strong> (by the government) last year.</div>
+      <div class="answer-row"><strong>2.</strong>&nbsp; <strong>A new approach to teaching has been discovered</strong> by researchers.</div>
+      <div class="answer-row"><strong>3.</strong>&nbsp; <strong>Standardised tests are used</strong> by many countries to measure student progress.</div>
+      <div class="answer-row"><strong>4.</strong>&nbsp; <strong>Millions of people will be affected</strong> by climate change in the next decade.</div>
+      <div class="answer-row"><strong>5.</strong>&nbsp; <strong>The revolution is depicted</strong> through a child's eyes (by Satrapi).</div>
+      <div class="answer-row"><strong>6.</strong>&nbsp; <strong>New research on air pollution is currently being conducted</strong> by scientists.</div>
+      <div class="answer-row"><strong>7.</strong>&nbsp; <strong>The issue of student mental health must be addressed</strong> by schools.</div>
+      <div class="answer-row"><strong>8.</strong>&nbsp; <strong>The government's decision has been widely criticised.</strong> (agent omitted — obvious)</div>
+    </div>
+  </div>
+
+  <!-- Exercise B -->
+  <div class="exercise-block">
+    <div class="exercise-header">
+      <div>
+        <div class="exercise-label">Exercise B</div>
+        <div class="exercise-title">Fill in the Blank — Choose the Correct Passive Form</div>
+      </div>
+      <button class="answer-toggle" onclick="toggleAnswers('b')">Show Answers</button>
+    </div>
+    <div class="exercise-body">
+      <p style="color:var(--text-3);font-size:13px;margin-bottom:14px;">Use the verb in brackets. Choose the correct tense of the passive.</p>
+      <div class="exercise-item"><div class="exercise-num">1</div><div>The graphic novel <span class="blank"></span> (publish) in France in 2000, but it <span class="blank"></span> (soon / translate) into many languages.</div></div>
+      <div class="exercise-item"><div class="exercise-num">2</div><div>It <span class="blank"></span> (widely / argue) that graphic novels <span class="blank"></span> (overlook) as serious literature for too long.</div></div>
+      <div class="exercise-item"><div class="exercise-num">3</div><div>Women in Iran <span class="blank"></span> (force) to wear the hijab since 1979.</div></div>
+      <div class="exercise-item"><div class="exercise-num">4</div><div>Before the revolution, Western culture <span class="blank"></span> (allow) in Iran, but all of that <span class="blank"></span> (change) overnight.</div></div>
+      <div class="exercise-item"><div class="exercise-num">5</div><div>More research <span class="blank"></span> (need) before any firm conclusions can <span class="blank"></span> (draw).</div></div>
+    </div>
+    <div class="answers-panel" id="answers-b">
+      <div class="answer-row"><strong>1.</strong>&nbsp; <strong>was published</strong> … <strong>was soon translated</strong></div>
+      <div class="answer-row"><strong>2.</strong>&nbsp; <strong>is widely argued</strong> … <strong>have been overlooked</strong></div>
+      <div class="answer-row"><strong>3.</strong>&nbsp; <strong>have been forced</strong></div>
+      <div class="answer-row"><strong>4.</strong>&nbsp; <strong>was allowed</strong> … <strong>was changed</strong></div>
+      <div class="answer-row"><strong>5.</strong>&nbsp; <strong>is needed</strong> … <strong>be drawn</strong></div>
+    </div>
+  </div>
+
+  <!-- Exercise C -->
+  <div class="exercise-block">
+    <div class="exercise-header">
+      <div>
+        <div class="exercise-label">Exercise C</div>
+        <div class="exercise-title">Find and Correct the Error</div>
+      </div>
+      <button class="answer-toggle" onclick="toggleAnswers('c')">Show Answers</button>
+    </div>
+    <div class="exercise-body">
+      <p style="color:var(--text-3);font-size:13px;margin-bottom:14px;">Each sentence contains one passive voice error. Identify it and write the correction.</p>
+      <div class="exercise-item"><div class="exercise-num">1</div><div>"The book was <strong>wrote</strong> by Satrapi in French."</div></div>
+      <div class="exercise-item"><div class="exercise-num">2</div><div>"The revolution is <strong>describing</strong> in great detail throughout the novel."</div></div>
+      <div class="exercise-item"><div class="exercise-num">3</div><div>"She was <strong>force</strong> to leave her country."</div></div>
+      <div class="exercise-item"><div class="exercise-num">4</div><div>"The results <strong>have been announced</strong> by the committee yesterday."</div></div>
+      <div class="exercise-item"><div class="exercise-num">5</div><div>"It is <strong>believe</strong> that education is the key to success."</div></div>
+    </div>
+    <div class="answers-panel" id="answers-c">
+      <div class="answer-row"><strong>1.</strong>&nbsp; <strong>wrote → written</strong>. Was + past participle. "Wrote" is simple past active; the passive needs the p.p. "written."</div>
+      <div class="answer-row"><strong>2.</strong>&nbsp; <strong>describing → described</strong>. Passive = be + past participle. "Describing" is the present participle (used in active continuous).</div>
+      <div class="answer-row"><strong>3.</strong>&nbsp; <strong>force → forced</strong>. Past participle of "force" is "forced." Missing -d.</div>
+      <div class="answer-row"><strong>4.</strong>&nbsp; <strong>have been announced → were announced</strong>. "Yesterday" is a definite past time reference — present perfect cannot be used with it. Use past simple passive.</div>
+      <div class="answer-row"><strong>5.</strong>&nbsp; <strong>believe → believed</strong>. It is + past participle. "Believe" is the base form; passive needs "believed."</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 5 — IELTS SPEAKING PRACTICE
+══════════════════════════════════════════════ -->
+<div class="section" id="speaking">
+  <p class="section-eyebrow">Section 5 — Speaking Practice</p>
+  <h2 class="section-title">IELTS Speaking — Record Your Answer</h2>
+  <p class="section-intro">Press <strong>Record</strong> to answer each question aloud. Your recording plays back immediately so you can listen and self-evaluate. Aim to speak without stopping — fluency matters as much as accuracy.</p>
+
+  <div class="tip-box">
+    <strong>Before you record:</strong> Read the question, think for 5–10 seconds, then speak. For Part 1, aim for 2–3 sentences. For Part 2, aim for 1–2 minutes. Try to use at least one passive structure in each answer.
+  </div>
+
+  <!-- PART 1 -->
+  <h3 style="font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--blue);margin-bottom:14px;">Part 1 — Level 1 Questions (Familiar Topics)</h3>
+  <p style="color:var(--text-3);font-size:13px;margin-bottom:20px;">Short answers · 2–3 sentences · Personal, everyday topics</p>
+
+  <div id="q-cards-p1"></div>
+
+  <!-- PART 2 -->
+  <h3 style="font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--amber);margin:32px 0 14px;">Part 2 — Level 2 Cue Card (Extended Response)</h3>
+  <p style="color:var(--text-3);font-size:13px;margin-bottom:20px;">1 minute to prepare · Speak for 1–2 minutes · Use the cue card bullet points as a guide</p>
+
+  <div id="q-cards-p2"></div>
+
+</div>
+
+</div><!-- /wrapper -->
+
+<script>
+// ── NAV ACTIVE STATE ──────────────────────────────────────────
+const sections = ['essay','corrections','grammar','exercises','speaking'];
+const pills = document.querySelectorAll('.nav-pill');
+function updateNav() {
+  const navH = 60;
+  let current = sections[0];
+  for (const id of sections) {
+    const el = document.getElementById(id);
+    if (el && el.getBoundingClientRect().top <= navH + 30) current = id;
+  }
+  pills.forEach((p, i) => p.classList.toggle('active', sections[i] === current));
+}
+window.addEventListener('scroll', updateNav, { passive: true });
+function scrollTo(id) {
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ── ANSWER TOGGLE ─────────────────────────────────────────────
+function toggleAnswers(id) {
+  const panel = document.getElementById('answers-' + id);
+  const btn = panel.previousElementSibling.querySelector('.answer-toggle');
+  const visible = panel.classList.toggle('visible');
+  btn.textContent = visible ? 'Hide Answers' : 'Show Answers';
+}
+
+// ── QUESTIONS DATA ────────────────────────────────────────────
+const p1Questions = [
+  { text: "Do you enjoy reading books? Why or why not?", hint: "Tip: try using passive → 'I am often drawn to…' / 'Books are considered…'" },
+  { text: "Have you ever read a book that changed the way you think? Tell me about it.", hint: "Tip: 'I was surprised by…' / 'My perspective was changed by…'" },
+  { text: "Do you think graphic novels are a good way to tell serious stories?", hint: "Tip: 'Serious topics can be explored through…' / 'Emotions are conveyed effectively…'" },
+  { text: "Do you prefer reading fiction or non-fiction? Why?", hint: "Tip: 'Non-fiction is often used to…' / 'I am more engaged when…'" },
+  { text: "Is reading popular among young people in your country?", hint: "Tip: 'Reading is not considered cool by many young people…' / 'It has been replaced by…'" },
+];
+const p2Questions = [
+  {
+    cue: true,
+    title: "Describe a book or film that made a strong impression on you.",
+    bullets: [
+      "what the book or film was about",
+      "when you read or watched it",
+      "what you found most interesting about it",
+    ],
+    explain: "explain why it made such a strong impression on you",
+    hint: "Use passive voice at least twice: 'It was written by… / I was moved by… / The story is told from the perspective of…'"
+  }
+];
+
+// ── BUILD QUESTION CARDS ──────────────────────────────────────
+function buildRecorder(qid) {
+  return `
+    <div class="recorder">
+      <button class="btn-record btn-start" id="btn-start-${qid}" onclick="startRecording('${qid}')">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="6"/></svg>
+        Record
+      </button>
+      <button class="btn-record btn-stop" id="btn-stop-${qid}" onclick="stopRecording('${qid}')">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><rect x="4" y="4" width="16" height="16" rx="2"/></svg>
+        Stop
+      </button>
+      <span class="recording-dot" id="recording-indicator-${qid}">
+        <span class="dot-pulse"></span> Recording…
+      </span>
+      <span class="audio-result" id="result-${qid}">
+        ✓ Recorded &nbsp;
+        <audio id="audio-${qid}" controls></audio>
+      </span>
+    </div>`;
+}
+
+const p1Container = document.getElementById('q-cards-p1');
+p1Questions.forEach((q, i) => {
+  const qid = 'p1-' + i;
+  const div = document.createElement('div');
+  div.className = 'q-card';
+  div.innerHTML = `
+    <div class="q-meta">
+      <span class="q-badge q-badge-p1">Part 1 · Q${i+1}</span>
+    </div>
+    <div class="q-text">${q.text}</div>
+    <div class="q-hint">${q.hint}</div>
+    ${buildRecorder(qid)}`;
+  p1Container.appendChild(div);
+});
+
+const p2Container = document.getElementById('q-cards-p2');
+p2Questions.forEach((q, i) => {
+  const qid = 'p2-' + i;
+  const div = document.createElement('div');
+  div.className = 'q-card';
+  const bulletHtml = q.bullets.map(b => `<li>— ${b}</li>`).join('');
+  div.innerHTML = `
+    <div class="q-meta">
+      <span class="q-badge q-badge-p2">Part 2 · Cue Card</span>
+    </div>
+    <div class="cue-card">
+      <strong>${q.title}</strong>
+      <p style="color:var(--text-3);font-size:12.5px;margin-bottom:6px;">You should say:</p>
+      <ul>${bulletHtml}</ul>
+      <p style="margin-top:10px;font-style:italic;">…and <strong>${q.explain}.</strong></p>
+    </div>
+    <div class="q-hint">${q.hint}</div>
+    ${buildRecorder(qid)}`;
+  p2Container.appendChild(div);
+});
+
+// ── AUDIO RECORDER ────────────────────────────────────────────
+let activeRecorder = null;
+let activeStream = null;
+
+async function startRecording(qid) {
+  if (activeRecorder && activeRecorder.state !== 'inactive') {
+    activeRecorder.stop();
+  }
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    activeStream = stream;
+    const recorder = new MediaRecorder(stream);
+    activeRecorder = recorder;
+    const chunks = [];
+
+    recorder.ondataavailable = e => { if (e.data.size > 0) chunks.push(e.data); };
+    recorder.onstop = () => {
+      const blob = new Blob(chunks, { type: 'audio/webm' });
+      const url = URL.createObjectURL(blob);
+      const audio = document.getElementById('audio-' + qid);
+      audio.src = url;
+      document.getElementById('result-' + qid).style.display = 'inline-flex';
+      stream.getTracks().forEach(t => t.stop());
+    };
+
+    recorder.start();
+    document.getElementById('btn-start-' + qid).style.display = 'none';
+    document.getElementById('btn-stop-' + qid).style.display = 'inline-flex';
+    document.getElementById('recording-indicator-' + qid).style.display = 'inline-flex';
+  } catch(err) {
+    alert('Microphone access is needed. Please allow access in your browser settings and try again.');
+  }
+}
+
+function stopRecording(qid) {
+  if (activeRecorder && activeRecorder.state !== 'inactive') {
+    activeRecorder.stop();
+  }
+  document.getElementById('btn-start-' + qid).style.display = 'inline-flex';
+  document.getElementById('btn-stop-' + qid).style.display = 'none';
+  document.getElementById('recording-indicator-' + qid).style.display = 'none';
+}
+</script>
+
+</body></html>
