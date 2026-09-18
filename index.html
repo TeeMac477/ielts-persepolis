@@ -440,6 +440,35 @@ sup.err-num {
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
 .audio-result { display: none; align-items: center; gap: 8px; font-size: 13px; color: var(--green); }
 .audio-result audio { height: 32px; }
+.btn-download {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--green);
+  background: var(--green-light);
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity .15s, transform .1s;
+  text-decoration: none;
+  margin-left: 4px;
+}
+.btn-download:hover { opacity: .8; }
+.btn-download:active { transform: scale(.97); }
+.send-instructions {
+  background: var(--blue-light);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 20px;
+  font-size: 13.5px;
+  color: var(--text-2);
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+.send-instructions strong { color: var(--blue); }
 .tip-box {
   background: var(--amber-light);
   border: 1px solid var(--border);
@@ -812,6 +841,15 @@ ul.bullet li { padding: 3px 0; }
     <strong>Before you record:</strong> Read the question, think for 5–10 seconds, then speak. For Part 1, aim for 2–3 sentences. For Part 2, aim for 1–2 minutes. Try to use at least one passive structure in each answer.
   </div>
 
+  <div class="send-instructions">
+    <strong>How to submit your recordings:</strong><br>
+    1. Record your answer using the <strong>Record</strong> button below each question.<br>
+    2. Listen back — if you're not happy, record again.<br>
+    3. When you're satisfied, click <strong>⬇ Download</strong> to save the audio file.<br>
+    4. Send all your downloaded recordings to your teacher via <strong>WhatsApp</strong> or <strong>Telegram</strong>.<br>
+    <span style="font-size:12px;color:var(--text-3);margin-top:4px;display:inline-block;">⚠ Recordings are NOT saved on this page — if you close the tab without downloading, they will be lost.</span>
+  </div>
+
   <!-- PART 1 -->
   <h3 style="font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--blue);margin-bottom:14px;">Part 1 — Level 1 Questions (Familiar Topics)</h3>
   <p style="color:var(--text-3);font-size:13px;margin-bottom:20px;">Short answers · 2–3 sentences · Personal, everyday topics</p>
@@ -895,6 +933,10 @@ function buildRecorder(qid) {
         ✓ Recorded &nbsp;
         <audio id="audio-${qid}" controls></audio>
       </span>
+      <a class="btn-download" id="dl-${qid}" download="">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Download
+      </a>
     </div>`;
 }
 
@@ -956,6 +998,10 @@ async function startRecording(qid) {
       const audio = document.getElementById('audio-' + qid);
       audio.src = url;
       document.getElementById('result-' + qid).style.display = 'inline-flex';
+      const dlBtn = document.getElementById('dl-' + qid);
+      dlBtn.href = url;
+      dlBtn.download = qid + '-recording.webm';
+      dlBtn.style.display = 'inline-flex';
       stream.getTracks().forEach(t => t.stop());
     };
 
