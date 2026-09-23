@@ -483,6 +483,121 @@ sup.err-num {
 ul.bullet { padding-left: 22px; color: var(--text-2); margin-bottom: 12px; }
 ul.bullet li { padding: 3px 0; }
 
+/* Speaking feedback */
+.fb-task {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+.fb-task-header {
+  background: var(--surface-2);
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+}
+.fb-task-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.fb-task-q {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 4px;
+}
+.fb-transcript {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  font-style: italic;
+  color: var(--text-2);
+  line-height: 1.7;
+  background: var(--amber-light);
+}
+.fb-body { padding: 16px 20px; }
+.fb-error-box {
+  background: var(--error-bg);
+  border: 1px solid var(--error-border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  font-size: 13.5px;
+}
+.fb-error-box strong { color: var(--error-text); }
+.fb-error-box .fb-said { color: var(--error-text); font-family: 'JetBrains Mono', monospace; font-size: 12.5px; }
+.fb-error-box .fb-better { color: var(--green); font-family: 'JetBrains Mono', monospace; font-size: 12.5px; }
+.fb-praise {
+  background: var(--green-light);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: var(--green);
+}
+
+/* Vocab / rewrite */
+.rewrite-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+.rewrite-card .original {
+  background: var(--surface-2);
+  border-radius: 8px;
+  padding: 14px 18px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+.rewrite-card textarea {
+  width: 100%;
+  min-height: 60px;
+  padding: 10px 14px;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+  font-size: 14px;
+  background: var(--surface);
+  color: var(--text);
+  resize: vertical;
+}
+.rewrite-card textarea:focus { outline: none; border-color: var(--accent); }
+.rewrite-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-3);
+  margin-bottom: 6px;
+}
+.vocab-word {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+.summary-text {
+  background: var(--amber-light);
+  border-left: 4px solid var(--amber);
+  border-radius: 0 8px 8px 0;
+  padding: 18px 22px;
+  line-height: 1.8;
+  font-size: 15px;
+  color: var(--text-2);
+  margin-bottom: 16px;
+}
+.summary-text p { margin-bottom: 14px; }
+.summary-text p:last-child { margin-bottom: 0; }
+
 @media (max-width: 500px) {
   .essay-card { padding: 18px; }
   .exercise-body { padding: 16px; }
@@ -496,7 +611,10 @@ ul.bullet li { padding: 3px 0; }
   <button class="nav-pill" onclick="scrollTo('corrections')">Corrections</button>
   <button class="nav-pill" onclick="scrollTo('grammar')">Passive Voice</button>
   <button class="nav-pill" onclick="scrollTo('exercises')">Exercises</button>
+  <button class="nav-pill" onclick="scrollTo('ex-corrections')">Your Answers</button>
   <button class="nav-pill" onclick="scrollTo('speaking')">Speaking</button>
+  <button class="nav-pill" onclick="scrollTo('speaking-fb')">Speaking FB</button>
+  <button class="nav-pill" onclick="scrollTo('vocab')">Vocabulary</button>
 </nav>
 
 <div class="wrapper">
@@ -864,11 +982,521 @@ ul.bullet li { padding: 3px 0; }
 
 </div>
 
+<!-- ═══════════════════════════════════════════
+     SECTION 5B — YOUR EXERCISE ANSWERS (CORRECTIONS)
+══════════════════════════════════════════════ -->
+<div class="section" id="ex-corrections">
+  <p class="section-eyebrow">Section 6 — Your Answers</p>
+  <h2 class="section-title">Passive Voice — Your Answers Corrected</h2>
+  <p class="section-intro">Here are your submitted answers with detailed corrections. Green = correct, red = needs fixing.</p>
+
+  <h3 style="font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;">Exercise A — Active to Passive Transformations</h3>
+
+  <!-- Q1 correct -->
+  <div class="grammar-card">
+    <h3 style="color:var(--green);">1. Correct</h3>
+    <p><em>"The new education policies were introduced by the government."</em></p>
+    <div class="fb-praise">Correct tense (past simple passive). Agent retained. Object promoted to subject.</div>
+  </div>
+
+  <!-- Q2 error -->
+  <div class="grammar-card">
+    <h3 style="color:var(--error-text);">2. Unnecessary Rephrasing</h3>
+    <div class="fb-error-box">
+      <strong>You wrote:</strong> <span class="fb-said">"A new teaching approach has been discovered."</span><br>
+      <strong>Corrected:</strong> <span class="fb-better">"A new approach to teaching has been discovered (by researchers)."</span><br><br>
+      Your passive is grammatically fine, but you changed the meaning: "a new approach to teaching" became "a new teaching approach". In a transformation task, the meaning must stay identical. Simply lift the object as it is.
+    </div>
+  </div>
+
+  <!-- Q3 error -->
+  <div class="grammar-card">
+    <h3 style="color:var(--error-text);">3. Spelling Error</h3>
+    <div class="fb-error-box">
+      <strong>You wrote:</strong> <span class="fb-said">"The standartised tests are used..."</span><br>
+      <strong>Corrected:</strong> <span class="fb-better">"The standardised tests are used by many countries to measure student progress."</span><br><br>
+      "standartised" is misspelled. Correct spelling: <strong>s-t-a-n-d-a-r-d-i-s-e-d</strong>. The passive form and tense (present simple) are both correct — well done!
+    </div>
+  </div>
+
+  <!-- Q4 correct -->
+  <div class="grammar-card">
+    <h3 style="color:var(--green);">4. Correct</h3>
+    <p><em>"Millions of people will be affected by climate change in the next decade."</em></p>
+    <div class="fb-praise">Future passive (will + be + past participle) used correctly.</div>
+  </div>
+
+  <!-- Q5 error -->
+  <div class="grammar-card">
+    <h3 style="color:var(--error-text);">5. Wrong Tense</h3>
+    <div class="fb-error-box">
+      <strong>You wrote:</strong> <span class="fb-said">"The revolution was depicted through a child's eyes by Satrapi."</span><br>
+      <strong>Corrected:</strong> <span class="fb-better">"The revolution is depicted through a child's eyes by Satrapi."</span><br><br>
+      The active sentence uses present simple ("Satrapi depicts"), so the passive must also be present simple: <strong>IS depicted</strong> — not WAS depicted. Rule: the tense of the passive verb must match the tense of the original active verb.
+    </div>
+  </div>
+
+  <!-- Q6 error -->
+  <div class="grammar-card">
+    <h3 style="color:var(--error-text);">6. Wrong Tense + Contradictory Adverb</h3>
+    <div class="fb-error-box">
+      <strong>You wrote:</strong> <span class="fb-said">"The new research on air pollution was currently conducted by scientists."</span><br>
+      <strong>Corrected:</strong> <span class="fb-better">"New research on air pollution is currently being conducted by scientists."</span><br><br>
+      Two errors: (1) <strong>Tense:</strong> "are currently conducting" = present continuous → passive = <strong>IS currently BEING conducted</strong>. (2) "currently" signals an action happening right now — it cannot be used with past simple "was". The word "currently" and "was" contradict each other.
+    </div>
+  </div>
+
+  <!-- Q7 error -->
+  <div class="grammar-card">
+    <h3 style="color:var(--error-text);">7. Wrong Modal Verb</h3>
+    <div class="fb-error-box">
+      <strong>You wrote:</strong> <span class="fb-said">"The issue of student mental health should be addressed by schools."</span><br>
+      <strong>Corrected:</strong> <span class="fb-better">"The issue of student mental health must be addressed by schools."</span><br><br>
+      "Schools <strong>must</strong> address" uses MUST (strong obligation). In the passive, the modal is kept unchanged: <strong>must be addressed</strong>. "Should" (recommendation/advice) and "must" (obligation/necessity) have different meanings — they are not interchangeable.
+    </div>
+  </div>
+
+  <!-- Q8 correct -->
+  <div class="grammar-card">
+    <h3 style="color:var(--green);">8. Correct</h3>
+    <p><em>"The government's decision has been widely criticised."</em></p>
+    <div class="fb-praise">Present perfect passive used correctly. "By people" correctly omitted (too general). Adverb "widely" correctly placed between auxiliary and past participle.</div>
+  </div>
+
+  <!-- Exercise B -->
+  <h3 style="font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);margin:32px 0 16px;">Exercise B — Passive Voice in Context</h3>
+
+  <div class="grammar-card">
+    <h3 style="color:var(--green);">1. Correct</h3>
+    <p><em>"The graphic novel was published in France in 2000, but it was soon translated into many languages."</em></p>
+    <div class="fb-praise">Two past simple passives correctly joined with "but". Appropriate for completed historical events.</div>
+  </div>
+
+  <div class="grammar-card">
+    <h3 style="color:var(--green);">2. Correct</h3>
+    <p><em>"It's widely argued that graphic novels have been overlooked as serious literature for too long."</em></p>
+    <div class="fb-praise">"It is argued that..." = impersonal passive (excellent academic register). Present perfect passive "have been overlooked" correctly expresses a situation continuing to the present.</div>
+  </div>
+
+  <div class="grammar-card">
+    <h3 style="color:var(--error-text);">3. Tense Error: "since" requires present perfect</h3>
+    <div class="fb-error-box">
+      <strong>You wrote:</strong> <span class="fb-said">"Women in Iran were forced to wear the hijab since 1979."</span><br>
+      <strong>Corrected:</strong> <span class="fb-better">"Women in Iran have been forced to wear the hijab since 1979."</span><br><br>
+      "Since" <strong>always</strong> requires present perfect (or past perfect in a past context) — never past simple. Rule: <strong>SINCE + present perfect</strong> = action/state that started in the past and continues now. "Were forced" is finished/over; "have been forced" = started in 1979 and is still happening.
+    </div>
+  </div>
+
+  <div class="grammar-card">
+    <h3 style="color:var(--green);">4. Correct</h3>
+    <p><em>"Before the revolution, Western culture was allowed in Iran, but all of that was changed overnight."</em></p>
+    <div class="fb-praise">Both past simple passives are correct for completed historical events.</div>
+  </div>
+
+  <div class="grammar-card">
+    <h3 style="color:var(--green);">5. Correct</h3>
+    <p><em>"More research is needed before any firm conclusions can be drawn."</em></p>
+    <div class="fb-praise">Two passives in one sentence: "is needed" (present simple) + "can be drawn" (modal passive). Both correct and appropriately formal.</div>
+  </div>
+
+  <!-- Exercise C — all correct -->
+  <h3 style="font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);margin:32px 0 16px;">Exercise C — Find and Correct the Error</h3>
+  <div class="fb-praise" style="margin-bottom:16px;">All five sentences corrected correctly! Here's what makes each one work:</div>
+
+  <div class="grammar-card">
+    <h3 style="color:var(--green);">1–5. All Correct</h3>
+    <p><strong>1.</strong> <em>"The book was written by Satrapi in French."</em> — Past simple passive. <strong>was + written</strong> (past participle).</p>
+    <p><strong>2.</strong> <em>"The revolution is described in great detail..."</em> — Present simple passive. Agent omitted.</p>
+    <p><strong>3.</strong> <em>"She was forced to leave her country."</em> — Past simple passive + to-infinitive.</p>
+    <p><strong>4.</strong> <em>"The results were announced by the committee yesterday."</em> — Past simple passive. Agent kept (important info).</p>
+    <p><strong>5.</strong> <em>"It is believed that education is the key to success."</em> — Impersonal passive — common in academic English.</p>
+  </div>
+
+  <!-- Error Pattern Summary -->
+  <h3 style="font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);margin:32px 0 16px;">Your Error Pattern Summary</h3>
+  <div style="overflow-x:auto;">
+  <table class="corr-table">
+    <thead><tr><th>Error type</th><th>Count</th><th>Key rule</th></tr></thead>
+    <tbody>
+      <tr><td>Tense mismatch</td><td>2</td><td>The passive tense must match the original active tense exactly</td></tr>
+      <tr><td>Wrong modal verb</td><td>1</td><td>Keep the same modal: must → must be done; should → should be done</td></tr>
+      <tr><td>Since + present perfect</td><td>1</td><td>"Since" always requires present perfect: have/has been + pp</td></tr>
+      <tr><td>Unnecessary rephrasing</td><td>1</td><td>Keep the object exactly as it appears in the active sentence</td></tr>
+      <tr><td>Spelling</td><td>1</td><td>standardised — memorise the spelling</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- NEW EXERCISES from corrections doc -->
+  <h3 style="font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);margin:32px 0 16px;">New Practice — Based on Your Errors</h3>
+
+  <div class="exercise-block">
+    <div class="exercise-header">
+      <div>
+        <div class="exercise-label">Exercise D</div>
+        <div class="exercise-title">Active → Passive (watch the tense!)</div>
+      </div>
+      <button class="answer-toggle" onclick="toggleAnswers('d')">Show Answers</button>
+    </div>
+    <div class="exercise-body">
+      <p style="color:var(--text-3);font-size:13px;margin-bottom:14px;">Keep the tense identical to the active sentence.</p>
+      <div class="exercise-item"><div class="exercise-num">1</div><div>The committee <strong>announces</strong> the results every year.</div></div>
+      <div class="exercise-item"><div class="exercise-num">2</div><div>The teacher <strong>is currently marking</strong> the exams.</div></div>
+      <div class="exercise-item"><div class="exercise-num">3</div><div>The president <strong>must sign</strong> the new law.</div></div>
+      <div class="exercise-item"><div class="exercise-num">4</div><div>Researchers <strong>have published</strong> three new studies this month.</div></div>
+      <div class="exercise-item"><div class="exercise-num">5</div><div>The government <strong>will introduce</strong> stricter environmental laws.</div></div>
+      <div class="exercise-item"><div class="exercise-num">6</div><div>Engineers <strong>are building</strong> a new hospital in the city centre.</div></div>
+      <div class="exercise-item"><div class="exercise-num">7</div><div>The school <strong>should provide</strong> more mental health support.</div></div>
+      <div class="exercise-item"><div class="exercise-num">8</div><div>People <strong>have widely praised</strong> the new policy.</div></div>
+    </div>
+    <div class="answers-panel" id="answers-d">
+      <div class="answer-row"><strong>1.</strong>&nbsp; The results <strong>are announced</strong> (by the committee) every year.</div>
+      <div class="answer-row"><strong>2.</strong>&nbsp; The exams <strong>are currently being marked</strong> (by the teacher).</div>
+      <div class="answer-row"><strong>3.</strong>&nbsp; The new law <strong>must be signed</strong> by the president.</div>
+      <div class="answer-row"><strong>4.</strong>&nbsp; Three new studies <strong>have been published</strong> (by researchers) this month.</div>
+      <div class="answer-row"><strong>5.</strong>&nbsp; Stricter environmental laws <strong>will be introduced</strong> (by the government).</div>
+      <div class="answer-row"><strong>6.</strong>&nbsp; A new hospital <strong>is being built</strong> in the city centre (by engineers).</div>
+      <div class="answer-row"><strong>7.</strong>&nbsp; More mental health support <strong>should be provided</strong> (by the school).</div>
+      <div class="answer-row"><strong>8.</strong>&nbsp; The new policy <strong>has been widely praised.</strong></div>
+    </div>
+  </div>
+
+  <div class="exercise-block">
+    <div class="exercise-header">
+      <div>
+        <div class="exercise-label">Exercise E</div>
+        <div class="exercise-title">Correct the Error (one per sentence)</div>
+      </div>
+      <button class="answer-toggle" onclick="toggleAnswers('e')">Show Answers</button>
+    </div>
+    <div class="exercise-body">
+      <div class="exercise-item"><div class="exercise-num">1</div><div>"The film <strong>was currently directed</strong> by a young filmmaker."</div></div>
+      <div class="exercise-item"><div class="exercise-num">2</div><div>"The decision <strong>should be taken</strong> by the board last week."</div></div>
+      <div class="exercise-item"><div class="exercise-num">3</div><div>"This building <strong>was constructed since</strong> 1900."</div></div>
+      <div class="exercise-item"><div class="exercise-num">4</div><div>"The report <strong>has been published</strong> in 2019."</div></div>
+      <div class="exercise-item"><div class="exercise-num">5</div><div>"Many people <strong>are affected</strong> by climate change since 2000."</div></div>
+      <div class="exercise-item"><div class="exercise-num">6</div><div>"The bridge <strong>must be repaired</strong> — it <strong>should collapse</strong> soon."</div></div>
+    </div>
+    <div class="answers-panel" id="answers-e">
+      <div class="answer-row"><strong>1.</strong>&nbsp; "was currently" → <strong>"is currently being directed"</strong> — "currently" requires present continuous, not past.</div>
+      <div class="answer-row"><strong>2.</strong>&nbsp; "should be taken" → <strong>"was taken"</strong> — "last week" = definite past → past simple, not modal.</div>
+      <div class="answer-row"><strong>3.</strong>&nbsp; "was constructed since" → <strong>"has been constructed since"</strong> — "since" always requires present perfect.</div>
+      <div class="answer-row"><strong>4.</strong>&nbsp; "has been published in 2019" → <strong>"was published in 2019"</strong> — "in 2019" = definite past → past simple.</div>
+      <div class="answer-row"><strong>5.</strong>&nbsp; "are affected" → <strong>"have been affected"</strong> — "since 2000" = present perfect required.</div>
+      <div class="answer-row"><strong>6.</strong>&nbsp; "should collapse" → <strong>"could/might collapse"</strong> — "should" = advice/recommendation, not possibility. Use "could/might" for risk.</div>
+    </div>
+  </div>
+
+  <div class="exercise-block">
+    <div class="exercise-header">
+      <div>
+        <div class="exercise-label">Exercise F</div>
+        <div class="exercise-title">Complete the Passive (use the verb in brackets)</div>
+      </div>
+      <button class="answer-toggle" onclick="toggleAnswers('f')">Show Answers</button>
+    </div>
+    <div class="exercise-body">
+      <div class="exercise-item"><div class="exercise-num">1</div><div>The new policy <span class="blank"></span> (introduce) next month.</div></div>
+      <div class="exercise-item"><div class="exercise-num">2</div><div>The letter <span class="blank"></span> (send) three days ago.</div></div>
+      <div class="exercise-item"><div class="exercise-num">3</div><div>The experiment <span class="blank"></span> (conduct) right now.</div></div>
+      <div class="exercise-item"><div class="exercise-num">4</div><div>Many languages <span class="blank"></span> (speak) in Canada.</div></div>
+      <div class="exercise-item"><div class="exercise-num">5</div><div>The building <span class="blank"></span> (demolish) since the accident happened.</div></div>
+      <div class="exercise-item"><div class="exercise-num">6</div><div>The project <span class="blank"></span> (complete) before the deadline.</div></div>
+    </div>
+    <div class="answers-panel" id="answers-f">
+      <div class="answer-row"><strong>1.</strong>&nbsp; <strong>will be introduced</strong></div>
+      <div class="answer-row"><strong>2.</strong>&nbsp; <strong>was sent</strong></div>
+      <div class="answer-row"><strong>3.</strong>&nbsp; <strong>is being conducted</strong></div>
+      <div class="answer-row"><strong>4.</strong>&nbsp; <strong>are spoken</strong></div>
+      <div class="answer-row"><strong>5.</strong>&nbsp; <strong>has been demolished</strong> (since → present perfect)</div>
+      <div class="answer-row"><strong>6.</strong>&nbsp; <strong>had been completed / was completed</strong></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 7 — SPEAKING FEEDBACK
+══════════════════════════════════════════════ -->
+<div class="section" id="speaking-fb">
+  <p class="section-eyebrow">Section 7 — Speaking Feedback</p>
+  <h2 class="section-title">Your Speaking — Transcripts & Corrections</h2>
+  <p class="section-intro">Your recorded answers are transcribed below with error corrections and praise for what you did well.</p>
+
+  <!-- Task 1 -->
+  <div class="fb-task">
+    <div class="fb-task-header">
+      <div class="fb-task-label">Task 1</div>
+      <div class="fb-task-q">Do you enjoy reading books? Why or why not?</div>
+    </div>
+    <div class="fb-transcript">"Well, now I enjoy reading books, but not as I did when I was in child, because it was my passion back then. I used to like reading realistic and maybe a bit sarcastic books about teenagers and their adventures."</div>
+    <div class="fb-body">
+      <div class="fb-error-box">
+        <strong>Wrong article before "child"</strong><br>
+        <strong>Said:</strong> <span class="fb-said">"when I was in child"</span><br>
+        <strong>Better:</strong> <span class="fb-better">"when I was a child"</span> or <span class="fb-better">"when I was younger"</span><br>
+        We say "a child" (countable noun). "In childhood" also works: "not as I did in childhood."
+      </div>
+      <div class="fb-error-box">
+        <strong>"Sarcastic" — wrong word for books</strong><br>
+        <strong>Said:</strong> <span class="fb-said">"a bit sarcastic"</span><br>
+        <strong>Better:</strong> <span class="fb-better">"a bit satirical"</span> or <span class="fb-better">"slightly ironic"</span><br>
+        "Sarcastic" describes a person's tone/attitude. Books (especially for young adults) are described as "satirical", "ironic", or "darkly humorous".
+      </div>
+      <div class="fb-praise">"I used to like reading..." — great use of "used to" to describe past habits.</div>
+      <div class="fb-praise">"...but not as I did when I was..." — good comparative structure.</div>
+    </div>
+  </div>
+
+  <!-- Task 2 -->
+  <div class="fb-task">
+    <div class="fb-task-header">
+      <div class="fb-task-label">Task 2</div>
+      <div class="fb-task-q">Have you ever read a book that changed the way you think? Tell me about it.</div>
+    </div>
+    <div class="fb-transcript">"My perspective was changed by a book written by an American philosopher, Eric From, and the book is called Art of Love. And her main idea is that love is not a passive feeling but an active art that can and should be learned."</div>
+    <div class="fb-body">
+      <div class="fb-error-box">
+        <strong>Philosopher's name — spelling</strong><br>
+        <strong>Said:</strong> <span class="fb-said">"Eric From"</span><br>
+        <strong>Better:</strong> <span class="fb-better">"Erich Fromm"</span><br>
+        The name is German-origin: Erich (not Eric) Fromm (double m). In speaking this is fine — worth knowing for writing.
+      </div>
+      <div class="fb-error-box">
+        <strong>Book title — slight error</strong><br>
+        <strong>Said:</strong> <span class="fb-said">"Art of Love"</span><br>
+        <strong>Better:</strong> <span class="fb-better">"The Art of Loving"</span> (1956)<br>
+        Very close! Minor slip — not penalised in speaking.
+      </div>
+      <div class="fb-error-box">
+        <strong>Wrong pronoun for a book</strong><br>
+        <strong>Said:</strong> <span class="fb-said">"her main idea"</span><br>
+        <strong>Better:</strong> <span class="fb-better">"its main idea"</span> or <span class="fb-better">"the book's main idea"</span><br>
+        Books use "it/its", not "she/her". We only say "she" for ships, countries, or when a narrator is specifically personified.
+      </div>
+      <div class="fb-praise">"My perspective was changed by..." — excellent passive voice. Sounds academic and natural.</div>
+      <div class="fb-praise">"...that can and should be learned" — very natural self-correction midway through.</div>
+    </div>
+  </div>
+
+  <!-- Task 3 -->
+  <div class="fb-task">
+    <div class="fb-task-header">
+      <div class="fb-task-label">Task 3</div>
+      <div class="fb-task-q">Do you think graphic novels are a good way to tell serious stories?</div>
+    </div>
+    <div class="fb-transcript">"I think that graphic novels are a good way to discuss serious topics because the simple presentation of a serious topic can be more interesting for the reader and it will make him involved more in reading the story."</div>
+    <div class="fb-body">
+      <div class="fb-error-box">
+        <strong>Word order — "make him more involved"</strong><br>
+        <strong>Said:</strong> <span class="fb-said">"it will make him involved more"</span><br>
+        <strong>Better:</strong> <span class="fb-better">"it will make the reader more involved in the story"</span><br>
+        With "make + object + adjective", the adjective comes right after the object: make them MORE INVOLVED (not "involved more").
+      </div>
+      <div class="fb-error-box">
+        <strong>"him" — prefer gender-neutral</strong><br>
+        <strong>Said:</strong> <span class="fb-said">"make him involved"</span><br>
+        <strong>Better:</strong> <span class="fb-better">"make the reader more involved"</span> or <span class="fb-better">"draw them in"</span><br>
+        The generic pronoun "him" is outdated in modern English. Use "the reader", "them", or restructure.
+      </div>
+      <div class="fb-error-box">
+        <strong>"a good way" — could be stronger vocabulary</strong><br>
+        <strong>Said:</strong> <span class="fb-said">"are a good way to discuss"</span><br>
+        <strong>Better:</strong> <span class="fb-better">"are an effective medium for exploring"</span> or <span class="fb-better">"are a powerful way to address"</span><br>
+        For a higher band, replace generic "good" with: effective, powerful, valuable, compelling.
+      </div>
+      <div class="fb-error-box">
+        <strong>"simple presentation" — imprecise</strong><br>
+        <strong>Said:</strong> <span class="fb-said">"the simple presentation of a serious topic"</span><br>
+        <strong>Better:</strong> <span class="fb-better">"the visual/accessible format"</span> or <span class="fb-better">"the combination of image and text"</span><br>
+        What makes graphic novels distinctive is their visual storytelling, not "simplicity". Being specific shows stronger lexical resource.
+      </div>
+      <div class="fb-praise">"I think that graphic novels are...because..." — well-structured opinion with a clear reason.</div>
+    </div>
+  </div>
+
+  <!-- Task 4 -->
+  <div class="fb-task">
+    <div class="fb-task-header">
+      <div class="fb-task-label">Task 4</div>
+      <div class="fb-task-q">Do you prefer reading fiction or non-fiction? Why?</div>
+    </div>
+    <div class="fb-transcript">"Well, from these two I would prefer fiction more because I've always liked reading mystery and thrillers and romance, but actually not fantasy or science fiction. Nonfiction is something I also read, but not that often. From nonfiction, I mostly read philosophy, for example."</div>
+    <div class="fb-body">
+      <div class="fb-error-box">
+        <strong>"prefer...more" — redundant</strong><br>
+        <strong>Said:</strong> <span class="fb-said">"I would prefer fiction more"</span><br>
+        <strong>Better:</strong> <span class="fb-better">"I would prefer fiction"</span> or <span class="fb-better">"I'd go with fiction"</span><br>
+        "Prefer" already means "like more", so adding "more" is redundant.
+      </div>
+      <div class="fb-error-box">
+        <strong>"for example" at the end is incomplete</strong><br>
+        <strong>Said:</strong> <span class="fb-said">"I mostly read philosophy, for example."</span><br>
+        <strong>Better:</strong> <span class="fb-better">"I mostly read philosophy — Erich Fromm, for example."</span> or just <span class="fb-better">"I mostly read philosophy."</span><br>
+        "For example" implies you're about to give an example. Here it's dangling at the end with nothing after it.
+      </div>
+      <div class="fb-error-box">
+        <strong>"mystery and thrillers and romance" — list style</strong><br>
+        <strong>Said:</strong> <span class="fb-said">"mystery and thrillers and romance"</span><br>
+        <strong>Better:</strong> <span class="fb-better">"mystery, thrillers, and romance"</span><br>
+        For three or more items, use commas. Repeating "and" sounds like a list that hasn't ended.
+      </div>
+      <div class="fb-praise">"Nonfiction is something I also read, but not that often." — great fronted structure (topic first), sounds natural and sophisticated.</div>
+      <div class="fb-praise">Good range of genres mentioned — shows lexical resource.</div>
+    </div>
+  </div>
+
+  <!-- Task 5 -->
+  <div class="fb-task">
+    <div class="fb-task-header">
+      <div class="fb-task-label">Task 5</div>
+      <div class="fb-task-q">Is reading popular among young people in your country?</div>
+    </div>
+    <div class="fb-transcript">"Well, reading in my country has been replaced by social media and movies, but I know a lot of people who still read books, especially fantasy and mystery. I even know a girl who writes her own books."</div>
+    <div class="fb-body">
+      <div class="fb-error-box">
+        <strong>"reading" — be more specific</strong><br>
+        <strong>Said:</strong> <span class="fb-said">"reading in my country has been replaced"</span><br>
+        <strong>Better:</strong> <span class="fb-better">"reading books in my country has largely been replaced"</span><br>
+        Adding "books" makes it clearer. "Largely" adds nuance and sounds more academic.
+      </div>
+      <div class="fb-error-box">
+        <strong>Response is short for IELTS Part 3</strong><br>
+        Part 3 expects developed answers. Try to add a reason or opinion: <span class="fb-better">"I think this is partly because..."</span> or <span class="fb-better">"However, I believe..."</span> to extend.
+      </div>
+      <div class="fb-praise">"...who still read books" — nice relative clause.</div>
+      <div class="fb-praise">"I even know a girl who writes her own books." — excellent personal anecdote, very natural.</div>
+      <div class="fb-praise">Generally very clean grammar in this response.</div>
+    </div>
+  </div>
+
+  <!-- Task 6 -->
+  <div class="fb-task">
+    <div class="fb-task-header">
+      <div class="fb-task-label">Task 6 — Part 2 Cue Card</div>
+      <div class="fb-task-q">Describe a book or film that made a strong impression on you.</div>
+    </div>
+    <div class="fb-transcript">"Well, recently I watched a film. It's called Dead Poet Society and it's about a group of boys from a private school who are deeply passionate about poets poems which are forbidden to read in class. So they start gathering in a cave every night to discuss things that interest them. This film is about a gap between parents and kids. The main character, he struggles with parents understanding his passion about theatre and poems and they just don't want to understand him. So. So he decides to kill himself. And yeah, this movie had a very strong impression on me."</div>
+    <div class="fb-body">
+      <div class="fb-error-box">
+        <strong>Film title — missing "s"</strong><br>
+        <strong>Said:</strong> <span class="fb-said">"Dead Poet Society"</span><br>
+        <strong>Better:</strong> <span class="fb-better">"Dead Poets Society"</span> (plural)<br>
+        Minor slip — completely understandable in speaking.
+      </div>
+      <div class="fb-error-box">
+        <strong>"poets poems" — awkward/redundant</strong><br>
+        <strong>Said:</strong> <span class="fb-said">"deeply passionate about poets poems"</span><br>
+        <strong>Better:</strong> <span class="fb-better">"deeply passionate about poetry"</span> or <span class="fb-better">"passionate about poems and poets"</span>
+      </div>
+      <div class="fb-error-box">
+        <strong>Wrong collocation: "had an impression"</strong><br>
+        <strong>Said:</strong> <span class="fb-said">"this movie had a very strong impression on me"</span><br>
+        <strong>Better:</strong> <span class="fb-better">"this movie made a very strong impression on me"</span><br>
+        The fixed phrase is "<strong>make</strong> an impression on someone". We say "the film <strong>made</strong> a strong impression" — not "had". Very common learner error.
+      </div>
+      <div class="fb-error-box">
+        <strong>"a gap between parents and kids"</strong><br>
+        <strong>Said:</strong> <span class="fb-said">"a gap between parents and kids"</span><br>
+        <strong>Better:</strong> <span class="fb-better">"a generation gap"</span> or <span class="fb-better">"the conflict between parents and children"</span><br>
+        "Generation gap" is the standard expression.
+      </div>
+      <div class="fb-error-box">
+        <strong>"he struggles with parents understanding"</strong><br>
+        <strong>Said:</strong> <span class="fb-said">"he struggles with parents understanding his passion"</span><br>
+        <strong>Better:</strong> <span class="fb-better">"he struggles because his parents don't understand his passion"</span><br>
+        The original phrasing is grammatically awkward (gerund subject). The rewrite is clearer.
+      </div>
+      <div class="fb-error-box">
+        <strong>Repeated sentence starters — "So. So..."</strong><br>
+        <strong>Said:</strong> <span class="fb-said">"So they start..." / "So. So he decides..."</span><br>
+        <strong>Better:</strong> Vary with: <span class="fb-better">"As a result,"</span> / <span class="fb-better">"Because of this,"</span> / <span class="fb-better">"In the end,"</span><br>
+        Starting multiple sentences with "So" lowers your Coherence band. Mix in other connectors.
+      </div>
+      <div class="fb-praise">"...boys from a private school who are deeply passionate about..." — great relative clause with "who".</div>
+      <div class="fb-praise">"So he decides to kill himself." — short, punchy, effective. Good narrative technique.</div>
+      <div class="fb-praise">The response is long, detailed, and tells a clear story — great fluency and content.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 8 — VOCABULARY PRACTICE
+══════════════════════════════════════════════ -->
+<div class="section" id="vocab">
+  <p class="section-eyebrow">Section 8 — Vocabulary & Paraphrasing</p>
+  <h2 class="section-title">Vocabulary Practice — Rewrite & Summarise</h2>
+  <p class="section-intro">These exercises build the paraphrasing skills you need for IELTS Band 7+. Rewriting complex sentences in your own words proves you understand the meaning — not just the words.</p>
+
+  <h3 style="font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;">Part A — Rewrite in Your Own Words</h3>
+  <p style="color:var(--text-3);font-size:13px;margin-bottom:20px;">Read each statement carefully. Then rewrite it using different vocabulary and sentence structure while keeping the same meaning. Write your version in the box below.</p>
+
+  <div class="rewrite-card">
+    <div style="font-size:12px;font-weight:600;color:var(--text-3);margin-bottom:6px;">Statement 1</div>
+    <div class="original">"The proliferation of social media has fundamentally <span class="vocab-word">altered</span> the way young people <span class="vocab-word">interact</span> with one another, often at the <span class="vocab-word">expense</span> of face-to-face communication."</div>
+    <div class="rewrite-label">Your version:</div>
+    <textarea placeholder="Rewrite this sentence in your own words..."></textarea>
+  </div>
+
+  <div class="rewrite-card">
+    <div style="font-size:12px;font-weight:600;color:var(--text-3);margin-bottom:6px;">Statement 2</div>
+    <div class="original">"It is widely <span class="vocab-word">acknowledged</span> that access to quality education remains the most <span class="vocab-word">significant</span> factor in <span class="vocab-word">determining</span> an individual's long-term economic <span class="vocab-word">prospects</span>."</div>
+    <div class="rewrite-label">Your version:</div>
+    <textarea placeholder="Rewrite this sentence in your own words..."></textarea>
+  </div>
+
+  <div class="rewrite-card">
+    <div style="font-size:12px;font-weight:600;color:var(--text-3);margin-bottom:6px;">Statement 3</div>
+    <div class="original">"The <span class="vocab-word">escalating</span> cost of living in major cities has <span class="vocab-word">compelled</span> many young professionals to <span class="vocab-word">relocate</span> to smaller towns, where housing is more <span class="vocab-word">affordable</span> and the quality of life is <span class="vocab-word">arguably</span> higher."</div>
+    <div class="rewrite-label">Your version:</div>
+    <textarea placeholder="Rewrite this sentence in your own words..."></textarea>
+  </div>
+
+  <div class="rewrite-card">
+    <div style="font-size:12px;font-weight:600;color:var(--text-3);margin-bottom:6px;">Statement 4</div>
+    <div class="original">"While technological <span class="vocab-word">innovation</span> has <span class="vocab-word">undeniably</span> improved <span class="vocab-word">efficiency</span> in the workplace, it has also <span class="vocab-word">contributed</span> to a growing sense of isolation among employees who work <span class="vocab-word">remotely</span>."</div>
+    <div class="rewrite-label">Your version:</div>
+    <textarea placeholder="Rewrite this sentence in your own words..."></textarea>
+  </div>
+
+  <div class="rewrite-card">
+    <div style="font-size:12px;font-weight:600;color:var(--text-3);margin-bottom:6px;">Statement 5</div>
+    <div class="original">"Governments that <span class="vocab-word">neglect</span> environmental <span class="vocab-word">regulations</span> in favour of short-term economic growth are <span class="vocab-word">jeopardising</span> the well-being of future <span class="vocab-word">generations</span>."</div>
+    <div class="rewrite-label">Your version:</div>
+    <textarea placeholder="Rewrite this sentence in your own words..."></textarea>
+  </div>
+
+  <div class="rewrite-card">
+    <div style="font-size:12px;font-weight:600;color:var(--text-3);margin-bottom:6px;">Statement 6</div>
+    <div class="original">"The <span class="vocab-word">erosion</span> of cultural identity in an increasingly <span class="vocab-word">globalised</span> world has sparked a <span class="vocab-word">renewed</span> interest in preserving indigenous languages and <span class="vocab-word">traditions</span>."</div>
+    <div class="rewrite-label">Your version:</div>
+    <textarea placeholder="Rewrite this sentence in your own words..."></textarea>
+  </div>
+
+  <!-- PART B — SUMMARISE -->
+  <h3 style="font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);margin:40px 0 16px;">Part B — Summarise this Text</h3>
+  <p style="color:var(--text-3);font-size:13px;margin-bottom:20px;">Read the passage below carefully, then write a summary in 3–5 sentences. Use your own words — do not copy phrases directly from the text. Focus on the main ideas, not the details.</p>
+
+  <div class="summary-text">
+    <p>The concept of emotional intelligence, popularised by psychologist Daniel Goleman in the 1990s, refers to an individual's ability to recognise, understand, and manage their own emotions, as well as the emotions of others. Unlike traditional measures of intelligence such as IQ, emotional intelligence encompasses skills like empathy, self-awareness, and social competence.</p>
+    <p>Research has consistently shown that people with high emotional intelligence tend to perform better in the workplace, maintain healthier relationships, and experience greater overall well-being. In leadership roles, emotional intelligence is often considered more important than technical expertise, as leaders must navigate complex interpersonal dynamics, resolve conflicts, and inspire trust among their teams.</p>
+    <p>Critics argue, however, that emotional intelligence is difficult to measure objectively and that the concept has been oversimplified by the self-help industry. Some psychologists question whether emotional intelligence is truly a distinct form of intelligence or simply a collection of personality traits. Despite these criticisms, the idea that success depends on more than just academic ability has gained widespread acceptance in education and corporate training programmes worldwide.</p>
+  </div>
+
+  <div class="rewrite-card">
+    <div class="rewrite-label">Your summary (3–5 sentences):</div>
+    <textarea placeholder="Write your summary here..." style="min-height:120px;"></textarea>
+  </div>
+
+  <div class="tip-box" style="margin-top:20px;">
+    <strong>Helpful vocabulary for summaries:</strong> According to the text... / The author argues that... / The main point is... / In contrast... / Despite this... / Furthermore... / It is suggested that... / Overall, the passage highlights...
+  </div>
+</div>
+
 </div><!-- /wrapper -->
 
 <script>
 // ── NAV ACTIVE STATE ──────────────────────────────────────────
-const sections = ['essay','corrections','grammar','exercises','speaking'];
+const sections = ['essay','corrections','grammar','exercises','ex-corrections','speaking','speaking-fb','vocab'];
 const pills = document.querySelectorAll('.nav-pill');
 function updateNav() {
   const navH = 60;
