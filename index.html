@@ -615,6 +615,11 @@ ul.bullet li { padding: 3px 0; }
 .useful-lang { background: var(--blue-light); border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; margin-top: 12px; font-size: 13px; color: var(--blue); line-height: 1.7; }
 .useful-lang strong { color: var(--text); }
 .img-timer-hint { font-size: 12px; color: var(--text-3); margin-top: 8px; }
+.task1-diagram { background: #fff; border-radius: 10px; padding: 16px; margin-bottom: 16px; overflow-x: auto; }
+.task1-diagram svg { display: block; margin: 0 auto; max-width: 100%; height: auto; }
+.task1-prompt { background: var(--surface-2); border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; margin-bottom: 16px; font-size: 14px; color: var(--text); font-weight: 500; font-style: italic; }
+.gap-fill-item { display: flex; gap: 10px; align-items: baseline; margin-bottom: 10px; font-size: 14px; color: var(--text); line-height: 1.7; }
+.gap-fill-num { min-width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; background: var(--accent); color: #fff; border-radius: 50%; font-size: 12px; font-weight: 700; flex-shrink: 0; }
 
 @media (max-width: 500px) {
   .essay-card { padding: 18px; }
@@ -1697,116 +1702,438 @@ ul.bullet li { padding: 3px 0; }
 </div>
 
 <!-- ═══════════════════════════════════════════
-     SECTION 10 — DESCRIBE IMAGES
+     SECTION 10 — IELTS WRITING TASK 1
 ══════════════════════════════════════════════ -->
 <div class="section" id="images">
-  <p class="section-eyebrow">Section 10 — Describing Images</p>
-  <h2 class="section-title">IELTS Image Description Practice</h2>
-  <p class="section-intro">In IELTS Speaking Part 2 and Writing Task 1, you need to describe what you see clearly and systematically. These exercises use text descriptions of images — read the scene, then describe or discuss it using the prompts provided. Time yourself: aim for 1–2 minutes of speaking per image.</p>
+  <p class="section-eyebrow">Section 10 — Writing Task 1</p>
+  <h2 class="section-title">IELTS Writing Task 1 — Diagrams, Graphs & Charts</h2>
+  <p class="section-intro">In IELTS Academic Writing Task 1, you must describe visual information (graphs, charts, diagrams, maps, or processes) in at least 150 words. You have 20 minutes. These exercises cover the main question types with model answer gap-fills to build your vocabulary.</p>
 
-  <div class="tip-box" style="margin-bottom:24px;">
-    <strong>How to structure an image description:</strong><br>
-    1. <strong>Overview</strong> — What is the image showing? (one sentence)<br>
-    2. <strong>Main details</strong> — Describe what you see, moving logically (left to right, foreground to background, or most to least important)<br>
-    3. <strong>Speculation/opinion</strong> — What might be happening? What does it suggest?<br>
-    Use present continuous for actions happening: <em>"A woman is walking..."</em><br>
-    Use "appears to", "seems to", "looks like" for speculation.
+  <div class="tip-box" style="margin-bottom:28px;">
+    <strong>Task 1 structure (4 paragraphs):</strong><br>
+    1. <strong>Introduction</strong> — Paraphrase the question (never copy it word for word)<br>
+    2. <strong>Overview</strong> — 2 key trends/features (the most important thing the examiner looks for!)<br>
+    3. <strong>Detail paragraph 1</strong> — Specific data to support the overview<br>
+    4. <strong>Detail paragraph 2</strong> — Remaining key data + comparisons<br>
+    <span style="font-size:12px;color:var(--text-3);">Never give opinions or reasons in Task 1 — only describe what you see.</span>
   </div>
 
-  <!-- Image 1: Classroom -->
+  <!-- ======== TASK 1A: PROCESS DIAGRAM — Frog Life Cycle ======== -->
   <div class="img-desc-card">
     <div class="img-desc-scene">
-      <h4>Scene 1 — The Classroom</h4>
-      <div class="scene-text">A large, modern classroom with rows of desks. About 25 students aged 16–17 are sitting in pairs. Most students are looking at tablets or laptops on their desks. Two students in the front row are whispering to each other. The teacher, a woman in her 40s wearing glasses, is standing at the interactive whiteboard pointing at a graph. One student at the back has his head on the desk. Through the window, you can see a school playground with a basketball court.</div>
+      <h4>Task 1A — Process Diagram</h4>
+      <div class="task1-prompt">The diagram below shows the life cycle of a frog. Summarise the information by selecting and reporting the main features.</div>
+    </div>
+    <div class="task1-diagram">
+      <svg viewBox="0 0 700 420" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif">
+        <!-- circle path -->
+        <circle cx="350" cy="210" r="170" fill="none" stroke="#c8c0b4" stroke-width="2" stroke-dasharray="8 4"/>
+        <!-- stage nodes -->
+        <g font-size="12" font-weight="600" fill="#1c1a14">
+          <!-- 1: Mating -->
+          <circle cx="200" cy="80" r="22" fill="#fceee8" stroke="#c04a1c" stroke-width="2"/>
+          <text x="200" y="84" text-anchor="middle" fill="#c04a1c" font-size="14" font-weight="700">1</text>
+          <text x="200" y="52" text-anchor="middle" font-size="11" fill="#4a4640">FROGS MATING</text>
+          <!-- 2: Eggs -->
+          <circle cx="120" cy="180" r="22" fill="#fceee8" stroke="#c04a1c" stroke-width="2"/>
+          <text x="120" y="184" text-anchor="middle" fill="#c04a1c" font-size="14" font-weight="700">2</text>
+          <text x="60" y="180" text-anchor="middle" font-size="11" fill="#4a4640">EGGS</text>
+          <text x="60" y="194" text-anchor="middle" font-size="9" fill="#88827a">(Frogspawn)</text>
+          <!-- 3: Tadpole -->
+          <circle cx="140" cy="310" r="22" fill="#fceee8" stroke="#c04a1c" stroke-width="2"/>
+          <text x="140" y="314" text-anchor="middle" fill="#c04a1c" font-size="14" font-weight="700">3</text>
+          <text x="140" y="355" text-anchor="middle" font-size="11" fill="#4a4640">TADPOLE</text>
+          <text x="140" y="369" text-anchor="middle" font-size="9" fill="#88827a">eats algae</text>
+          <!-- 4: Tadpole with legs -->
+          <circle cx="280" cy="370" r="22" fill="#fceee8" stroke="#c04a1c" stroke-width="2"/>
+          <text x="280" y="374" text-anchor="middle" fill="#c04a1c" font-size="14" font-weight="700">4</text>
+          <text x="280" y="405" text-anchor="middle" font-size="11" fill="#4a4640">TADPOLE</text>
+          <text x="280" y="418" text-anchor="middle" font-size="9" fill="#88827a">6 weeks — hind legs</text>
+          <!-- 5: Tadpole with 4 legs -->
+          <circle cx="430" cy="370" r="22" fill="#fceee8" stroke="#c04a1c" stroke-width="2"/>
+          <text x="430" y="374" text-anchor="middle" fill="#c04a1c" font-size="14" font-weight="700">5</text>
+          <text x="430" y="405" text-anchor="middle" font-size="11" fill="#4a4640">TADPOLE</text>
+          <text x="430" y="418" text-anchor="middle" font-size="9" fill="#88827a">9 weeks — 4 legs</text>
+          <!-- 6: Froglet -->
+          <circle cx="560" cy="310" r="22" fill="#fceee8" stroke="#c04a1c" stroke-width="2"/>
+          <text x="560" y="314" text-anchor="middle" fill="#c04a1c" font-size="14" font-weight="700">6</text>
+          <text x="620" y="310" text-anchor="middle" font-size="11" fill="#4a4640">FROGLET</text>
+          <text x="620" y="324" text-anchor="middle" font-size="9" fill="#88827a">12 wks — lungs</text>
+          <!-- 7: Young Frog -->
+          <circle cx="580" cy="180" r="22" fill="#fceee8" stroke="#c04a1c" stroke-width="2"/>
+          <text x="580" y="184" text-anchor="middle" fill="#c04a1c" font-size="14" font-weight="700">7</text>
+          <text x="640" y="180" text-anchor="middle" font-size="11" fill="#4a4640">YOUNG</text>
+          <text x="640" y="194" text-anchor="middle" font-size="11" fill="#4a4640">FROG</text>
+          <!-- 8: Adult Frog -->
+          <circle cx="480" cy="70" r="22" fill="#e6f4ec" stroke="#2d6a4f" stroke-width="2"/>
+          <text x="480" y="74" text-anchor="middle" fill="#2d6a4f" font-size="14" font-weight="700">8</text>
+          <text x="480" y="45" text-anchor="middle" font-size="11" font-weight="700" fill="#2d6a4f">ADULT FROG</text>
+          <text x="480" y="30" text-anchor="middle" font-size="9" fill="#88827a">(4 years)</text>
+        </g>
+        <!-- arrows -->
+        <defs><marker id="ah" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#c04a1c"/></marker></defs>
+        <line x1="215" y1="97" x2="130" y2="162" stroke="#c04a1c" stroke-width="2" marker-end="url(#ah)"/>
+        <line x1="125" y1="204" x2="135" y2="286" stroke="#c04a1c" stroke-width="2" marker-end="url(#ah)"/>
+        <line x1="162" y1="316" x2="256" y2="364" stroke="#c04a1c" stroke-width="2" marker-end="url(#ah)"/>
+        <line x1="302" y1="370" x2="406" y2="370" stroke="#c04a1c" stroke-width="2" marker-end="url(#ah)"/>
+        <line x1="448" y1="354" x2="544" y2="322" stroke="#c04a1c" stroke-width="2" marker-end="url(#ah)"/>
+        <line x1="570" y1="288" x2="575" y2="204" stroke="#c04a1c" stroke-width="2" marker-end="url(#ah)"/>
+        <line x1="565" y1="162" x2="498" y2="88" stroke="#c04a1c" stroke-width="2" marker-end="url(#ah)"/>
+        <path d="M465,75 C380,60 280,50 220,72" stroke="#2d6a4f" stroke-width="2" fill="none" marker-end="url(#ah)" stroke-dasharray="6 3"/>
+        <!-- labels -->
+        <text x="350" y="210" text-anchor="middle" font-size="13" fill="#88827a" font-style="italic">WATER</text>
+        <text x="350" y="140" text-anchor="middle" font-size="13" fill="#88827a" font-style="italic">LAND</text>
+        <text x="115" y="248" text-anchor="middle" font-size="9" fill="#88827a">7–10 days</text>
+      </svg>
     </div>
     <div class="img-desc-body">
-      <div class="prompt-label">Speaking prompt</div>
-      <p style="font-size:14px;color:var(--text);margin-bottom:12px;font-weight:500;">Describe what is happening in this scene. Then discuss: <em>Do you think technology in the classroom helps or hinders learning?</em></p>
-      <textarea placeholder="Write your description here, or practise speaking aloud for 1–2 minutes..."></textarea>
-      <div class="useful-lang"><strong>Useful language:</strong> In the foreground / background... · On the left/right side... · The teacher appears to be... · Most of the students seem to be... · It looks as though... · This suggests that... · One noticeable detail is...</div>
-      <div class="img-timer-hint">Aim for 1–2 minutes. Try to use at least 3 different tenses.</div>
+      <div class="prompt-label">Gap-fill: complete the model answer</div>
+      <p style="font-size:13px;color:var(--text-3);margin-bottom:14px;">Fill in each gap with a suitable word or phrase. Then click "Show Answers" to check.</p>
+
+      <div class="exercise-block">
+        <div class="exercise-header">
+          <div><div class="exercise-label">Model Answer</div><div class="exercise-title">Life Cycle of a Frog</div></div>
+          <button class="answer-toggle" onclick="toggleAnswers('frog')">Show Answers</button>
+        </div>
+        <div class="exercise-body">
+          <p style="line-height:1.8;font-size:14px;color:var(--text);">
+            The diagram <strong>(1)</strong> ______ the life cycle of a frog, from mating to adulthood. Overall, there are <strong>(2)</strong> ______ main stages in this <strong>(3)</strong> ______, which takes approximately four years to complete. The cycle begins on land and the early stages <strong>(4)</strong> ______ place in water.
+          </p>
+          <p style="line-height:1.8;font-size:14px;color:var(--text);margin-top:12px;">
+            The process begins when adult frogs <strong>(5)</strong> ______, after which the female <strong>(6)</strong> ______ eggs, known as frogspawn, in the water. Within 7 to 10 days, these eggs <strong>(7)</strong> ______ into tadpoles, which feed <strong>(8)</strong> ______ algae.
+          </p>
+          <p style="line-height:1.8;font-size:14px;color:var(--text);margin-top:12px;">
+            <strong>(9)</strong> ______ the following weeks, the tadpole undergoes <strong>(10)</strong> ______ changes. At around six weeks, it develops hind legs, and by nine weeks, all four legs have <strong>(11)</strong> ______. At twelve weeks, the tadpole <strong>(12)</strong> ______ a froglet and begins breathing with lungs. <strong>(13)</strong> ______, it leaves the water and grows into a young frog, before reaching <strong>(14)</strong> ______ at approximately four years of age, at which point the cycle <strong>(15)</strong> ______ again.
+          </p>
+        </div>
+        <div class="answers-panel" id="answers-frog">
+          <div class="answer-row"><strong>1.</strong>&nbsp; <strong>illustrates</strong> (or "shows" — never "describes")</div>
+          <div class="answer-row"><strong>2.</strong>&nbsp; <strong>eight</strong></div>
+          <div class="answer-row"><strong>3.</strong>&nbsp; <strong>process / cycle</strong></div>
+          <div class="answer-row"><strong>4.</strong>&nbsp; <strong>take</strong></div>
+          <div class="answer-row"><strong>5.</strong>&nbsp; <strong>mate</strong></div>
+          <div class="answer-row"><strong>6.</strong>&nbsp; <strong>lays</strong></div>
+          <div class="answer-row"><strong>7.</strong>&nbsp; <strong>hatch / develop</strong></div>
+          <div class="answer-row"><strong>8.</strong>&nbsp; <strong>on</strong></div>
+          <div class="answer-row"><strong>9.</strong>&nbsp; <strong>Over / During</strong></div>
+          <div class="answer-row"><strong>10.</strong>&nbsp; <strong>significant / considerable</strong></div>
+          <div class="answer-row"><strong>11.</strong>&nbsp; <strong>formed / grown / developed</strong></div>
+          <div class="answer-row"><strong>12.</strong>&nbsp; <strong>becomes</strong></div>
+          <div class="answer-row"><strong>13.</strong>&nbsp; <strong>Eventually / Subsequently / Finally</strong></div>
+          <div class="answer-row"><strong>14.</strong>&nbsp; <strong>maturity / adulthood</strong></div>
+          <div class="answer-row"><strong>15.</strong>&nbsp; <strong>begins / starts</strong></div>
+        </div>
+      </div>
+
+      <div class="useful-lang"><strong>Process language:</strong> The process begins when... · The first/next stage involves... · Following this... · Subsequently... · At this point... · Once X has occurred, Y... · The final stage is... · The cycle then repeats.</div>
     </div>
   </div>
 
-  <!-- Image 2: City street -->
+  <!-- ======== TASK 1B: COMPARISON DIAGRAM — Water Supply ======== -->
   <div class="img-desc-card">
     <div class="img-desc-scene">
-      <h4>Scene 2 — The City Street</h4>
-      <div class="scene-text">A busy city street on a rainy evening. The road is wet and reflecting the neon signs from shops and restaurants on both sides. People are hurrying along the pavement, most of them holding umbrellas — some brightly coloured, some plain black. A food delivery cyclist in a yellow jacket is waiting at a red traffic light. An elderly couple are sheltering under a shop awning, looking at a menu in the window. In the distance, a double-decker bus is approaching. There is a large digital billboard advertising a film.</div>
+      <h4>Task 1B — Comparison Diagram</h4>
+      <div class="task1-prompt">The diagrams below show the water supply system in Australia at present and in the future. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</div>
+    </div>
+    <div class="task1-diagram">
+      <svg viewBox="0 0 700 500" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif" font-size="12">
+        <!-- PRESENT SYSTEM -->
+        <text x="20" y="20" font-size="13" font-weight="700" fill="#c04a1c">Present water supply:</text>
+        <!-- Dam -->
+        <rect x="30" y="50" width="140" height="45" rx="4" fill="none" stroke="#1c1a14" stroke-width="1.5"/>
+        <text x="100" y="77" text-anchor="middle" fill="#1c1a14">Dam / Storage</text>
+        <!-- City box -->
+        <rect x="240" y="40" width="200" height="70" rx="4" fill="#f0ede6" stroke="#1c1a14" stroke-width="1.5"/>
+        <text x="340" y="62" text-anchor="middle" font-weight="600" fill="#1c1a14">Households</text>
+        <text x="290" y="82" text-anchor="middle" fill="#4a4640">Shops</text>
+        <text x="400" y="82" text-anchor="middle" fill="#4a4640">Factories</text>
+        <text x="340" y="100" text-anchor="middle" font-size="11" font-weight="600" fill="#88827a">City</text>
+        <!-- Water treatment -->
+        <rect x="30" y="140" width="170" height="40" rx="4" fill="none" stroke="#1c1a14" stroke-width="1.5"/>
+        <text x="115" y="164" text-anchor="middle" fill="#1c1a14">Water treatment plant</text>
+        <!-- River -->
+        <rect x="30" y="210" width="410" height="30" rx="4" fill="#e8f0fb" stroke="#1a4e8a" stroke-width="1.5"/>
+        <text x="240" y="230" text-anchor="middle" fill="#1a4e8a" font-weight="600">River</text>
+        <!-- Arrows: Dam → City (pure water) -->
+        <line x1="170" y1="72" x2="238" y2="72" stroke="#1a4e8a" stroke-width="2" marker-end="url(#ah-blue)"/>
+        <!-- City → Treatment (waste water, thick) -->
+        <line x1="340" y1="112" x2="200" y2="148" stroke="#1c1a14" stroke-width="3" marker-end="url(#ah-black)"/>
+        <!-- Treatment → River (treated waste) -->
+        <line x1="115" y1="182" x2="115" y2="208" stroke="#1c1a14" stroke-width="3" marker-end="url(#ah-black)"/>
+        <!-- Legend -->
+        <g transform="translate(490,50)">
+          <line x1="0" y1="6" x2="30" y2="6" stroke="#1a4e8a" stroke-width="2"/><circle cx="30" cy="6" r="3" fill="#1a4e8a"/>
+          <text x="38" y="10" font-size="11" fill="#4a4640">Pure water</text>
+          <line x1="0" y1="26" x2="30" y2="26" stroke="#88827a" stroke-width="2" stroke-dasharray="6 3"/><circle cx="30" cy="26" r="3" fill="#88827a"/>
+          <text x="38" y="30" font-size="11" fill="#4a4640">Storm water</text>
+          <line x1="0" y1="46" x2="30" y2="46" stroke="#1c1a14" stroke-width="3"/><circle cx="30" cy="46" r="3" fill="#1c1a14"/>
+          <text x="38" y="50" font-size="11" fill="#4a4640">Waste water</text>
+        </g>
+        <defs>
+          <marker id="ah-blue" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#1a4e8a"/></marker>
+          <marker id="ah-black" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#1c1a14"/></marker>
+          <marker id="ah-grey" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6" fill="#88827a"/></marker>
+        </defs>
+
+        <!-- FUTURE SYSTEM -->
+        <text x="20" y="280" font-size="13" font-weight="700" fill="#2d6a4f">Future water supply system:</text>
+        <!-- Dam -->
+        <rect x="30" y="300" width="140" height="45" rx="4" fill="none" stroke="#1c1a14" stroke-width="1.5"/>
+        <text x="100" y="327" text-anchor="middle" fill="#1c1a14">Dam / Storage</text>
+        <!-- City box -->
+        <rect x="240" y="290" width="200" height="70" rx="4" fill="#e6f4ec" stroke="#1c1a14" stroke-width="1.5"/>
+        <text x="340" y="312" text-anchor="middle" font-weight="600" fill="#1c1a14">Households</text>
+        <text x="290" y="332" text-anchor="middle" fill="#4a4640">Shops</text>
+        <text x="400" y="332" text-anchor="middle" fill="#4a4640">Factories</text>
+        <text x="340" y="350" text-anchor="middle" font-size="11" font-weight="600" fill="#88827a">City</text>
+        <!-- Water treatment -->
+        <rect x="30" y="390" width="170" height="40" rx="4" fill="none" stroke="#1c1a14" stroke-width="1.5"/>
+        <text x="115" y="414" text-anchor="middle" fill="#1c1a14">Water treatment plant</text>
+        <!-- River -->
+        <rect x="30" y="460" width="410" height="30" rx="4" fill="#e8f0fb" stroke="#1a4e8a" stroke-width="1.5"/>
+        <text x="240" y="480" text-anchor="middle" fill="#1a4e8a" font-weight="600">River</text>
+        <!-- Arrows: Dam → City (pure water) -->
+        <line x1="170" y1="322" x2="238" y2="322" stroke="#1a4e8a" stroke-width="2" marker-end="url(#ah-blue)"/>
+        <!-- City → Treatment (waste water) -->
+        <line x1="340" y1="362" x2="200" y2="398" stroke="#1c1a14" stroke-width="3" marker-end="url(#ah-black)"/>
+        <!-- Treatment → Dam (recycled — key difference!) -->
+        <path d="M35,390 L35,350 L35,322 L28,322" stroke="#2d6a4f" stroke-width="2.5" fill="none" marker-end="url(#ah-green)" stroke-dasharray="6 3"/>
+        <text x="10" y="370" font-size="9" fill="#2d6a4f" font-weight="600" transform="rotate(-90,10,370)">recycled</text>
+        <defs><marker id="ah-green" markerWidth="8" markerHeight="6" refX="0" refY="3" orient="auto"><path d="M8,0 L0,3 L8,6" fill="#2d6a4f"/></marker></defs>
+        <!-- Storm water from city → treatment (new) -->
+        <line x1="240" y1="350" x2="200" y2="405" stroke="#88827a" stroke-width="2" stroke-dasharray="6 3" marker-end="url(#ah-grey)"/>
+        <text x="195" y="378" font-size="9" fill="#88827a" font-weight="600" transform="rotate(-55,195,378)">storm</text>
+        <!-- NO arrow to river (key change) -->
+        <text x="115" y="450" text-anchor="middle" font-size="10" fill="#2d6a4f" font-weight="700">✗ No discharge to river</text>
+      </svg>
     </div>
     <div class="img-desc-body">
-      <div class="prompt-label">Speaking prompt</div>
-      <p style="font-size:14px;color:var(--text);margin-bottom:12px;font-weight:500;">Describe the atmosphere of this scene. Then discuss: <em>How has city life changed in the last 20 years?</em></p>
-      <textarea placeholder="Write your description here, or practise speaking aloud for 1–2 minutes..."></textarea>
-      <div class="useful-lang"><strong>Useful language:</strong> The atmosphere seems... · It gives the impression of... · In the centre of the image... · Meanwhile... · This creates a sense of... · What stands out is... · The contrast between X and Y...</div>
+      <div class="prompt-label">Your answer (150+ words)</div>
+      <textarea placeholder="Write your Task 1 answer here. Remember: introduction → overview → detail paragraph 1 → detail paragraph 2." style="min-height:160px;"></textarea>
+
+      <div class="exercise-block" style="margin-top:16px;">
+        <div class="exercise-header">
+          <div><div class="exercise-label">Key vocabulary</div><div class="exercise-title">Comparison diagrams</div></div>
+          <button class="answer-toggle" onclick="toggleAnswers('water')">Show Key Phrases</button>
+        </div>
+        <div class="answers-panel" id="answers-water">
+          <div class="answer-row"><strong>Introduction:</strong> The two diagrams compare the current and proposed future water supply systems in Australia.</div>
+          <div class="answer-row"><strong>Overview:</strong> The most significant change is that in the future system, waste water will be recycled back to the dam rather than discharged into the river. Additionally, storm water will be collected and treated.</div>
+          <div class="answer-row"><strong>Useful phrases:</strong> currently / at present / in the existing system · in the proposed / future system · the key difference is · unlike the current system · a notable change is · will be redirected to · instead of being discharged into</div>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- Image 3: Market -->
+  <!-- ======== TASK 1C: LINE GRAPH — Radio & TV ======== -->
   <div class="img-desc-card">
     <div class="img-desc-scene">
-      <h4>Scene 3 — The Local Market</h4>
-      <div class="scene-text">An outdoor market in a southern European town on a sunny morning. Stalls with colourful awnings line both sides of a cobblestone street. The nearest stall displays piles of fresh fruit: oranges, lemons, strawberries, and watermelons. A vendor, a middle-aged man wearing an apron, is handing a paper bag to a young woman. Behind them, another stall sells flowers — buckets of sunflowers, roses, and lavender. An older woman with a walking stick is examining cheeses at a third stall. Two children are running between the stalls, and a dog is lying in the shade under a table. Hand-written price signs in euros are visible on most stalls.</div>
+      <h4>Task 1C — Line Graph</h4>
+      <div class="task1-prompt">The line graph shows the percentage of people in the UK who listened to the radio and watched television throughout the day in October–December 1992. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</div>
+    </div>
+    <div class="task1-diagram">
+      <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif">
+        <!-- axes -->
+        <line x1="70" y1="20" x2="70" y2="310" stroke="#1c1a14" stroke-width="1.5"/>
+        <line x1="70" y1="310" x2="670" y2="310" stroke="#1c1a14" stroke-width="1.5"/>
+        <!-- Y axis labels -->
+        <g font-size="10" fill="#88827a" text-anchor="end">
+          <text x="62" y="313">0%</text>
+          <text x="62" y="255">10%</text>
+          <text x="62" y="197">20%</text>
+          <text x="62" y="139">30%</text>
+          <text x="62" y="81">40%</text>
+          <text x="62" y="24">50%</text>
+        </g>
+        <!-- Y axis title -->
+        <text x="16" y="170" font-size="10" fill="#88827a" transform="rotate(-90,16,170)" text-anchor="middle">% of UK population (over 4 years old)</text>
+        <!-- Grid lines -->
+        <g stroke="#e0dbd0" stroke-width="0.5">
+          <line x1="70" y1="252" x2="670" y2="252"/>
+          <line x1="70" y1="194" x2="670" y2="194"/>
+          <line x1="70" y1="136" x2="670" y2="136"/>
+          <line x1="70" y1="78" x2="670" y2="78"/>
+          <line x1="70" y1="20" x2="670" y2="20"/>
+        </g>
+        <!-- X axis labels -->
+        <g font-size="10" fill="#88827a" text-anchor="middle">
+          <text x="95" y="328">1:00</text>
+          <text x="145" y="328">3:00</text>
+          <text x="195" y="328">5:00</text>
+          <text x="245" y="328">7:00</text>
+          <text x="295" y="328">9:00</text>
+          <text x="345" y="328">11:00</text>
+          <text x="395" y="328">13:00</text>
+          <text x="445" y="328">15:00</text>
+          <text x="495" y="328">17:00</text>
+          <text x="545" y="328">19:00</text>
+          <text x="595" y="328">21:00</text>
+          <text x="645" y="328">23:00</text>
+        </g>
+        <text x="370" y="355" text-anchor="middle" font-size="11" fill="#88827a">Time of day</text>
+        <!-- TV line (blue) -->
+        <polyline points="95,268 145,294 195,297 245,281 295,268 345,268 395,223 445,220 495,107 545,78 595,75 645,223" fill="none" stroke="#1a4e8a" stroke-width="2.5"/>
+        <!-- Radio line (red) -->
+        <polyline points="95,294 145,300 195,297 245,165 295,165 345,178 395,223 445,236 495,236 545,275 595,281 645,294" fill="none" stroke="#c04a1c" stroke-width="2.5"/>
+        <!-- Legend -->
+        <rect x="100" y="22" width="80" height="22" rx="4" fill="#fff" stroke="#e0dbd0"/>
+        <line x1="108" y1="33" x2="128" y2="33" stroke="#1a4e8a" stroke-width="2.5"/>
+        <text x="133" y="37" font-size="11" fill="#1a4e8a" font-weight="600">TV</text>
+        <rect x="185" y="22" width="90" height="22" rx="4" fill="#fff" stroke="#e0dbd0"/>
+        <line x1="193" y1="33" x2="213" y2="33" stroke="#c04a1c" stroke-width="2.5"/>
+        <text x="218" y="37" font-size="11" fill="#c04a1c" font-weight="600">Radio</text>
+        <!-- Title -->
+        <text x="370" y="375" text-anchor="middle" font-size="11" fill="#4a4640" font-weight="600">Radio and Television audiences in UK, Oct–Dec 1992</text>
+      </svg>
     </div>
     <div class="img-desc-body">
-      <div class="prompt-label">Speaking prompt</div>
-      <p style="font-size:14px;color:var(--text);margin-bottom:12px;font-weight:500;">Describe the scene in detail. Then discuss: <em>Do you prefer shopping at local markets or supermarkets? Why?</em></p>
-      <textarea placeholder="Write your description here, or practise speaking aloud for 1–2 minutes..."></textarea>
-      <div class="useful-lang"><strong>Useful language:</strong> The scene depicts... · Various items are on display, including... · It appears to be... · One person is in the process of... · The overall impression is one of... · Compared to... · Personally, I would prefer...</div>
+      <div class="prompt-label">Gap-fill: complete the model answer</div>
+
+      <div class="exercise-block">
+        <div class="exercise-header">
+          <div><div class="exercise-label">Model Answer</div><div class="exercise-title">Line Graph — Radio & TV</div></div>
+          <button class="answer-toggle" onclick="toggleAnswers('tv')">Show Answers</button>
+        </div>
+        <div class="exercise-body">
+          <p style="line-height:1.8;font-size:14px;color:var(--text);">
+            The line graph <strong>(1)</strong> ______ the percentage of people listening to the radio and watching TV who were over the age of 4 in <strong>(2)</strong> ______ period, in the UK from October to December 1992.
+          </p>
+          <p style="line-height:1.8;font-size:14px;color:var(--text);margin-top:12px;">
+            Overall, the <strong>(3)</strong> ______ of people listened to the radio in the morning while <strong>(4)</strong> ______ people watched TV in the evening. Over the 24-hour period, there were more people watching TV than there were listening to the radio.
+          </p>
+          <p style="line-height:1.8;font-size:14px;color:var(--text);margin-top:12px;">
+            <strong>(5)</strong> ______ the TV, at 1am there were under 10% of people watching TV. This <strong>(6)</strong> ______ remained relatively <strong>(7)</strong> ______ until 11am when there was a <strong>(8)</strong> ______ increase in people watching TV before <strong>(9)</strong> ______ at approximately 45% at around 9pm. After that time, there was a <strong>(10)</strong> ______ drop in viewers to under 20% by midnight.
+          </p>
+          <p style="line-height:1.8;font-size:14px;color:var(--text);margin-top:12px;">
+            Similarly, the percentage of listeners to the radio also began low at under 5%. After continuing at under 5%, the figure then rose <strong>(11)</strong> ______ to a <strong>(12)</strong> ______ of almost 25% at about 8am. From that point, the proportion of audience <strong>(13)</strong> ______ in a gradual <strong>(14)</strong> ______ trend to 5% at the <strong>(15)</strong> ______ of the day.
+          </p>
+        </div>
+        <div class="answers-panel" id="answers-tv">
+          <div class="answer-row"><strong>1.</strong>&nbsp; <strong>illustrates</strong></div>
+          <div class="answer-row"><strong>2.</strong>&nbsp; <strong>a three-month</strong> (paraphrasing "October to December")</div>
+          <div class="answer-row"><strong>3.</strong>&nbsp; <strong>majority</strong></div>
+          <div class="answer-row"><strong>4.</strong>&nbsp; <strong>more / the majority of</strong></div>
+          <div class="answer-row"><strong>5.</strong>&nbsp; <strong>Regarding / With regard to / Looking at</strong></div>
+          <div class="answer-row"><strong>6.</strong>&nbsp; <strong>figure / percentage / number</strong></div>
+          <div class="answer-row"><strong>7.</strong>&nbsp; <strong>stable / constant / low</strong></div>
+          <div class="answer-row"><strong>8.</strong>&nbsp; <strong>sharp / significant / steady</strong></div>
+          <div class="answer-row"><strong>9.</strong>&nbsp; <strong>peaking</strong></div>
+          <div class="answer-row"><strong>10.</strong>&nbsp; <strong>sharp / noticeable / considerable</strong></div>
+          <div class="answer-row"><strong>11.</strong>&nbsp; <strong>sharply / dramatically / steeply</strong></div>
+          <div class="answer-row"><strong>12.</strong>&nbsp; <strong>peak</strong></div>
+          <div class="answer-row"><strong>13.</strong>&nbsp; <strong>declined / decreased / fell</strong></div>
+          <div class="answer-row"><strong>14.</strong>&nbsp; <strong>downward</strong></div>
+          <div class="answer-row"><strong>15.</strong>&nbsp; <strong>end</strong></div>
+        </div>
+      </div>
+
+      <div class="useful-lang" style="margin-top:14px;"><strong>Graph/trend language:</strong> rose sharply / gradually · peaked at · reached a high/low of · remained stable/constant · fluctuated between X and Y · experienced a slight/significant increase · declined steadily · fell to its lowest point · by contrast · whereas · while</div>
     </div>
   </div>
 
-  <!-- Image 4: Environmental contrast -->
+  <!-- ======== TASK 1D: PIE CHARTS + TABLE ======== -->
   <div class="img-desc-card">
     <div class="img-desc-scene">
-      <h4>Scene 4 — Two Contrasting Landscapes</h4>
-      <div class="scene-text"><strong>Left side:</strong> A lush green forest with tall trees and a river running through it. The water is clear, and sunlight filters through the canopy. A deer is drinking at the riverbank. Wild flowers grow along the path.<br><br><strong>Right side:</strong> The same location, but deforested. Tree stumps cover the hillside. The river is brown and muddy. Construction vehicles are parked near a half-built road. Smoke rises from a burning pile of branches. A "No Trespassing" sign is visible near a wire fence.</div>
+      <h4>Task 1D — Table & Pie Charts</h4>
+      <div class="task1-prompt">The table and pie charts give information about the total value and sources of fish imported to the US between 1988 and 2000. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</div>
+    </div>
+    <div class="task1-diagram">
+      <svg viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" font-family="Inter, sans-serif">
+        <!-- Table -->
+        <text x="350" y="22" text-anchor="middle" font-size="12" font-weight="700" fill="#1c1a14">Total Value in Billions of Dollars</text>
+        <rect x="160" y="32" width="380" height="28" rx="0" fill="#f0ede6" stroke="#e0dbd0"/>
+        <text x="280" y="51" text-anchor="middle" font-size="11" font-weight="600" fill="#4a4640">Year</text>
+        <text x="440" y="51" text-anchor="middle" font-size="11" font-weight="600" fill="#4a4640">Value ($bn)</text>
+        <rect x="160" y="60" width="380" height="24" rx="0" fill="none" stroke="#e0dbd0"/>
+        <text x="280" y="77" text-anchor="middle" font-size="11" fill="#1c1a14">1988</text>
+        <text x="440" y="77" text-anchor="middle" font-size="11" fill="#1c1a14" font-weight="600">6.57</text>
+        <rect x="160" y="84" width="380" height="24" rx="0" fill="none" stroke="#e0dbd0"/>
+        <text x="280" y="101" text-anchor="middle" font-size="11" fill="#1c1a14">1992</text>
+        <text x="440" y="101" text-anchor="middle" font-size="11" fill="#1c1a14" font-weight="600">8.52</text>
+        <rect x="160" y="108" width="380" height="24" rx="0" fill="none" stroke="#e0dbd0"/>
+        <text x="280" y="125" text-anchor="middle" font-size="11" fill="#1c1a14">2000</text>
+        <text x="440" y="125" text-anchor="middle" font-size="11" fill="#1c1a14" font-weight="600">10.72</text>
+
+        <!-- Pie chart title -->
+        <text x="350" y="165" text-anchor="middle" font-size="12" font-weight="700" fill="#1c1a14">Source of fish imported to the US</text>
+        <!-- Legend -->
+        <rect x="210" y="175" width="12" height="12" fill="#4a4640"/><text x="228" y="186" font-size="10" fill="#4a4640">China</text>
+        <rect x="290" y="175" width="12" height="12" fill="#a09890"/><text x="308" y="186" font-size="10" fill="#4a4640">Canada</text>
+        <rect x="380" y="175" width="12" height="12" fill="#d4cfc8"/><text x="398" y="186" font-size="10" fill="#4a4640">Others</text>
+
+        <!-- 1988 pie -->
+        <text x="130" y="210" text-anchor="middle" font-size="11" font-weight="600" fill="#4a4640">1988</text>
+        <circle cx="130" cy="290" r="65" fill="#d4cfc8"/>
+        <!-- China 60% = 216deg from top -->
+        <path d="M130,225 L130,290 L130,225" fill="#4a4640" stroke="none"/>
+        <path d="M130,225 A65,65 0 1,1 73.4,322.3 L130,290 Z" fill="#4a4640"/>
+        <!-- Canada 27% = 97.2deg -->
+        <path d="M73.4,322.3 A65,65 0 0,1 83.2,233.5 L130,290 Z" fill="#a09890"/>
+        <!-- Others 13% = remaining -->
+        <path d="M83.2,233.5 A65,65 0 0,1 130,225 L130,290 Z" fill="#d4cfc8"/>
+        <text x="155" y="265" font-size="10" fill="#fff" font-weight="600">60%</text>
+        <text x="85" y="305" font-size="10" fill="#fff" font-weight="600">27%</text>
+        <text x="98" y="245" font-size="9" fill="#4a4640" font-weight="600">13%</text>
+
+        <!-- 1992 pie -->
+        <text x="350" y="210" text-anchor="middle" font-size="11" font-weight="600" fill="#4a4640">1992</text>
+        <circle cx="350" cy="290" r="65" fill="#d4cfc8"/>
+        <!-- China 34% -->
+        <path d="M350,225 A65,65 0 0,1 404.2,264.3 L350,290 Z" fill="#4a4640"/>
+        <!-- Canada 46% -->
+        <path d="M404.2,264.3 A65,65 0 0,1 295.8,264.3 L350,290 Z" fill="#a09890"/>
+        <!-- Others 20% -->
+        <path d="M295.8,264.3 A65,65 0 0,1 350,225 L350,290 Z" fill="#d4cfc8"/>
+        <text x="375" y="260" font-size="10" fill="#fff" font-weight="600">34%</text>
+        <text x="350" y="320" font-size="10" fill="#fff" font-weight="600">46%</text>
+        <text x="315" y="255" font-size="9" fill="#4a4640" font-weight="600">20%</text>
+
+        <!-- 2000 pie -->
+        <text x="570" y="210" text-anchor="middle" font-size="11" font-weight="600" fill="#4a4640">2000</text>
+        <circle cx="570" cy="290" r="65" fill="#d4cfc8"/>
+        <!-- China 28% -->
+        <path d="M570,225 A65,65 0 0,1 614.7,260.5 L570,290 Z" fill="#4a4640"/>
+        <!-- Canada 42% -->
+        <path d="M614.7,260.5 A65,65 0 0,1 518,270 L570,290 Z" fill="#a09890"/>
+        <!-- Others 30% -->
+        <path d="M518,270 A65,65 0 0,1 570,225 L570,290 Z" fill="#d4cfc8"/>
+        <text x="595" y="258" font-size="10" fill="#fff" font-weight="600">28%</text>
+        <text x="562" y="325" font-size="10" fill="#fff" font-weight="600">42%</text>
+        <text x="535" y="248" font-size="9" fill="#4a4640" font-weight="600">30%</text>
+      </svg>
     </div>
     <div class="img-desc-body">
-      <div class="prompt-label">Speaking prompt</div>
-      <p style="font-size:14px;color:var(--text);margin-bottom:12px;font-weight:500;">Compare and contrast the two images. Then discuss: <em>What should governments do to protect natural environments?</em></p>
-      <textarea placeholder="Write your comparison here, or practise speaking aloud for 1–2 minutes..."></textarea>
-      <div class="useful-lang"><strong>Useful language:</strong> The most striking difference is... · While the first image shows... the second reveals... · In stark contrast to... · This transformation suggests... · It is evident that... · One possible solution would be... · If no action is taken...</div>
+      <div class="prompt-label">Your answer (150+ words)</div>
+      <textarea placeholder="Write your Task 1 answer here. Include an introduction, overview, and two detail paragraphs." style="min-height:160px;"></textarea>
+
+      <div class="exercise-block" style="margin-top:16px;">
+        <div class="exercise-header">
+          <div><div class="exercise-label">Checklist</div><div class="exercise-title">Did you include these?</div></div>
+          <button class="answer-toggle" onclick="toggleAnswers('pie')">Show Checklist</button>
+        </div>
+        <div class="answers-panel" id="answers-pie">
+          <div class="answer-row">Did you <strong>paraphrase</strong> the question? (Don't copy "The table and pie charts give information...")</div>
+          <div class="answer-row">Did you include an <strong>overview</strong> with 2 main trends? (1: total value increased steadily; 2: China's share fell while others rose)</div>
+          <div class="answer-row">Did you use <strong>specific figures</strong>? ($6.57bn → $10.72bn; China: 60% → 28%)</div>
+          <div class="answer-row">Did you <strong>compare</strong>? (China vs Canada; 1988 vs 2000)</div>
+          <div class="answer-row">Did you avoid giving <strong>opinions or reasons</strong>? (No "because..." or "I think...")</div>
+          <div class="answer-row"><strong>Key data to mention:</strong> China's share halved (60% → 28%). Canada grew from 27% to 42%, becoming the largest source. "Others" more than doubled (13% → 30%). Total value grew by $4.15bn over 12 years.</div>
+        </div>
+      </div>
+
+      <div class="useful-lang" style="margin-top:14px;"><strong>Data language:</strong> accounted for / comprised / represented X% · the proportion of X increased/decreased · X was the largest/smallest contributor · the figure for X stood at · compared to / in comparison with · by contrast · X overtook Y to become the leading source · nearly/approximately/roughly · there was a twofold/threefold increase</div>
     </div>
   </div>
 
-  <!-- Image 5: Working from home -->
-  <div class="img-desc-card">
-    <div class="img-desc-scene">
-      <h4>Scene 5 — Working from Home</h4>
-      <div class="scene-text">A kitchen table being used as a home office. A woman in her 30s is sitting at a laptop with headphones on, apparently on a video call — several small faces are visible on her screen. Next to her laptop, there is a mug of coffee, a notepad with handwritten notes, and a half-eaten sandwich. A toddler is pulling at her sleeve, holding a toy. A cat is sleeping on a pile of papers on the other end of the table. The kitchen behind her is slightly messy: dishes in the sink, a fridge covered in children's drawings, a clock on the wall showing 2:15 PM. Through the doorway, you can see a living room with toys scattered on the floor.</div>
-    </div>
-    <div class="img-desc-body">
-      <div class="prompt-label">Speaking prompt</div>
-      <p style="font-size:14px;color:var(--text);margin-bottom:12px;font-weight:500;">Describe the scene and the woman's situation. Then discuss: <em>What are the advantages and disadvantages of working from home?</em></p>
-      <textarea placeholder="Write your description here, or practise speaking aloud for 1–2 minutes..."></textarea>
-      <div class="useful-lang"><strong>Useful language:</strong> She seems to be juggling... · The scene suggests that... · It is clear from the details that... · On the one hand... on the other hand... · This raises the question of... · A growing number of people... · The main drawback / benefit is...</div>
-    </div>
-  </div>
-
-  <!-- Image 6: Graph description (Writing Task 1 style) -->
-  <div class="img-desc-card">
-    <div class="img-desc-scene">
-      <h4>Scene 6 — Data Description (Writing Task 1 Style)</h4>
-      <div class="scene-text"><strong>Bar chart:</strong> "Preferred leisure activities among 18–25 year-olds in 2005 vs 2025"<br><br>
-      <strong>2005:</strong> Watching TV (78%) · Reading books (45%) · Playing sport (62%) · Using social media (12%) · Gaming (28%)<br>
-      <strong>2025:</strong> Watching TV (41%) · Reading books (22%) · Playing sport (48%) · Using social media (89%) · Gaming (67%)<br><br>
-      <em>Source: National Youth Leisure Survey, 2025. Sample: 5,000 respondents aged 18–25.</em></div>
-    </div>
-    <div class="img-desc-body">
-      <div class="prompt-label">Writing prompt (Task 1 style)</div>
-      <p style="font-size:14px;color:var(--text);margin-bottom:12px;font-weight:500;">Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.</p>
-      <textarea placeholder="Write your Task 1 response here..." style="min-height:150px;"></textarea>
-      <div class="useful-lang"><strong>Useful language for data:</strong> The bar chart illustrates... · Overall, the most notable trend is... · X experienced a significant increase/decrease... · By contrast... · While X rose from...to..., Y fell sharply... · The most dramatic change was in... · The figures for X and Y were remarkably similar... · It is worth noting that...</div>
-    </div>
-  </div>
-
+  <!-- Tips box -->
   <div class="tip-box" style="margin-top:8px;">
-    <strong>Common mistakes to avoid:</strong><br>
-    • Don't say <span class="coll-wrong">"In this picture I can see..."</span> repeatedly — vary your openings.<br>
-    • Don't just list what you see — interpret, compare, and give your opinion.<br>
-    • Don't forget to use <strong>specific vocabulary</strong> instead of "thing", "stuff", or "nice".<br>
-    • For data descriptions, <strong>never write</strong> "the graph <span class="coll-wrong">says</span>" — use "shows", "illustrates", "indicates", or "reveals".
+    <strong>Common Task 1 mistakes to avoid:</strong><br>
+    • <span class="coll-wrong">"The graph says..."</span> → use <span class="coll-right">"shows / illustrates / indicates / reveals"</span><br>
+    • <span class="coll-wrong">"It can be seen from the graph that..."</span> → too wordy. Just describe.<br>
+    • <span class="coll-wrong">Copying the question word for word</span> → always paraphrase the introduction<br>
+    • <span class="coll-wrong">Listing every number</span> → select the most important features only<br>
+    • <span class="coll-wrong">Giving reasons or opinions</span> → Task 1 is description only (no "because..." or "I think...")<br>
+    • <span class="coll-wrong">Forgetting the overview</span> → this is the single most important paragraph for your score
   </div>
 </div>
 
