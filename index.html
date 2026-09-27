@@ -598,6 +598,24 @@ ul.bullet li { padding: 3px 0; }
 .summary-text p { margin-bottom: 14px; }
 .summary-text p:last-child { margin-bottom: 0; }
 
+.coll-card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 18px 22px; margin-bottom: 14px; }
+.coll-card .coll-verb { font-size: 18px; font-weight: 700; color: var(--accent); margin-bottom: 8px; }
+.coll-card .coll-def { font-size: 13px; color: var(--text-3); margin-bottom: 10px; font-style: italic; }
+.coll-card .coll-example { font-size: 14px; color: var(--text-2); line-height: 1.6; margin-bottom: 4px; }
+.coll-card .coll-example strong { color: var(--text); }
+.coll-wrong { color: var(--error-text); font-family: 'JetBrains Mono', monospace; font-size: 12.5px; text-decoration: line-through; }
+.coll-right { color: var(--green); font-family: 'JetBrains Mono', monospace; font-size: 12.5px; font-weight: 600; }
+.img-desc-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-bottom: 24px; }
+.img-desc-scene { background: var(--surface-2); padding: 20px 24px; border-bottom: 1px solid var(--border); }
+.img-desc-scene h4 { margin: 0 0 8px; font-size: 14px; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: .06em; }
+.img-desc-scene .scene-text { font-size: 14px; line-height: 1.7; color: var(--text); }
+.img-desc-body { padding: 18px 24px; }
+.img-desc-body .prompt-label { font-size: 12px; font-weight: 600; color: var(--text-3); margin-bottom: 6px; text-transform: uppercase; letter-spacing: .05em; }
+.img-desc-body textarea { width: 100%; min-height: 100px; padding: 12px 14px; border: 1.5px solid var(--border); border-radius: 8px; font: inherit; font-size: 14px; background: var(--surface); color: var(--text); resize: vertical; }
+.useful-lang { background: var(--blue-light); border: 1px solid var(--border); border-radius: 8px; padding: 14px 18px; margin-top: 12px; font-size: 13px; color: var(--blue); line-height: 1.7; }
+.useful-lang strong { color: var(--text); }
+.img-timer-hint { font-size: 12px; color: var(--text-3); margin-top: 8px; }
+
 @media (max-width: 500px) {
   .essay-card { padding: 18px; }
   .exercise-body { padding: 16px; }
@@ -615,6 +633,8 @@ ul.bullet li { padding: 3px 0; }
   <button class="nav-pill" onclick="scrollTo('speaking')">Speaking</button>
   <button class="nav-pill" onclick="scrollTo('speaking-fb')">Speaking FB</button>
   <button class="nav-pill" onclick="scrollTo('vocab')">Vocabulary</button>
+  <button class="nav-pill" onclick="scrollTo('collocations')">Collocations</button>
+  <button class="nav-pill" onclick="scrollTo('images')">Describe Images</button>
 </nav>
 
 <div class="wrapper">
@@ -1492,11 +1512,309 @@ ul.bullet li { padding: 3px 0; }
   </div>
 </div>
 
+<!-- ═══════════════════════════════════════════
+     SECTION 9 — COLLOCATIONS
+══════════════════════════════════════════════ -->
+<div class="section" id="collocations">
+  <p class="section-eyebrow">Section 9 — Collocations</p>
+  <h2 class="section-title">Collocation Practice</h2>
+  <p class="section-intro">Collocations are words that naturally go together in English. Using the wrong combination sounds unnatural even when the grammar is correct. These exercises target collocations that appear frequently in IELTS — and ones you've made errors with.</p>
+
+  <div class="tip-box" style="margin-bottom:24px;">
+    <strong>Why this matters for IELTS:</strong> Examiners score "Lexical Resource" partly on whether you use natural word combinations. Saying <span class="coll-wrong">"do a mistake"</span> instead of <span class="coll-right">"make a mistake"</span> costs you marks — even though the meaning is clear.
+  </div>
+
+  <!-- Part A: Learn the collocations -->
+  <h3 style="font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;">Part A — Key IELTS Collocations (learn these)</h3>
+
+  <div class="coll-card">
+    <div class="coll-verb">MAKE</div>
+    <div class="coll-def">Used for creating, producing, or causing</div>
+    <div class="coll-example"><strong>make an impression</strong> — "The film <strong>made</strong> a strong impression on me." (NOT <span class="coll-wrong">had an impression</span>)</div>
+    <div class="coll-example"><strong>make a decision</strong> — "The government needs to <strong>make</strong> a decision soon."</div>
+    <div class="coll-example"><strong>make a mistake</strong> — "Students often <strong>make</strong> mistakes with prepositions."</div>
+    <div class="coll-example"><strong>make progress</strong> — "She has <strong>made</strong> significant progress this term."</div>
+    <div class="coll-example"><strong>make an effort</strong> — "You should <strong>make</strong> an effort to read more widely."</div>
+    <div class="coll-example"><strong>make a contribution</strong> — "Technology has <strong>made</strong> a huge contribution to education."</div>
+  </div>
+
+  <div class="coll-card">
+    <div class="coll-verb">DO</div>
+    <div class="coll-def">Used for tasks, work, and activities</div>
+    <div class="coll-example"><strong>do research</strong> — "Scientists <strong>do</strong> research on climate change." (NOT <span class="coll-wrong">make research</span>)</div>
+    <div class="coll-example"><strong>do damage</strong> — "Pollution <strong>does</strong> serious damage to the environment."</div>
+    <div class="coll-example"><strong>do homework / do an exam</strong> — "I need to <strong>do</strong> my homework before class."</div>
+    <div class="coll-example"><strong>do somebody a favour</strong> — "Could you <strong>do</strong> me a favour?"</div>
+  </div>
+
+  <div class="coll-card">
+    <div class="coll-verb">TAKE</div>
+    <div class="coll-def">Used for actions, time, and responsibility</div>
+    <div class="coll-example"><strong>take action</strong> — "Governments must <strong>take</strong> action on climate change."</div>
+    <div class="coll-example"><strong>take responsibility</strong> — "Adults should <strong>take</strong> responsibility for their choices."</div>
+    <div class="coll-example"><strong>take into account / consideration</strong> — "We need to <strong>take</strong> cultural differences into account."</div>
+    <div class="coll-example"><strong>take measures / steps</strong> — "Schools should <strong>take</strong> measures to prevent bullying."</div>
+    <div class="coll-example"><strong>take place</strong> — "The exam <strong>takes</strong> place in December."</div>
+  </div>
+
+  <div class="coll-card">
+    <div class="coll-verb">DRAW</div>
+    <div class="coll-def">Used for conclusions, attention, and comparisons</div>
+    <div class="coll-example"><strong>draw a conclusion</strong> — "It is difficult to <strong>draw</strong> firm conclusions from this data."</div>
+    <div class="coll-example"><strong>draw attention to</strong> — "The report <strong>draws</strong> attention to rising inequality."</div>
+    <div class="coll-example"><strong>draw a comparison / distinction</strong> — "We can <strong>draw</strong> a comparison between the two systems."</div>
+  </div>
+
+  <div class="coll-card">
+    <div class="coll-verb">RAISE / RISE</div>
+    <div class="coll-def">raise = make something go up (transitive); rise = go up on its own (intransitive)</div>
+    <div class="coll-example"><strong>raise awareness</strong> — "Campaigns <strong>raise</strong> awareness of mental health issues."</div>
+    <div class="coll-example"><strong>raise concerns / questions</strong> — "The study <strong>raises</strong> serious concerns."</div>
+    <div class="coll-example"><strong>a rise in</strong> — "There has been a sharp <strong>rise</strong> in unemployment."</div>
+  </div>
+
+  <div class="coll-card">
+    <div class="coll-verb">PAY</div>
+    <div class="coll-def">Not just money — also attention, respect, and visits</div>
+    <div class="coll-example"><strong>pay attention to</strong> — "Students should <strong>pay</strong> close attention to the instructions."</div>
+    <div class="coll-example"><strong>pay a compliment</strong> — "She <strong>paid</strong> me a lovely compliment."</div>
+    <div class="coll-example"><strong>pay the price</strong> — "We will all <strong>pay</strong> the price for environmental neglect."</div>
+  </div>
+
+  <div class="coll-card">
+    <div class="coll-verb">PLAY</div>
+    <div class="coll-def">Used for roles, parts, and importance</div>
+    <div class="coll-example"><strong>play a role / part</strong> — "Education <strong>plays</strong> a crucial role in reducing poverty."</div>
+    <div class="coll-example"><strong>play a key/vital/significant role</strong> — "Parents <strong>play</strong> a vital role in children's development."</div>
+  </div>
+
+  <div class="coll-card">
+    <div class="coll-verb">HIGHLY / DEEPLY / WIDELY / STRONGLY</div>
+    <div class="coll-def">Strong adverb collocations for academic writing</div>
+    <div class="coll-example"><strong>highly unlikely / competitive / skilled</strong> — "It is <strong>highly</strong> unlikely that this will change."</div>
+    <div class="coll-example"><strong>deeply concerned / affected / rooted</strong> — "They are <strong>deeply</strong> concerned about climate change."</div>
+    <div class="coll-example"><strong>widely believed / recognised / used</strong> — "It is <strong>widely</strong> believed that exercise improves mental health."</div>
+    <div class="coll-example"><strong>strongly recommend / disagree / oppose</strong> — "I <strong>strongly</strong> recommend this approach."</div>
+  </div>
+
+  <!-- Part B: Exercise — choose correct collocation -->
+  <h3 style="font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);margin:32px 0 16px;">Part B — Choose the Correct Collocation</h3>
+
+  <div class="exercise-block">
+    <div class="exercise-header">
+      <div>
+        <div class="exercise-label">Exercise G</div>
+        <div class="exercise-title">Choose the correct verb</div>
+      </div>
+      <button class="answer-toggle" onclick="toggleAnswers('g')">Show Answers</button>
+    </div>
+    <div class="exercise-body">
+      <p style="color:var(--text-3);font-size:13px;margin-bottom:14px;">Choose MAKE, DO, TAKE, DRAW, RAISE, or PAY to complete each sentence.</p>
+      <div class="exercise-item"><div class="exercise-num">1</div><div>The documentary ______ a strong impression on young viewers.</div></div>
+      <div class="exercise-item"><div class="exercise-num">2</div><div>Scientists need to ______ more research before ______ conclusions.</div></div>
+      <div class="exercise-item"><div class="exercise-num">3</div><div>The government should ______ immediate action to ______ this issue.</div></div>
+      <div class="exercise-item"><div class="exercise-num">4</div><div>Social media ______ a significant role in ______ awareness of social problems.</div></div>
+      <div class="exercise-item"><div class="exercise-num">5</div><div>Students who don't ______ attention in class often ______ careless mistakes.</div></div>
+      <div class="exercise-item"><div class="exercise-num">6</div><div>The new law has ______ concerns among human rights groups.</div></div>
+      <div class="exercise-item"><div class="exercise-num">7</div><div>It's important to ______ cultural differences into account when ______ comparisons.</div></div>
+      <div class="exercise-item"><div class="exercise-num">8</div><div>She has ______ remarkable progress since she started ______ an effort.</div></div>
+      <div class="exercise-item"><div class="exercise-num">9</div><div>The report ______ a clear distinction between urban and rural education.</div></div>
+      <div class="exercise-item"><div class="exercise-num">10</div><div>If we don't ______ measures now, future generations will ______ the price.</div></div>
+    </div>
+    <div class="answers-panel" id="answers-g">
+      <div class="answer-row"><strong>1.</strong>&nbsp; <strong>made</strong> — make an impression</div>
+      <div class="answer-row"><strong>2.</strong>&nbsp; <strong>do</strong> ... <strong>drawing</strong> — do research / draw conclusions</div>
+      <div class="answer-row"><strong>3.</strong>&nbsp; <strong>take</strong> ... <strong>address</strong> — take action</div>
+      <div class="answer-row"><strong>4.</strong>&nbsp; <strong>plays</strong> ... <strong>raising</strong> — play a role / raise awareness</div>
+      <div class="answer-row"><strong>5.</strong>&nbsp; <strong>pay</strong> ... <strong>make</strong> — pay attention / make mistakes</div>
+      <div class="answer-row"><strong>6.</strong>&nbsp; <strong>raised</strong> — raise concerns</div>
+      <div class="answer-row"><strong>7.</strong>&nbsp; <strong>take</strong> ... <strong>drawing</strong> — take into account / draw comparisons</div>
+      <div class="answer-row"><strong>8.</strong>&nbsp; <strong>made</strong> ... <strong>making</strong> — make progress / make an effort</div>
+      <div class="answer-row"><strong>9.</strong>&nbsp; <strong>draws</strong> — draw a distinction</div>
+      <div class="answer-row"><strong>10.</strong>&nbsp; <strong>take</strong> ... <strong>pay</strong> — take measures / pay the price</div>
+    </div>
+  </div>
+
+  <!-- Part C: Fix the error -->
+  <div class="exercise-block">
+    <div class="exercise-header">
+      <div>
+        <div class="exercise-label">Exercise H</div>
+        <div class="exercise-title">Fix the collocation error</div>
+      </div>
+      <button class="answer-toggle" onclick="toggleAnswers('h')">Show Answers</button>
+    </div>
+    <div class="exercise-body">
+      <p style="color:var(--text-3);font-size:13px;margin-bottom:14px;">Each sentence has one wrong collocation. Find and correct it.</p>
+      <div class="exercise-item"><div class="exercise-num">1</div><div>"The film <strong>had</strong> a very strong impression on me."</div></div>
+      <div class="exercise-item"><div class="exercise-num">2</div><div>"We need to <strong>make</strong> more research on this topic."</div></div>
+      <div class="exercise-item"><div class="exercise-num">3</div><div>"The government should <strong>do</strong> a decision quickly."</div></div>
+      <div class="exercise-item"><div class="exercise-num">4</div><div>"Education <strong>does</strong> an important role in society."</div></div>
+      <div class="exercise-item"><div class="exercise-num">5</div><div>"Students need to <strong>give</strong> more attention to grammar."</div></div>
+      <div class="exercise-item"><div class="exercise-num">6</div><div>"This event <strong>made</strong> place in the centre of the city."</div></div>
+      <div class="exercise-item"><div class="exercise-num">7</div><div>"We cannot <strong>make</strong> conclusions from such a small sample."</div></div>
+      <div class="exercise-item"><div class="exercise-num">8</div><div>"It is <strong>deeply</strong> unlikely that the plan will succeed."</div></div>
+    </div>
+    <div class="answers-panel" id="answers-h">
+      <div class="answer-row"><strong>1.</strong>&nbsp; <span class="coll-wrong">had</span> → <span class="coll-right">made</span> — <strong>make</strong> an impression (this was your error in the speaking test!)</div>
+      <div class="answer-row"><strong>2.</strong>&nbsp; <span class="coll-wrong">make</span> → <span class="coll-right">do</span> — <strong>do</strong> research</div>
+      <div class="answer-row"><strong>3.</strong>&nbsp; <span class="coll-wrong">do</span> → <span class="coll-right">make</span> — <strong>make</strong> a decision</div>
+      <div class="answer-row"><strong>4.</strong>&nbsp; <span class="coll-wrong">does</span> → <span class="coll-right">plays</span> — <strong>play</strong> a role</div>
+      <div class="answer-row"><strong>5.</strong>&nbsp; <span class="coll-wrong">give</span> → <span class="coll-right">pay</span> — <strong>pay</strong> attention</div>
+      <div class="answer-row"><strong>6.</strong>&nbsp; <span class="coll-wrong">made</span> → <span class="coll-right">took</span> — <strong>take</strong> place</div>
+      <div class="answer-row"><strong>7.</strong>&nbsp; <span class="coll-wrong">make</span> → <span class="coll-right">draw</span> — <strong>draw</strong> conclusions</div>
+      <div class="answer-row"><strong>8.</strong>&nbsp; <span class="coll-wrong">deeply</span> → <span class="coll-right">highly</span> — <strong>highly</strong> unlikely (deeply = emotions; highly = degree/probability)</div>
+    </div>
+  </div>
+
+  <!-- Part D: Complete the sentence -->
+  <div class="exercise-block">
+    <div class="exercise-header">
+      <div>
+        <div class="exercise-label">Exercise I</div>
+        <div class="exercise-title">Complete with the correct collocation</div>
+      </div>
+      <button class="answer-toggle" onclick="toggleAnswers('i')">Show Answers</button>
+    </div>
+    <div class="exercise-body">
+      <p style="color:var(--text-3);font-size:13px;margin-bottom:14px;">Fill in both words of the collocation. The first letter of each word is given.</p>
+      <div class="exercise-item"><div class="exercise-num">1</div><div>The charity's campaign s______ r______ awareness of child poverty.</div></div>
+      <div class="exercise-item"><div class="exercise-num">2</div><div>It is w______ b______ that regular exercise improves mental health.</div></div>
+      <div class="exercise-item"><div class="exercise-num">3</div><div>Teachers p______ a v______ role in shaping young minds.</div></div>
+      <div class="exercise-item"><div class="exercise-num">4</div><div>The novel m______ a l______ impression on millions of readers.</div></div>
+      <div class="exercise-item"><div class="exercise-num">5</div><div>We should t______ i______ account the needs of all students.</div></div>
+      <div class="exercise-item"><div class="exercise-num">6</div><div>She is a h______ s______ surgeon with 20 years of experience.</div></div>
+    </div>
+    <div class="answers-panel" id="answers-i">
+      <div class="answer-row"><strong>1.</strong>&nbsp; <strong>successfully raised</strong> awareness</div>
+      <div class="answer-row"><strong>2.</strong>&nbsp; <strong>widely believed</strong></div>
+      <div class="answer-row"><strong>3.</strong>&nbsp; <strong>play a vital</strong> role</div>
+      <div class="answer-row"><strong>4.</strong>&nbsp; <strong>made a lasting</strong> impression</div>
+      <div class="answer-row"><strong>5.</strong>&nbsp; <strong>take into</strong> account</div>
+      <div class="answer-row"><strong>6.</strong>&nbsp; <strong>highly skilled</strong></div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     SECTION 10 — DESCRIBE IMAGES
+══════════════════════════════════════════════ -->
+<div class="section" id="images">
+  <p class="section-eyebrow">Section 10 — Describing Images</p>
+  <h2 class="section-title">IELTS Image Description Practice</h2>
+  <p class="section-intro">In IELTS Speaking Part 2 and Writing Task 1, you need to describe what you see clearly and systematically. These exercises use text descriptions of images — read the scene, then describe or discuss it using the prompts provided. Time yourself: aim for 1–2 minutes of speaking per image.</p>
+
+  <div class="tip-box" style="margin-bottom:24px;">
+    <strong>How to structure an image description:</strong><br>
+    1. <strong>Overview</strong> — What is the image showing? (one sentence)<br>
+    2. <strong>Main details</strong> — Describe what you see, moving logically (left to right, foreground to background, or most to least important)<br>
+    3. <strong>Speculation/opinion</strong> — What might be happening? What does it suggest?<br>
+    Use present continuous for actions happening: <em>"A woman is walking..."</em><br>
+    Use "appears to", "seems to", "looks like" for speculation.
+  </div>
+
+  <!-- Image 1: Classroom -->
+  <div class="img-desc-card">
+    <div class="img-desc-scene">
+      <h4>Scene 1 — The Classroom</h4>
+      <div class="scene-text">A large, modern classroom with rows of desks. About 25 students aged 16–17 are sitting in pairs. Most students are looking at tablets or laptops on their desks. Two students in the front row are whispering to each other. The teacher, a woman in her 40s wearing glasses, is standing at the interactive whiteboard pointing at a graph. One student at the back has his head on the desk. Through the window, you can see a school playground with a basketball court.</div>
+    </div>
+    <div class="img-desc-body">
+      <div class="prompt-label">Speaking prompt</div>
+      <p style="font-size:14px;color:var(--text);margin-bottom:12px;font-weight:500;">Describe what is happening in this scene. Then discuss: <em>Do you think technology in the classroom helps or hinders learning?</em></p>
+      <textarea placeholder="Write your description here, or practise speaking aloud for 1–2 minutes..."></textarea>
+      <div class="useful-lang"><strong>Useful language:</strong> In the foreground / background... · On the left/right side... · The teacher appears to be... · Most of the students seem to be... · It looks as though... · This suggests that... · One noticeable detail is...</div>
+      <div class="img-timer-hint">Aim for 1–2 minutes. Try to use at least 3 different tenses.</div>
+    </div>
+  </div>
+
+  <!-- Image 2: City street -->
+  <div class="img-desc-card">
+    <div class="img-desc-scene">
+      <h4>Scene 2 — The City Street</h4>
+      <div class="scene-text">A busy city street on a rainy evening. The road is wet and reflecting the neon signs from shops and restaurants on both sides. People are hurrying along the pavement, most of them holding umbrellas — some brightly coloured, some plain black. A food delivery cyclist in a yellow jacket is waiting at a red traffic light. An elderly couple are sheltering under a shop awning, looking at a menu in the window. In the distance, a double-decker bus is approaching. There is a large digital billboard advertising a film.</div>
+    </div>
+    <div class="img-desc-body">
+      <div class="prompt-label">Speaking prompt</div>
+      <p style="font-size:14px;color:var(--text);margin-bottom:12px;font-weight:500;">Describe the atmosphere of this scene. Then discuss: <em>How has city life changed in the last 20 years?</em></p>
+      <textarea placeholder="Write your description here, or practise speaking aloud for 1–2 minutes..."></textarea>
+      <div class="useful-lang"><strong>Useful language:</strong> The atmosphere seems... · It gives the impression of... · In the centre of the image... · Meanwhile... · This creates a sense of... · What stands out is... · The contrast between X and Y...</div>
+    </div>
+  </div>
+
+  <!-- Image 3: Market -->
+  <div class="img-desc-card">
+    <div class="img-desc-scene">
+      <h4>Scene 3 — The Local Market</h4>
+      <div class="scene-text">An outdoor market in a southern European town on a sunny morning. Stalls with colourful awnings line both sides of a cobblestone street. The nearest stall displays piles of fresh fruit: oranges, lemons, strawberries, and watermelons. A vendor, a middle-aged man wearing an apron, is handing a paper bag to a young woman. Behind them, another stall sells flowers — buckets of sunflowers, roses, and lavender. An older woman with a walking stick is examining cheeses at a third stall. Two children are running between the stalls, and a dog is lying in the shade under a table. Hand-written price signs in euros are visible on most stalls.</div>
+    </div>
+    <div class="img-desc-body">
+      <div class="prompt-label">Speaking prompt</div>
+      <p style="font-size:14px;color:var(--text);margin-bottom:12px;font-weight:500;">Describe the scene in detail. Then discuss: <em>Do you prefer shopping at local markets or supermarkets? Why?</em></p>
+      <textarea placeholder="Write your description here, or practise speaking aloud for 1–2 minutes..."></textarea>
+      <div class="useful-lang"><strong>Useful language:</strong> The scene depicts... · Various items are on display, including... · It appears to be... · One person is in the process of... · The overall impression is one of... · Compared to... · Personally, I would prefer...</div>
+    </div>
+  </div>
+
+  <!-- Image 4: Environmental contrast -->
+  <div class="img-desc-card">
+    <div class="img-desc-scene">
+      <h4>Scene 4 — Two Contrasting Landscapes</h4>
+      <div class="scene-text"><strong>Left side:</strong> A lush green forest with tall trees and a river running through it. The water is clear, and sunlight filters through the canopy. A deer is drinking at the riverbank. Wild flowers grow along the path.<br><br><strong>Right side:</strong> The same location, but deforested. Tree stumps cover the hillside. The river is brown and muddy. Construction vehicles are parked near a half-built road. Smoke rises from a burning pile of branches. A "No Trespassing" sign is visible near a wire fence.</div>
+    </div>
+    <div class="img-desc-body">
+      <div class="prompt-label">Speaking prompt</div>
+      <p style="font-size:14px;color:var(--text);margin-bottom:12px;font-weight:500;">Compare and contrast the two images. Then discuss: <em>What should governments do to protect natural environments?</em></p>
+      <textarea placeholder="Write your comparison here, or practise speaking aloud for 1–2 minutes..."></textarea>
+      <div class="useful-lang"><strong>Useful language:</strong> The most striking difference is... · While the first image shows... the second reveals... · In stark contrast to... · This transformation suggests... · It is evident that... · One possible solution would be... · If no action is taken...</div>
+    </div>
+  </div>
+
+  <!-- Image 5: Working from home -->
+  <div class="img-desc-card">
+    <div class="img-desc-scene">
+      <h4>Scene 5 — Working from Home</h4>
+      <div class="scene-text">A kitchen table being used as a home office. A woman in her 30s is sitting at a laptop with headphones on, apparently on a video call — several small faces are visible on her screen. Next to her laptop, there is a mug of coffee, a notepad with handwritten notes, and a half-eaten sandwich. A toddler is pulling at her sleeve, holding a toy. A cat is sleeping on a pile of papers on the other end of the table. The kitchen behind her is slightly messy: dishes in the sink, a fridge covered in children's drawings, a clock on the wall showing 2:15 PM. Through the doorway, you can see a living room with toys scattered on the floor.</div>
+    </div>
+    <div class="img-desc-body">
+      <div class="prompt-label">Speaking prompt</div>
+      <p style="font-size:14px;color:var(--text);margin-bottom:12px;font-weight:500;">Describe the scene and the woman's situation. Then discuss: <em>What are the advantages and disadvantages of working from home?</em></p>
+      <textarea placeholder="Write your description here, or practise speaking aloud for 1–2 minutes..."></textarea>
+      <div class="useful-lang"><strong>Useful language:</strong> She seems to be juggling... · The scene suggests that... · It is clear from the details that... · On the one hand... on the other hand... · This raises the question of... · A growing number of people... · The main drawback / benefit is...</div>
+    </div>
+  </div>
+
+  <!-- Image 6: Graph description (Writing Task 1 style) -->
+  <div class="img-desc-card">
+    <div class="img-desc-scene">
+      <h4>Scene 6 — Data Description (Writing Task 1 Style)</h4>
+      <div class="scene-text"><strong>Bar chart:</strong> "Preferred leisure activities among 18–25 year-olds in 2005 vs 2025"<br><br>
+      <strong>2005:</strong> Watching TV (78%) · Reading books (45%) · Playing sport (62%) · Using social media (12%) · Gaming (28%)<br>
+      <strong>2025:</strong> Watching TV (41%) · Reading books (22%) · Playing sport (48%) · Using social media (89%) · Gaming (67%)<br><br>
+      <em>Source: National Youth Leisure Survey, 2025. Sample: 5,000 respondents aged 18–25.</em></div>
+    </div>
+    <div class="img-desc-body">
+      <div class="prompt-label">Writing prompt (Task 1 style)</div>
+      <p style="font-size:14px;color:var(--text);margin-bottom:12px;font-weight:500;">Summarise the information by selecting and reporting the main features, and make comparisons where relevant. Write at least 150 words.</p>
+      <textarea placeholder="Write your Task 1 response here..." style="min-height:150px;"></textarea>
+      <div class="useful-lang"><strong>Useful language for data:</strong> The bar chart illustrates... · Overall, the most notable trend is... · X experienced a significant increase/decrease... · By contrast... · While X rose from...to..., Y fell sharply... · The most dramatic change was in... · The figures for X and Y were remarkably similar... · It is worth noting that...</div>
+    </div>
+  </div>
+
+  <div class="tip-box" style="margin-top:8px;">
+    <strong>Common mistakes to avoid:</strong><br>
+    • Don't say <span class="coll-wrong">"In this picture I can see..."</span> repeatedly — vary your openings.<br>
+    • Don't just list what you see — interpret, compare, and give your opinion.<br>
+    • Don't forget to use <strong>specific vocabulary</strong> instead of "thing", "stuff", or "nice".<br>
+    • For data descriptions, <strong>never write</strong> "the graph <span class="coll-wrong">says</span>" — use "shows", "illustrates", "indicates", or "reveals".
+  </div>
+</div>
+
 </div><!-- /wrapper -->
 
 <script>
 // ── NAV ACTIVE STATE ──────────────────────────────────────────
-const sections = ['essay','corrections','grammar','exercises','ex-corrections','speaking','speaking-fb','vocab'];
+const sections = ['essay','corrections','grammar','exercises','ex-corrections','speaking','speaking-fb','vocab','collocations','images'];
 const pills = document.querySelectorAll('.nav-pill');
 function updateNav() {
   const navH = 60;
