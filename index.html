@@ -643,6 +643,10 @@ ul.bullet li { padding: 3px 0; }
   <button class="nav-pill" onclick="scrollTo('images')">Describe Images</button>
   <button class="nav-pill" onclick="scrollTo('listening')">Listening</button>
   <button class="nav-pill" onclick="scrollTo('hw-corrections')">Homework</button>
+  <button class="nav-pill" onclick="scrollTo('perfect-tenses')">Perfect Tenses</button>
+  <button class="nav-pill" onclick="scrollTo('synonyms')">Synonyms</button>
+  <button class="nav-pill" onclick="scrollTo('phrasals')">Phrasals</button>
+  <button class="nav-pill" onclick="scrollTo('writing2')">Writing 2</button>
 </nav>
 
 <div class="wrapper">
@@ -2058,12 +2062,13 @@ ul.bullet li { padding: 3px 0; }
   </div>
 </div>
 
-<!-- ── SECTION 12: HOMEWORK CORRECTIONS ─────────────────────── -->
+<!-- ── SECTION 12: HOMEWORK CORRECTIONS (Restructured) ────── -->
 <div class="section" id="hw-corrections">
   <div class="section-label">12 — Homework Corrections (01.10.2026)</div>
-  <h2>Homework Analysis & Feedback</h2>
+  <h2>Homework — Question → Answer → Correction</h2>
+  <p style="margin-bottom:20px;">Each exercise shows the original question, your answer, and the correction with explanation.</p>
 
-  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px;">
+  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px;">
     <div style="background:var(--green-light);border:1px solid var(--green);border-radius:10px;padding:16px 22px;flex:1;min-width:120px;text-align:center;">
       <div style="font-size:28px;font-weight:700;color:var(--green);">90%</div>
       <div style="font-size:12px;color:var(--text-3);margin-top:4px;">Passive Voice</div>
@@ -2082,270 +2087,466 @@ ul.bullet li { padding: 3px 0; }
     </div>
   </div>
 
-  <!-- ═══ PASSIVE VOICE ═══ -->
-  <h3 style="color:var(--accent);margin:28px 0 12px;font-size:16px;letter-spacing:1px;">EXERCISE D — ACTIVE → PASSIVE</h3>
-  <table class="correction-table" style="width:100%;margin-bottom:16px;">
-    <thead><tr><th>Q</th><th>Your Answer</th><th>Verdict</th></tr></thead>
-    <tbody>
-      <tr><td>1</td><td>The results are announced by the committee every year.</td><td style="color:var(--green);">✓</td></tr>
-      <tr><td>2</td><td>The exams are currently being marked by the teacher.</td><td style="color:var(--green);">✓</td></tr>
-      <tr><td>3</td><td>The new law must be signed by the president.</td><td style="color:var(--green);">✓</td></tr>
-      <tr style="background:var(--error-bg);"><td>4</td><td><span class="coll-wrong">Three new studies were published by researchers.</span></td><td style="color:var(--error-text);">✗</td></tr>
-      <tr><td>5</td><td>Stricter environmental laws will be introduced by the government.</td><td style="color:var(--green);">✓</td></tr>
-      <tr><td>6</td><td>A new hospital in the city is being built by engineers.</td><td style="color:var(--green);">✓</td></tr>
-      <tr><td>7</td><td>More mental health support should be provided by the school.</td><td style="color:var(--green);">✓</td></tr>
-      <tr style="background:var(--error-bg);"><td>8</td><td><span class="coll-wrong">The new policy is widely praised by people.</span></td><td style="color:var(--error-text);">✗</td></tr>
-    </tbody>
-  </table>
-  <div style="background:var(--error-bg);border:1px solid var(--error-border);border-radius:8px;padding:14px 18px;margin-bottom:10px;">
-    <strong style="color:var(--error-text);">Q4 — Wrong tense: past simple instead of present perfect</strong><br>
-    <span style="font-size:13px;color:var(--text-2);">
-      Original: "Researchers <strong>have published</strong> three new studies <strong>this month</strong>."<br>
-      You wrote: "Three new studies <span class="coll-wrong">were published</span>..."<br>
-      Correct: "Three new studies <span class="coll-right">have been published</span> (by researchers) this month."<br>
-      <strong>Rule:</strong> "This month" = unfinished time period → present perfect, not past simple. You also dropped "this month."
-    </span>
+  <!-- ═══ EXERCISE D — Question → Answer → Correction ═══ -->
+  <h3 style="color:var(--accent);margin:28px 0 12px;font-size:16px;letter-spacing:1px;">EXERCISE D — ACTIVE → PASSIVE (6/8)</h3>
+
+  <div class="coll-card" style="margin-bottom:8px;">
+    <div style="font-size:13px;color:var(--text-3);margin-bottom:4px;">Question 4</div>
+    <div style="font-size:14px;color:var(--text);margin-bottom:6px;"><strong>Convert:</strong> Researchers <strong>have published</strong> three new studies this month.</div>
+    <div style="font-size:14px;color:var(--text-2);margin-bottom:6px;"><strong>Your answer:</strong> <span class="coll-wrong">Three new studies were published by researchers.</span></div>
+    <div style="font-size:14px;color:var(--green);"><strong>Correct:</strong> Three new studies <span class="coll-right">have been published</span> (by researchers) this month.</div>
+    <div style="font-size:12px;color:var(--text-3);margin-top:6px;">"This month" = unfinished time → present perfect, not past simple. You also dropped "this month."</div>
   </div>
-  <div style="background:var(--error-bg);border:1px solid var(--error-border);border-radius:8px;padding:14px 18px;margin-bottom:24px;">
-    <strong style="color:var(--error-text);">Q8 — Wrong tense: present simple instead of present perfect</strong><br>
-    <span style="font-size:13px;color:var(--text-2);">
-      Original: "People <strong>have widely praised</strong> the new policy."<br>
-      You wrote: "The new policy <span class="coll-wrong">is widely praised</span> by people."<br>
-      Correct: "The new policy <span class="coll-right">has been widely praised</span>."<br>
-      <strong>Rule:</strong> "Have praised" = present perfect → the passive must also be present perfect: "has been praised."
-    </span>
+  <div class="coll-card" style="margin-bottom:16px;">
+    <div style="font-size:13px;color:var(--text-3);margin-bottom:4px;">Question 8</div>
+    <div style="font-size:14px;color:var(--text);margin-bottom:6px;"><strong>Convert:</strong> People <strong>have widely praised</strong> the new policy.</div>
+    <div style="font-size:14px;color:var(--text-2);margin-bottom:6px;"><strong>Your answer:</strong> <span class="coll-wrong">The new policy is widely praised by people.</span></div>
+    <div style="font-size:14px;color:var(--green);"><strong>Correct:</strong> The new policy <span class="coll-right">has been widely praised</span>.</div>
+    <div style="font-size:12px;color:var(--text-3);margin-top:6px;">"Have praised" = present perfect → passive must also be present perfect: "has been praised."</div>
   </div>
 
-  <h3 style="color:var(--accent);margin:28px 0 12px;font-size:16px;letter-spacing:1px;">EXERCISE E — CORRECT THE ERROR</h3>
-  <table class="correction-table" style="width:100%;margin-bottom:16px;">
-    <thead><tr><th>Q</th><th>Your Correction</th><th>Verdict</th></tr></thead>
-    <tbody>
-      <tr><td>1</td><td>is currently being directed ← ✓</td><td style="color:var(--green);">✓</td></tr>
-      <tr style="background:var(--amber-light);"><td>2</td><td>should have been taken ← acceptable but different meaning</td><td style="color:var(--amber);">⚠</td></tr>
-      <tr><td>3</td><td>has been constructed since ← ✓</td><td style="color:var(--green);">✓</td></tr>
-      <tr><td>4</td><td>was published in 2019 ← ✓</td><td style="color:var(--green);">✓</td></tr>
-      <tr><td>5</td><td>have been affected ← ✓</td><td style="color:var(--green);">✓</td></tr>
-      <tr><td>6</td><td>might collapse ← ✓</td><td style="color:var(--green);">✓</td></tr>
-    </tbody>
-  </table>
-  <div style="background:var(--amber-light);border:1px solid var(--amber);border-radius:8px;padding:14px 18px;margin-bottom:24px;">
-    <strong style="color:var(--amber);">Q2 — Grammatically correct, but changes the meaning</strong><br>
-    <span style="font-size:13px;color:var(--text-2);">
-      You wrote: "The decision <strong>should have been taken</strong> by the board last week."<br>
-      This means: "They were supposed to take it but <em>didn't</em>" (criticism/regret).<br>
-      Expected answer: "The decision <strong>was taken</strong> by the board last week."<br>
-      This means: "They took it" (neutral fact).<br>
-      <strong>Both are grammatically correct</strong> with "last week," but the intended fix was simply matching the past time marker. Your version works if you meant to express regret — just be aware of the difference.
-    </span>
+  <!-- ═══ EXERCISE E — Q→A→C ═══ -->
+  <h3 style="color:var(--accent);margin:28px 0 12px;font-size:16px;letter-spacing:1px;">EXERCISE E — CORRECT THE ERROR (5/6)</h3>
+  <div class="coll-card" style="margin-bottom:16px;">
+    <div style="font-size:13px;color:var(--text-3);margin-bottom:4px;">Question 2</div>
+    <div style="font-size:14px;color:var(--text);margin-bottom:6px;"><strong>Fix:</strong> "The decision <strong>should be taken</strong> by the board last week."</div>
+    <div style="font-size:14px;color:var(--text-2);margin-bottom:6px;"><strong>Your answer:</strong> "The decision <span style="color:var(--amber);">should have been taken</span> by the board last week."</div>
+    <div style="font-size:14px;color:var(--green);"><strong>Expected:</strong> "The decision <span class="coll-right">was taken</span> by the board last week."</div>
+    <div style="font-size:12px;color:var(--text-3);margin-top:6px;">Your version = "they were supposed to but didn't" (regret). Expected = "they took it" (fact). Both are grammatically valid — just different meanings.</div>
   </div>
 
-  <h3 style="color:var(--accent);margin:28px 0 12px;font-size:16px;letter-spacing:1px;">EXERCISE F — COMPLETE THE PASSIVE</h3>
-  <table class="correction-table" style="width:100%;margin-bottom:16px;">
-    <thead><tr><th>Q</th><th>Your Answer</th><th>Verdict</th></tr></thead>
-    <tbody>
-      <tr><td>1</td><td>will be introduced</td><td style="color:var(--green);">✓</td></tr>
-      <tr><td>2</td><td>was sent</td><td style="color:var(--green);">✓</td></tr>
-      <tr><td>3</td><td>is being conducted</td><td style="color:var(--green);">✓</td></tr>
-      <tr><td>4</td><td>are spoken</td><td style="color:var(--green);">✓</td></tr>
-      <tr><td>5</td><td>has been demolished</td><td style="color:var(--green);">✓</td></tr>
-      <tr style="background:var(--amber-light);"><td>6</td><td>must be completed</td><td style="color:var(--amber);">⚠</td></tr>
-    </tbody>
-  </table>
-  <div style="background:var(--amber-light);border:1px solid var(--amber);border-radius:8px;padding:14px 18px;margin-bottom:24px;">
-    <strong style="color:var(--amber);">Q6 — Acceptable but different nuance</strong><br>
-    <span style="font-size:13px;color:var(--text-2);">
-      You wrote: "The project <strong>must be completed</strong> before the deadline."<br>
-      This = obligation/necessity (it's required to be finished).<br>
-      Expected: "The project <strong>had been completed / was completed</strong> before the deadline."<br>
-      This = describing what happened (it was finished before the deadline).<br>
-      Your answer is grammatically correct and natural — just a different interpretation.
-    </span>
+  <!-- ═══ EXERCISE G — Q→A→C ═══ -->
+  <h3 style="color:var(--accent);margin:28px 0 12px;font-size:16px;letter-spacing:1px;">EXERCISE G — COLLOCATIONS (8/10)</h3>
+  <div class="coll-card" style="margin-bottom:8px;">
+    <div style="font-size:13px;color:var(--text-3);margin-bottom:4px;">Question 3</div>
+    <div style="font-size:14px;color:var(--text);margin-bottom:6px;"><strong>Fill in:</strong> The government should ______ immediate action to ______ this issue.</div>
+    <div style="font-size:14px;color:var(--text-2);margin-bottom:6px;"><strong>Your answer:</strong> take... <span class="coll-wrong">raise</span></div>
+    <div style="font-size:14px;color:var(--green);"><strong>Correct:</strong> take... <span class="coll-right">address</span></div>
+    <div style="font-size:12px;color:var(--text-3);margin-top:6px;">"Raise an issue" = mention it. "Address an issue" = deal with/solve it. After "take action," you need "address."</div>
   </div>
-
-  <!-- ═══ VOCABULARY ═══ -->
-  <h3 style="color:var(--accent);margin:28px 0 12px;font-size:16px;letter-spacing:1px;">VOCABULARY — SENTENCE REWRITING</h3>
-  <div style="background:var(--green-light);border:1px solid var(--green);border-radius:8px;padding:14px 18px;margin-bottom:24px;">
-    <strong style="color:var(--green);">All 5 sentences: Excellent! ✓</strong><br>
-    <span style="font-size:13px;color:var(--text-2);">
-      Outstanding vocabulary range: "to the detriment of," "widely recognized," "long-term economic prospects," "undoubtedly," "contributed to a greater sense of isolation," "jeopardize the well-being." These are Band 7.5–8 level phrases used accurately and naturally. Very impressive work.
-    </span>
+  <div class="coll-card" style="margin-bottom:16px;">
+    <div style="font-size:13px;color:var(--text-3);margin-bottom:4px;">Question 7</div>
+    <div style="font-size:14px;color:var(--text);margin-bottom:6px;"><strong>Fill in:</strong> It's important to ______ cultural differences into account when ______ comparisons.</div>
+    <div style="font-size:14px;color:var(--text-2);margin-bottom:6px;"><strong>Your answer:</strong> take... <span class="coll-wrong">making</span></div>
+    <div style="font-size:14px;color:var(--green);"><strong>Correct:</strong> take... <span class="coll-right">drawing</span></div>
+    <div style="font-size:12px;color:var(--text-3);margin-top:6px;">Academic English: DRAW comparisons, DRAW conclusions, DRAW a distinction — DRAW is the verb for analytical connections.</div>
   </div>
 
   <!-- ═══ SUMMARY ═══ -->
-  <h3 style="color:var(--accent);margin:28px 0 12px;font-size:16px;letter-spacing:1px;">VOCABULARY — SUMMARY WRITING</h3>
-  <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 22px;margin-bottom:14px;">
-    <p style="font-size:14px;color:var(--text-2);line-height:1.7;">
-      "The text emphasizes that emotional intelligence, which involves empathy and regulating emotions, is essential for professional success, building healthy relationships and effective leadership. Research demonstrates that these skills are often more important than technical expertise, contributing significantly to overall well-being. However, critics argue that the concept is difficult to measure objectively and has been oversimplified by self-help culture, though it remains <span style="background:var(--error-bg);padding:2px 6px;border-radius:4px;border:1px solid var(--error-border);"><strong style="color:var(--error-text);">widely proliferated</strong></span>."
-    </p>
-  </div>
-  <div style="background:var(--error-bg);border:1px solid var(--error-border);border-radius:8px;padding:14px 18px;margin-bottom:10px;">
-    <strong style="color:var(--error-text);">«Widely proliferated» — incorrect word choice</strong><br>
-    <span style="font-size:13px;color:var(--text-2);">
-      "Proliferate" means "spread/increase rapidly" — saying "widely proliferated" is redundant (like saying "spread widely spreadly"). Also, "proliferated" doesn't work well as an adjective here.<br>
-      <strong>Better alternatives:</strong> "though it remains <span class="coll-right">widely accepted</span>" / "<span class="coll-right">widely discussed</span>" / "<span class="coll-right">prevalent</span>"
-    </span>
-  </div>
-  <div style="background:var(--green-light);border:1px solid var(--green);border-radius:8px;padding:14px 18px;margin-bottom:24px;">
-    <strong style="color:var(--green);">Overall: Very good summary</strong><br>
-    <span style="font-size:13px;color:var(--text-2);">Good structure (main idea → supporting evidence → counter-argument). Concise and well-paraphrased. Just fix the ending.</span>
+  <h3 style="color:var(--accent);margin:28px 0 12px;font-size:16px;letter-spacing:1px;">SUMMARY — WORD CHOICE ERROR</h3>
+  <div class="coll-card" style="margin-bottom:16px;">
+    <div style="font-size:14px;color:var(--text);margin-bottom:6px;"><strong>You wrote:</strong> "...though it remains <span class="coll-wrong">widely proliferated</span>."</div>
+    <div style="font-size:14px;color:var(--green);margin-bottom:6px;"><strong>Better:</strong> "...though it remains <span class="coll-right">widely accepted</span> / <span class="coll-right">prevalent</span>."</div>
+    <div style="font-size:12px;color:var(--text-3);">"Proliferate" already means "spread widely" — "widely proliferated" is redundant. Also doesn't work as an adjective here.</div>
   </div>
 
-  <!-- ═══ COLLOCATIONS ═══ -->
-  <h3 style="color:var(--accent);margin:28px 0 12px;font-size:16px;letter-spacing:1px;">EXERCISE G — CHOOSE THE CORRECT VERB</h3>
-  <table class="correction-table" style="width:100%;margin-bottom:16px;">
-    <thead><tr><th>Q</th><th>Your Answer</th><th>Verdict</th></tr></thead>
-    <tbody>
-      <tr><td>1</td><td>made a strong impression</td><td style="color:var(--green);">✓</td></tr>
-      <tr><td>2</td><td>do more research... drawing conclusions</td><td style="color:var(--green);">✓</td></tr>
-      <tr style="background:var(--error-bg);"><td>3</td><td>take immediate action to <span class="coll-wrong">raise</span> this issue</td><td style="color:var(--error-text);">✗</td></tr>
-      <tr><td>4</td><td>plays a significant role... raising awareness</td><td style="color:var(--green);">✓</td></tr>
-      <tr><td>5</td><td>pay attention... make careless mistakes</td><td style="color:var(--green);">✓</td></tr>
-      <tr><td>6</td><td>raised concerns</td><td style="color:var(--green);">✓</td></tr>
-      <tr style="background:var(--error-bg);"><td>7</td><td>take... into account when <span class="coll-wrong">making</span> comparisons</td><td style="color:var(--error-text);">✗</td></tr>
-      <tr><td>8</td><td>made remarkable progress... making an effort</td><td style="color:var(--green);">✓</td></tr>
-      <tr><td>9</td><td>draws a clear distinction</td><td style="color:var(--green);">✓</td></tr>
-      <tr><td>10</td><td>take measures... pay the price</td><td style="color:var(--green);">✓</td></tr>
-    </tbody>
-  </table>
-  <div style="background:var(--error-bg);border:1px solid var(--error-border);border-radius:8px;padding:14px 18px;margin-bottom:10px;">
-    <strong style="color:var(--error-text);">Q3 — «raise» should be «address»</strong><br>
-    <span style="font-size:13px;color:var(--text-2);">
-      "Take action to <strong>address</strong> this issue" = deal with / solve the issue.<br>
-      "Raise this issue" = bring attention to it, mention it.<br>
-      After "take action," you need a verb that means <em>dealing with</em> the problem, not just mentioning it.
-    </span>
-  </div>
-  <div style="background:var(--error-bg);border:1px solid var(--error-border);border-radius:8px;padding:14px 18px;margin-bottom:24px;">
-    <strong style="color:var(--error-text);">Q7 — «making comparisons» should be «drawing comparisons»</strong><br>
-    <span style="font-size:13px;color:var(--text-2);">
-      "Make comparisons" exists in everyday English, but in academic/IELTS context the stronger collocation is <strong>draw comparisons</strong> (same family as "draw conclusions" and "draw a distinction"). This exercise tests the DRAW collocations specifically.
-    </span>
-  </div>
-
-  <h3 style="color:var(--accent);margin:28px 0 12px;font-size:16px;letter-spacing:1px;">EXERCISES H & I — COLLOCATIONS</h3>
-  <div style="background:var(--green-light);border:1px solid var(--green);border-radius:8px;padding:14px 18px;margin-bottom:24px;">
-    <strong style="color:var(--green);">Exercise H: 8/8 — Perfect! ★</strong><br>
-    <strong style="color:var(--green);">Exercise I: 6/6 — Perfect! ★</strong><br>
-    <span style="font-size:13px;color:var(--text-2);">Every collocation error correctly identified and fixed. All gap-fills completed accurately. Your collocation knowledge is strong.</span>
-  </div>
-
-  <!-- ═══ WRITING TASK 1 ═══ -->
-  <h3 style="color:var(--accent);margin:28px 0 12px;font-size:16px;letter-spacing:1px;">WRITING TASK 1A — FROG LIFE CYCLE</h3>
-  <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 22px;margin-bottom:14px;">
-    <p style="font-size:14px;color:var(--text-2);line-height:1.7;margin-bottom:12px;">
-      "The diagram <strong>shows</strong> the life cycle of a frog, from mating to adulthood. Overall, there are <strong>eight</strong> main stages in this <strong>cycle</strong>, which takes approximately four years to complete. The cycle begins on land and the early stages <strong>take</strong> place in water."
-    </p>
-    <p style="font-size:14px;color:var(--text-2);line-height:1.7;margin-bottom:12px;">
-      "The process begins when adult frogs <strong>mate</strong>, after which the female <strong>lays</strong> eggs, known as frogspawn, in the water. Within 7 to 10 days, these eggs <strong>hatch</strong> into tadpoles, which feed <strong>on</strong> algae."
-    </p>
-    <p style="font-size:14px;color:var(--text-2);line-height:1.7;">
-      "<strong>Over</strong> the following weeks, the tadpole undergoes several changes. At around six weeks, it develops hind legs, and by nine weeks, all four legs have <strong>developed</strong>. At twelve weeks, the tadpole <strong>becomes</strong> a froglet and begins breathing with lungs. <strong>Subsequently</strong>, it leaves the water and grows into a young frog, before reaching <strong>maturity</strong> at approximately four years of age, at which point the cycle <strong>begins</strong> again."
-    </p>
-  </div>
+  <!-- ═══ WRITING TASK 1 SCORES ═══ -->
+  <h3 style="color:var(--accent);margin:28px 0 12px;font-size:16px;letter-spacing:1px;">WRITING TASK 1 — SCORES</h3>
   <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px;">
-    <div style="background:var(--surface-2);border-radius:8px;padding:12px 16px;flex:1;min-width:140px;">
-      <div style="font-size:12px;color:var(--text-3);margin-bottom:4px;">Task Achievement</div>
-      <div style="font-size:20px;font-weight:700;color:var(--green);">8</div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;flex:1;min-width:200px;">
+      <div style="font-size:14px;font-weight:700;color:var(--accent);margin-bottom:8px;">Task 1A — Frog Lifecycle: Band 7.5–8</div>
+      <div style="font-size:13px;color:var(--text-2);">Excellent process description. Good overview, logical sequencing, strong vocabulary ("undergoes," "subsequently"). Use more passive voice in processes and vary linking devices.</div>
     </div>
-    <div style="background:var(--surface-2);border-radius:8px;padding:12px 16px;flex:1;min-width:140px;">
-      <div style="font-size:12px;color:var(--text-3);margin-bottom:4px;">Coherence</div>
-      <div style="font-size:20px;font-weight:700;color:var(--green);">8</div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px;flex:1;min-width:200px;">
+      <div style="font-size:14px;font-weight:700;color:var(--green);margin-bottom:8px;">Task 1B — Water Supply: Band 8</div>
+      <div style="font-size:13px;color:var(--text-2);">Your strongest writing. Excellent overview ("closed cycle"), outstanding cohesion, rich vocabulary. Minor: use "households/factories" instead of "residential buildings/industrial enterprises" (Russian transfer).</div>
     </div>
-    <div style="background:var(--surface-2);border-radius:8px;padding:12px 16px;flex:1;min-width:140px;">
-      <div style="font-size:12px;color:var(--text-3);margin-bottom:4px;">Lexical Resource</div>
-      <div style="font-size:20px;font-weight:700;color:var(--blue);">7.5</div>
-    </div>
-    <div style="background:var(--surface-2);border-radius:8px;padding:12px 16px;flex:1;min-width:140px;">
-      <div style="font-size:12px;color:var(--text-3);margin-bottom:4px;">Grammar</div>
-      <div style="font-size:20px;font-weight:700;color:var(--green);">8</div>
-    </div>
-  </div>
-  <div style="background:var(--green-light);border:1px solid var(--green);border-radius:8px;padding:14px 18px;margin-bottom:10px;">
-    <strong style="color:var(--green);">Estimated Band: 7.5–8</strong><br>
-    <span style="font-size:13px;color:var(--text-2);">
-      Excellent process description. Clear overview with the key summary ("eight stages... approximately four years... begins on land, early stages in water"). Logical sequencing with good use of time markers ("within 7 to 10 days," "at around six weeks," "by nine weeks"). Strong vocabulary: "undergoes," "subsequently," "reaching maturity." The structure follows the 4-paragraph model perfectly.
-    </span>
-  </div>
-  <div style="background:var(--amber-light);border:1px solid var(--amber);border-radius:8px;padding:14px 18px;margin-bottom:24px;">
-    <strong style="color:var(--amber);">To improve further:</strong><br>
-    <span style="font-size:13px;color:var(--text-2);">
-      • Add more variety to linking devices — try "Following this," "At this stage," "Once... has/have"<br>
-      • Use more passive structures in process descriptions: "the eggs are laid," "hind legs are developed" — process diagrams reward passive voice
-    </span>
-  </div>
-
-  <h3 style="color:var(--accent);margin:28px 0 12px;font-size:16px;letter-spacing:1px;">WRITING TASK 1B — WATER SUPPLY SYSTEM</h3>
-  <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 22px;margin-bottom:14px;">
-    <p style="font-size:14px;color:var(--text-2);line-height:1.7;margin-bottom:12px;">
-      "The diagrams compare the current and future layouts of the water supply system in Australia. Overall, the most significant changes involve redirecting wastewater and stormwater. While the city currently relies on a river to discharge untreated and treated water, the future system plans to completely abandon direct discharge into the river and create a closed cycle for domestic and industrial wastewater."
-    </p>
-    <p style="font-size:14px;color:var(--text-2);line-height:1.7;margin-bottom:12px;">
-      "Currently, clean water from the reservoir is supplied directly to residential buildings and shops in the city, but it is not supplied to industrial enterprises. After use in residential buildings and shops, wastewater is generated, which is sent to a water treatment plant and then discharged into the local river. Industrial enterprises, by contrast, discharge wastewater into the river without any treatment. In addition, stormwater from the city's surface flows straight to the river system."
-    </p>
-    <p style="font-size:14px;color:var(--text-2);line-height:1.7;">
-      "In the future, the water supply system will be significantly restructured. Clean water from the reservoir will be supplied only to residential buildings, while industrial enterprises will start receiving treated water from the water treatment plant. Most importantly, the discharge into the river will be completely eliminated: all wastewater from the city and industrial enterprises, as well as stormwater, will be directed to the water treatment plant. After treatment, this water will be returned to the reservoir or sent directly to the factories, forming a sustainable closed cycle."
-    </p>
-    <div style="font-size:12px;color:var(--text-3);margin-top:8px;">224 words</div>
-  </div>
-  <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:14px;">
-    <div style="background:var(--surface-2);border-radius:8px;padding:12px 16px;flex:1;min-width:140px;">
-      <div style="font-size:12px;color:var(--text-3);margin-bottom:4px;">Task Achievement</div>
-      <div style="font-size:20px;font-weight:700;color:var(--green);">8</div>
-    </div>
-    <div style="background:var(--surface-2);border-radius:8px;padding:12px 16px;flex:1;min-width:140px;">
-      <div style="font-size:12px;color:var(--text-3);margin-bottom:4px;">Coherence</div>
-      <div style="font-size:20px;font-weight:700;color:var(--green);">8</div>
-    </div>
-    <div style="background:var(--surface-2);border-radius:8px;padding:12px 16px;flex:1;min-width:140px;">
-      <div style="font-size:12px;color:var(--text-3);margin-bottom:4px;">Lexical Resource</div>
-      <div style="font-size:20px;font-weight:700;color:var(--green);">8</div>
-    </div>
-    <div style="background:var(--surface-2);border-radius:8px;padding:12px 16px;flex:1;min-width:140px;">
-      <div style="font-size:12px;color:var(--text-3);margin-bottom:4px;">Grammar</div>
-      <div style="font-size:20px;font-weight:700;color:var(--green);">8</div>
-    </div>
-  </div>
-  <div style="background:var(--green-light);border:1px solid var(--green);border-radius:8px;padding:14px 18px;margin-bottom:10px;">
-    <strong style="color:var(--green);">Estimated Band: 8</strong><br>
-    <span style="font-size:13px;color:var(--text-2);">
-      This is your strongest piece of writing. Excellent overview identifying the key transformation ("closed cycle," "abandon direct discharge"). Outstanding cohesion: "Currently... In the future," "by contrast," "In addition," "Most importantly." Rich vocabulary: "restructured," "eliminated," "sustainable closed cycle," "redirecting." Good use of both active and passive voice. Word count (224) is ideal. The comparison structure (present → future) is clear and logical.
-    </span>
-  </div>
-  <div style="background:var(--amber-light);border:1px solid var(--amber);border-radius:8px;padding:14px 18px;margin-bottom:24px;">
-    <strong style="color:var(--amber);">Minor notes:</strong><br>
-    <span style="font-size:13px;color:var(--text-2);">
-      • "Residential buildings" — the diagram says "Households" — use the exact term from the diagram when possible, then vary with synonyms<br>
-      • "Industrial enterprises" is correct but slightly formal/Russian-influenced — "factories" or "industrial facilities" is more natural in IELTS English<br>
-      • Consider varying sentence openings more — several paragraphs start with the subject
-    </span>
-  </div>
-
-  <!-- ═══ OVERALL ═══ -->
-  <h3 style="color:var(--accent);margin:28px 0 12px;font-size:16px;letter-spacing:1px;">OVERALL HOMEWORK ASSESSMENT</h3>
-  <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 22px;margin-bottom:14px;">
-    <strong style="color:var(--green);">Strengths</strong>
-    <ul style="margin-top:8px;padding-left:20px;font-size:14px;color:var(--text-2);">
-      <li><strong>Collocations mastered:</strong> 22/24 correct across Ex G, H, and I — your weakest area from speaking is now one of your strongest</li>
-      <li><strong>Vocabulary range is excellent:</strong> "jeopardize," "to the detriment of," "undoubtedly," "sustainable closed cycle" — these are Band 8 phrases</li>
-      <li><strong>Writing Task 1B is band 8 quality:</strong> clear structure, strong overview, excellent comparison language</li>
-      <li><strong>Passive voice mostly accurate:</strong> 18/20 correct across three exercises</li>
-    </ul>
-  </div>
-  <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 22px;margin-bottom:14px;">
-    <strong style="color:var(--error-text);">Focus areas</strong>
-    <ul style="margin-top:8px;padding-left:20px;font-size:14px;color:var(--text-2);">
-      <li><strong>Present perfect passive:</strong> You confused it with past simple (Ex D Q4) and present simple (Ex D Q8) — review the rule: unfinished time periods and actions with present relevance need "has/have been + past participle"</li>
-      <li><strong>DRAW collocations:</strong> Remember "draw comparisons" (not make), "draw conclusions," "draw a distinction" — DRAW is the academic verb for analytical connections</li>
-      <li><strong>Word choice precision:</strong> "Raise an issue" vs "address an issue," "widely proliferated" — small differences in meaning matter at Band 7.5+</li>
-      <li><strong>Russian-English interference:</strong> "Industrial enterprises" (промышленные предприятия) → prefer "factories" or "industrial facilities" in English</li>
-    </ul>
   </div>
 
   <div style="background:var(--blue-light);border:1px solid var(--blue);border-radius:10px;padding:18px 22px;">
-    <strong style="color:var(--blue);">Progress Summary</strong><br>
-    <span style="font-size:14px;color:var(--text-2);">
-      This homework shows <strong>significant improvement</strong> from the original essay analysis. Your collocations have gone from frequent errors to near-perfect accuracy. Your Writing Task 1 answers demonstrate strong exam technique — clear overviews, good structure, appropriate vocabulary. The remaining errors are minor and mostly about tense precision in passives. You're consistently performing at <strong>Band 7.5–8</strong> level across skills.
-    </span>
+    <strong style="color:var(--blue);">Progress: Band 7.5–8 across skills</strong> — Collocations improved from frequent errors to near-perfect. Writing Task 1 shows strong exam technique. Focus on present perfect passive and word precision.
+  </div>
+</div>
+
+<!-- ── SECTION 13: PERFECT TENSES ─────────────────────────────── -->
+<div class="section" id="perfect-tenses">
+  <div class="section-label">13 — Perfect Tenses</div>
+  <h2>All Perfect Tense Forms — Explanation & Exercises</h2>
+
+  <div class="tip-box" style="margin-bottom:28px;">
+    <strong>Why perfect tenses matter for IELTS:</strong><br>
+    Band 7+ requires a range of complex structures used accurately. Perfect tenses show the examiner you can express <em>relationships between time periods</em> — not just "what happened" but "what had happened before," "what has been happening since," and "what will have happened by."
+  </div>
+
+  <!-- PRESENT PERFECT SIMPLE -->
+  <h3 style="color:var(--accent);margin:24px 0 10px;font-size:16px;letter-spacing:1px;">1. PRESENT PERFECT SIMPLE</h3>
+  <div class="coll-card">
+    <div style="font-size:15px;font-weight:700;color:var(--accent);margin-bottom:6px;">have / has + past participle</div>
+    <div style="font-size:13px;color:var(--text-2);line-height:1.7;">
+      <strong>Use for:</strong> actions with present relevance, unfinished time periods, experiences<br>
+      <strong>Signals:</strong> since, for, already, yet, just, recently, so far, this week/month/year, ever, never<br>
+      <strong>Active:</strong> Scientists <strong>have discovered</strong> a new species.<br>
+      <strong>Passive:</strong> A new species <strong>has been discovered</strong> (by scientists).<br>
+      <span style="color:var(--error-text);">Common error:</span> "The report <span class="coll-wrong">was published</span> this year" → "The report <span class="coll-right">has been published</span> this year" (unfinished time)
+    </div>
+  </div>
+
+  <!-- PRESENT PERFECT CONTINUOUS -->
+  <h3 style="color:var(--accent);margin:24px 0 10px;font-size:16px;letter-spacing:1px;">2. PRESENT PERFECT CONTINUOUS</h3>
+  <div class="coll-card">
+    <div style="font-size:15px;font-weight:700;color:var(--accent);margin-bottom:6px;">have / has + been + -ing</div>
+    <div style="font-size:13px;color:var(--text-2);line-height:1.7;">
+      <strong>Use for:</strong> actions that started in the past and are still continuing, or recently finished with visible results<br>
+      <strong>Signals:</strong> since, for, all day/week, how long, lately, recently<br>
+      <strong>Example:</strong> Researchers <strong>have been studying</strong> this phenomenon for decades.<br>
+      <strong>Example:</strong> The government <strong>has been investing</strong> heavily in renewable energy since 2015.<br>
+      <span style="color:var(--error-text);">vs Simple:</span> "I <strong>have read</strong> the report" (finished) vs "I <strong>have been reading</strong> the report" (still reading or just stopped)
+    </div>
+  </div>
+
+  <!-- PAST PERFECT SIMPLE -->
+  <h3 style="color:var(--accent);margin:24px 0 10px;font-size:16px;letter-spacing:1px;">3. PAST PERFECT SIMPLE</h3>
+  <div class="coll-card">
+    <div style="font-size:15px;font-weight:700;color:var(--accent);margin-bottom:6px;">had + past participle</div>
+    <div style="font-size:13px;color:var(--text-2);line-height:1.7;">
+      <strong>Use for:</strong> an action completed BEFORE another past action ("the past of the past")<br>
+      <strong>Signals:</strong> before, after, by the time, already, until, when (+ past simple)<br>
+      <strong>Active:</strong> The government <strong>had already introduced</strong> the policy before the crisis began.<br>
+      <strong>Passive:</strong> The policy <strong>had already been introduced</strong> before the crisis began.<br>
+      <strong>IELTS use:</strong> "By 2010, the number of users <strong>had reached</strong> 50 million." (Writing Task 1 — describing data at a point in the past)
+    </div>
+  </div>
+
+  <!-- PAST PERFECT CONTINUOUS -->
+  <h3 style="color:var(--accent);margin:24px 0 10px;font-size:16px;letter-spacing:1px;">4. PAST PERFECT CONTINUOUS</h3>
+  <div class="coll-card">
+    <div style="font-size:15px;font-weight:700;color:var(--accent);margin-bottom:6px;">had + been + -ing</div>
+    <div style="font-size:13px;color:var(--text-2);line-height:1.7;">
+      <strong>Use for:</strong> a continuous action that was happening BEFORE another past event<br>
+      <strong>Signals:</strong> for, since, before, when, by the time, all day<br>
+      <strong>Example:</strong> Scientists <strong>had been warning</strong> about climate change for years before governments took action.<br>
+      <strong>Example:</strong> She <strong>had been living</strong> in Moscow for ten years when she decided to move.<br>
+      <strong>IELTS Speaking:</strong> "Before I started university, I <strong>had been working</strong> as a translator for two years."
+    </div>
+  </div>
+
+  <!-- FUTURE PERFECT -->
+  <h3 style="color:var(--accent);margin:24px 0 10px;font-size:16px;letter-spacing:1px;">5. FUTURE PERFECT SIMPLE</h3>
+  <div class="coll-card">
+    <div style="font-size:15px;font-weight:700;color:var(--accent);margin-bottom:6px;">will + have + past participle</div>
+    <div style="font-size:13px;color:var(--text-2);line-height:1.7;">
+      <strong>Use for:</strong> an action that will be completed BEFORE a future time<br>
+      <strong>Signals:</strong> by (+ future time), by the time, before, by then<br>
+      <strong>Active:</strong> By 2030, the population <strong>will have exceeded</strong> 9 billion.<br>
+      <strong>Passive:</strong> By 2030, the project <strong>will have been completed</strong>.<br>
+      <strong>IELTS Writing:</strong> "By the end of this century, sea levels <strong>will have risen</strong> by up to one metre."
+    </div>
+  </div>
+
+  <!-- FUTURE PERFECT CONTINUOUS -->
+  <h3 style="color:var(--accent);margin:24px 0 10px;font-size:16px;letter-spacing:1px;">6. FUTURE PERFECT CONTINUOUS</h3>
+  <div class="coll-card">
+    <div style="font-size:15px;font-weight:700;color:var(--accent);margin-bottom:6px;">will + have + been + -ing</div>
+    <div style="font-size:13px;color:var(--text-2);line-height:1.7;">
+      <strong>Use for:</strong> the duration of an action up to a future point<br>
+      <strong>Signals:</strong> by, for, by the time<br>
+      <strong>Example:</strong> By next year, she <strong>will have been studying</strong> English for six years.<br>
+      <strong>Example:</strong> By 2030, this city <strong>will have been growing</strong> for three consecutive decades.
+    </div>
+  </div>
+
+  <!-- EXERCISES -->
+  <h3 style="color:var(--accent);margin:28px 0 12px;font-size:16px;letter-spacing:1px;">EXERCISES</h3>
+
+  <div class="exercise-block">
+    <div class="exercise-header">
+      <div>
+        <div class="exercise-label">Exercise J</div>
+        <div class="exercise-title">Choose the correct perfect tense</div>
+      </div>
+      <button class="answer-toggle" onclick="toggleAnswers('j')">Show Answers</button>
+    </div>
+    <div class="exercise-body">
+      <p style="color:var(--text-3);font-size:13px;margin-bottom:14px;">Fill in the correct perfect form of the verb in brackets.</p>
+      <div class="exercise-item"><div class="exercise-num">1</div><div>The number of tourists ______ (increase) significantly since 2015.</div></div>
+      <div class="exercise-item"><div class="exercise-num">2</div><div>By the time the government acted, thousands of people ______ (lose) their homes.</div></div>
+      <div class="exercise-item"><div class="exercise-num">3</div><div>Researchers ______ (study) this problem for over a decade before they found a solution.</div></div>
+      <div class="exercise-item"><div class="exercise-num">4</div><div>By 2050, renewable energy ______ (replace) fossil fuels in most developed countries.</div></div>
+      <div class="exercise-item"><div class="exercise-num">5</div><div>The charity ______ (raise) over $2 million so far this year.</div></div>
+      <div class="exercise-item"><div class="exercise-num">6</div><div>Before she moved to London, she ______ (never / live) abroad.</div></div>
+      <div class="exercise-item"><div class="exercise-num">7</div><div>Scientists ______ (warn) about global warming for decades, but little action ______ (take) until recently.</div></div>
+      <div class="exercise-item"><div class="exercise-num">8</div><div>By next September, I ______ (study) English for exactly five years.</div></div>
+    </div>
+    <div class="answers-panel" id="answers-j">
+      <div class="answer-row"><strong>1.</strong>&nbsp; <strong>has increased</strong> — present perfect simple ("since 2015" = unfinished time)</div>
+      <div class="answer-row"><strong>2.</strong>&nbsp; <strong>had lost</strong> — past perfect simple (before another past event)</div>
+      <div class="answer-row"><strong>3.</strong>&nbsp; <strong>had been studying</strong> — past perfect continuous (duration before past event)</div>
+      <div class="answer-row"><strong>4.</strong>&nbsp; <strong>will have replaced</strong> — future perfect simple (completed by future time)</div>
+      <div class="answer-row"><strong>5.</strong>&nbsp; <strong>has raised</strong> — present perfect simple ("so far this year" = unfinished time)</div>
+      <div class="answer-row"><strong>6.</strong>&nbsp; <strong>had never lived</strong> — past perfect simple (before past event "moved")</div>
+      <div class="answer-row"><strong>7.</strong>&nbsp; <strong>had been warning</strong> ... <strong>was taken</strong> — past perfect continuous + past simple passive</div>
+      <div class="answer-row"><strong>8.</strong>&nbsp; <strong>will have been studying</strong> — future perfect continuous (duration up to future point)</div>
+    </div>
+  </div>
+
+  <div class="exercise-block">
+    <div class="exercise-header">
+      <div>
+        <div class="exercise-label">Exercise K</div>
+        <div class="exercise-title">Correct the tense error</div>
+      </div>
+      <button class="answer-toggle" onclick="toggleAnswers('k')">Show Answers</button>
+    </div>
+    <div class="exercise-body">
+      <p style="color:var(--text-3);font-size:13px;margin-bottom:14px;">Each sentence has one tense error. Find and correct it.</p>
+      <div class="exercise-item"><div class="exercise-num">1</div><div>"The population <strong>grew</strong> rapidly since the 1990s."</div></div>
+      <div class="exercise-item"><div class="exercise-num">2</div><div>"By 2020, the company <strong>has launched</strong> three new products."</div></div>
+      <div class="exercise-item"><div class="exercise-num">3</div><div>"She <strong>has been living</strong> in Paris for five years before she moved to Berlin."</div></div>
+      <div class="exercise-item"><div class="exercise-num">4</div><div>"The government <strong>has introduced</strong> new regulations last year."</div></div>
+      <div class="exercise-item"><div class="exercise-num">5</div><div>"By the end of the decade, temperatures <strong>rose</strong> by 2 degrees."</div></div>
+      <div class="exercise-item"><div class="exercise-num">6</div><div>"Many studies <strong>were published</strong> on this topic recently."</div></div>
+    </div>
+    <div class="answers-panel" id="answers-k">
+      <div class="answer-row"><strong>1.</strong>&nbsp; <span class="coll-wrong">grew</span> → <span class="coll-right">has grown</span> — "since" = present perfect</div>
+      <div class="answer-row"><strong>2.</strong>&nbsp; <span class="coll-wrong">has launched</span> → <span class="coll-right">had launched</span> — "by 2020" (past) = past perfect</div>
+      <div class="answer-row"><strong>3.</strong>&nbsp; <span class="coll-wrong">has been living</span> → <span class="coll-right">had been living</span> — "before she moved" = past perfect continuous</div>
+      <div class="answer-row"><strong>4.</strong>&nbsp; <span class="coll-wrong">has introduced</span> → <span class="coll-right">introduced</span> — "last year" = definite past → past simple</div>
+      <div class="answer-row"><strong>5.</strong>&nbsp; <span class="coll-wrong">rose</span> → <span class="coll-right">will have risen</span> — "by the end of the decade" (future) = future perfect</div>
+      <div class="answer-row"><strong>6.</strong>&nbsp; <span class="coll-wrong">were published</span> → <span class="coll-right">have been published</span> — "recently" = present perfect</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── SECTION 14: SYNONYM REPLACEMENT ────────────────────────── -->
+<div class="section" id="synonyms">
+  <div class="section-label">14 — Vocabulary: Synonym Replacement</div>
+  <h2>Replace the Word — Same Meaning</h2>
+  <p style="margin-bottom:20px;">Replace the <strong>underlined</strong> word or phrase with a synonym. The meaning of the sentence must stay the same.</p>
+
+  <div class="exercise-block">
+    <div class="exercise-header">
+      <div>
+        <div class="exercise-label">Exercise L</div>
+        <div class="exercise-title">Replace with a formal/academic synonym</div>
+      </div>
+      <button class="answer-toggle" onclick="toggleAnswers('l')">Show Answers</button>
+    </div>
+    <div class="exercise-body">
+      <p style="color:var(--text-3);font-size:13px;margin-bottom:14px;">Replace the bold word with a more formal or academic alternative.</p>
+      <div class="exercise-item"><div class="exercise-num">1</div><div>Social media has <strong>changed</strong> the way people communicate.</div></div>
+      <div class="exercise-item"><div class="exercise-num">2</div><div>The number of students <strong>went up</strong> significantly last year.</div></div>
+      <div class="exercise-item"><div class="exercise-num">3</div><div>Many people <strong>think</strong> that education is the key to success.</div></div>
+      <div class="exercise-item"><div class="exercise-num">4</div><div>The government <strong>needs to</strong> address this problem immediately.</div></div>
+      <div class="exercise-item"><div class="exercise-num">5</div><div>Air pollution is <strong>very bad</strong> in major cities.</div></div>
+      <div class="exercise-item"><div class="exercise-num">6</div><div>This <strong>shows</strong> a clear link between poverty and crime.</div></div>
+      <div class="exercise-item"><div class="exercise-num">7</div><div>The cost of living <strong>has gone up</strong> dramatically over the past decade.</div></div>
+      <div class="exercise-item"><div class="exercise-num">8</div><div>Young people are <strong>more and more</strong> dependent on technology.</div></div>
+      <div class="exercise-item"><div class="exercise-num">9</div><div>There are <strong>good things and bad things</strong> about working from home.</div></div>
+      <div class="exercise-item"><div class="exercise-num">10</div><div>The research <strong>looked at</strong> the impact of social media on teenagers.</div></div>
+    </div>
+    <div class="answers-panel" id="answers-l">
+      <div class="answer-row"><strong>1.</strong>&nbsp; changed → <span class="coll-right">transformed / revolutionised / fundamentally altered</span></div>
+      <div class="answer-row"><strong>2.</strong>&nbsp; went up → <span class="coll-right">increased / rose / surged</span></div>
+      <div class="answer-row"><strong>3.</strong>&nbsp; think → <span class="coll-right">believe / argue / maintain / contend</span></div>
+      <div class="answer-row"><strong>4.</strong>&nbsp; needs to → <span class="coll-right">is required to / must / is obliged to</span></div>
+      <div class="answer-row"><strong>5.</strong>&nbsp; very bad → <span class="coll-right">severe / critical / hazardous / alarming</span></div>
+      <div class="answer-row"><strong>6.</strong>&nbsp; shows → <span class="coll-right">demonstrates / illustrates / indicates / reveals</span></div>
+      <div class="answer-row"><strong>7.</strong>&nbsp; has gone up → <span class="coll-right">has risen / has increased / has soared / has escalated</span></div>
+      <div class="answer-row"><strong>8.</strong>&nbsp; more and more → <span class="coll-right">increasingly / ever more / progressively</span></div>
+      <div class="answer-row"><strong>9.</strong>&nbsp; good things and bad things → <span class="coll-right">advantages and disadvantages / benefits and drawbacks / merits and demerits</span></div>
+      <div class="answer-row"><strong>10.</strong>&nbsp; looked at → <span class="coll-right">examined / investigated / analysed / explored</span></div>
+    </div>
+  </div>
+
+  <div class="exercise-block">
+    <div class="exercise-header">
+      <div>
+        <div class="exercise-label">Exercise M</div>
+        <div class="exercise-title">Rewrite without changing the meaning</div>
+      </div>
+      <button class="answer-toggle" onclick="toggleAnswers('m')">Show Answers</button>
+    </div>
+    <div class="exercise-body">
+      <p style="color:var(--text-3);font-size:13px;margin-bottom:14px;">Rewrite each sentence replacing ALL bold words. Keep the meaning identical.</p>
+      <div class="exercise-item"><div class="exercise-num">1</div><div><strong>Many people believe</strong> that <strong>getting</strong> a university degree <strong>is essential</strong> for a <strong>good</strong> career.</div></div>
+      <div class="exercise-item"><div class="exercise-num">2</div><div>The <strong>main reason</strong> for the <strong>increase</strong> in obesity is the <strong>lack</strong> of physical activity.</div></div>
+      <div class="exercise-item"><div class="exercise-num">3</div><div>Technology has <strong>had a big impact on</strong> the way children <strong>learn</strong>.</div></div>
+      <div class="exercise-item"><div class="exercise-num">4</div><div><strong>However</strong>, some <strong>experts</strong> <strong>disagree</strong> with this <strong>point of view</strong>.</div></div>
+      <div class="exercise-item"><div class="exercise-num">5</div><div>The government should <strong>spend more money on</strong> public <strong>transport</strong> to <strong>reduce</strong> traffic congestion.</div></div>
+    </div>
+    <div class="answers-panel" id="answers-m">
+      <div class="answer-row"><strong>1.</strong>&nbsp; It is <span class="coll-right">widely argued</span> that <span class="coll-right">obtaining</span> a university degree <span class="coll-right">is crucial / indispensable</span> for a <span class="coll-right">successful / prosperous</span> career.</div>
+      <div class="answer-row"><strong>2.</strong>&nbsp; The <span class="coll-right">primary / key factor</span> behind the <span class="coll-right">rise / surge</span> in obesity is the <span class="coll-right">absence / shortage</span> of physical activity.</div>
+      <div class="answer-row"><strong>3.</strong>&nbsp; Technology has <span class="coll-right">significantly influenced / profoundly affected</span> the way children <span class="coll-right">acquire knowledge / are educated</span>.</div>
+      <div class="answer-row"><strong>4.</strong>&nbsp; <span class="coll-right">Nevertheless / On the other hand</span>, some <span class="coll-right">scholars / specialists / academics</span> <span class="coll-right">challenge / contest / dispute</span> this <span class="coll-right">perspective / stance / viewpoint</span>.</div>
+      <div class="answer-row"><strong>5.</strong>&nbsp; The government should <span class="coll-right">allocate more funds to / increase investment in</span> public <span class="coll-right">transportation</span> to <span class="coll-right">alleviate / mitigate / ease</span> traffic congestion.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── SECTION 15: PHRASAL VERBS & MORE COLLOCATIONS ──────────── -->
+<div class="section" id="phrasals">
+  <div class="section-label">15 — Phrasal Verbs & Advanced Collocations</div>
+  <h2>Phrasal Verbs & Collocations for IELTS</h2>
+
+  <div class="tip-box" style="margin-bottom:20px;">
+    <strong>Phrasal verbs in IELTS:</strong> Use them in Speaking for natural fluency, but in Academic Writing prefer their formal equivalents (e.g., "bring up" → "raise," "carry out" → "conduct"). Knowing both forms boosts your score.
+  </div>
+
+  <!-- PHRASAL VERB REFERENCE -->
+  <h3 style="color:var(--accent);margin:24px 0 12px;font-size:16px;letter-spacing:1px;">KEY PHRASAL VERBS FOR IELTS</h3>
+  <div class="coll-card"><div class="coll-verb">BRING UP</div><div class="coll-def">to raise a topic / to raise a child</div><div class="coll-example">"She <strong>brought up</strong> an interesting point during the discussion." (= raised)</div><div class="coll-example">"He was <strong>brought up</strong> in a small village." (= raised/grew up)</div></div>
+  <div class="coll-card"><div class="coll-verb">CARRY OUT</div><div class="coll-def">to conduct / to perform</div><div class="coll-example">"Scientists <strong>carried out</strong> extensive research on the topic." (= conducted)</div></div>
+  <div class="coll-card"><div class="coll-verb">COME UP WITH</div><div class="coll-def">to think of / to produce (an idea or plan)</div><div class="coll-example">"The team <strong>came up with</strong> a creative solution." (= devised)</div></div>
+  <div class="coll-card"><div class="coll-verb">CUT DOWN ON</div><div class="coll-def">to reduce</div><div class="coll-example">"People should <strong>cut down on</strong> their use of single-use plastics." (= reduce)</div></div>
+  <div class="coll-card"><div class="coll-verb">LOOK INTO</div><div class="coll-def">to investigate / to examine</div><div class="coll-example">"The police are <strong>looking into</strong> the matter." (= investigating)</div></div>
+  <div class="coll-card"><div class="coll-verb">POINT OUT</div><div class="coll-def">to highlight / to indicate</div><div class="coll-example">"Critics <strong>point out</strong> that the policy has many flaws." (= highlight)</div></div>
+  <div class="coll-card"><div class="coll-verb">PUT FORWARD</div><div class="coll-def">to propose / to suggest</div><div class="coll-example">"Several solutions have been <strong>put forward</strong> by researchers." (= proposed)</div></div>
+  <div class="coll-card"><div class="coll-verb">SET UP</div><div class="coll-def">to establish / to create</div><div class="coll-example">"The government <strong>set up</strong> a committee to address the issue." (= established)</div></div>
+  <div class="coll-card"><div class="coll-verb">TURN OUT</div><div class="coll-def">to result / to prove to be</div><div class="coll-example">"The experiment <strong>turned out</strong> to be a success." (= proved to be)</div></div>
+  <div class="coll-card"><div class="coll-verb">WORK OUT</div><div class="coll-def">to solve / to calculate / to succeed</div><div class="coll-example">"Scientists are trying to <strong>work out</strong> the cause of the disease." (= determine)</div></div>
+
+  <!-- ADVANCED COLLOCATIONS -->
+  <h3 style="color:var(--accent);margin:28px 0 12px;font-size:16px;letter-spacing:1px;">ADVANCED COLLOCATIONS FOR BAND 8+</h3>
+  <div class="coll-card"><div class="coll-verb">POSE a threat / risk / challenge / question</div><div class="coll-example">"Climate change <strong>poses a serious threat</strong> to biodiversity."</div></div>
+  <div class="coll-card"><div class="coll-verb">EXERT influence / pressure / control</div><div class="coll-example">"Social media <strong>exerts a powerful influence</strong> on young people."</div></div>
+  <div class="coll-card"><div class="coll-verb">YIELD results / benefits / profits</div><div class="coll-example">"The new approach <strong>yielded significant results</strong> within months."</div></div>
+  <div class="coll-card"><div class="coll-verb">UNDERGO changes / transformation / surgery</div><div class="coll-example">"The education system has <strong>undergone significant changes</strong> in recent years."</div></div>
+  <div class="coll-card"><div class="coll-verb">BEAR responsibility / the consequences / resemblance</div><div class="coll-example">"Parents <strong>bear primary responsibility</strong> for their children's behaviour."</div></div>
+  <div class="coll-card"><div class="coll-verb">REACH a conclusion / agreement / compromise</div><div class="coll-example">"After months of negotiations, the parties <strong>reached a compromise</strong>."</div></div>
+
+  <!-- EXERCISES -->
+  <div class="exercise-block">
+    <div class="exercise-header">
+      <div>
+        <div class="exercise-label">Exercise N</div>
+        <div class="exercise-title">Replace the phrasal verb with a formal equivalent</div>
+      </div>
+      <button class="answer-toggle" onclick="toggleAnswers('n')">Show Answers</button>
+    </div>
+    <div class="exercise-body">
+      <p style="color:var(--text-3);font-size:13px;margin-bottom:14px;">Replace the bold phrasal verb with a single formal word suitable for academic writing.</p>
+      <div class="exercise-item"><div class="exercise-num">1</div><div>The government <strong>set up</strong> a new department to deal with environmental issues.</div></div>
+      <div class="exercise-item"><div class="exercise-num">2</div><div>Researchers <strong>carried out</strong> a study on the effects of screen time.</div></div>
+      <div class="exercise-item"><div class="exercise-num">3</div><div>Many people <strong>look up to</strong> their teachers as role models.</div></div>
+      <div class="exercise-item"><div class="exercise-num">4</div><div>The scientist <strong>pointed out</strong> several flaws in the methodology.</div></div>
+      <div class="exercise-item"><div class="exercise-num">5</div><div>A new theory was <strong>put forward</strong> to explain the phenomenon.</div></div>
+      <div class="exercise-item"><div class="exercise-num">6</div><div>We need to <strong>come up with</strong> a solution to this growing problem.</div></div>
+      <div class="exercise-item"><div class="exercise-num">7</div><div>The experiment <strong>turned out</strong> to be more complex than expected.</div></div>
+      <div class="exercise-item"><div class="exercise-num">8</div><div>The committee is <strong>looking into</strong> possible causes of the accident.</div></div>
+    </div>
+    <div class="answers-panel" id="answers-n">
+      <div class="answer-row"><strong>1.</strong>&nbsp; set up → <span class="coll-right">established / founded / created</span></div>
+      <div class="answer-row"><strong>2.</strong>&nbsp; carried out → <span class="coll-right">conducted / performed / undertook</span></div>
+      <div class="answer-row"><strong>3.</strong>&nbsp; look up to → <span class="coll-right">admire / respect / revere</span></div>
+      <div class="answer-row"><strong>4.</strong>&nbsp; pointed out → <span class="coll-right">highlighted / identified / indicated</span></div>
+      <div class="answer-row"><strong>5.</strong>&nbsp; put forward → <span class="coll-right">proposed / suggested / advanced</span></div>
+      <div class="answer-row"><strong>6.</strong>&nbsp; come up with → <span class="coll-right">devise / develop / formulate</span></div>
+      <div class="answer-row"><strong>7.</strong>&nbsp; turned out → <span class="coll-right">proved / transpired</span></div>
+      <div class="answer-row"><strong>8.</strong>&nbsp; looking into → <span class="coll-right">investigating / examining / exploring</span></div>
+    </div>
+  </div>
+
+  <div class="exercise-block">
+    <div class="exercise-header">
+      <div>
+        <div class="exercise-label">Exercise O</div>
+        <div class="exercise-title">Complete the advanced collocation</div>
+      </div>
+      <button class="answer-toggle" onclick="toggleAnswers('o')">Show Answers</button>
+    </div>
+    <div class="exercise-body">
+      <p style="color:var(--text-3);font-size:13px;margin-bottom:14px;">Choose POSE, EXERT, YIELD, UNDERGO, BEAR, or REACH to complete each sentence.</p>
+      <div class="exercise-item"><div class="exercise-num">1</div><div>Artificial intelligence ______ both opportunities and challenges for the job market.</div></div>
+      <div class="exercise-item"><div class="exercise-num">2</div><div>Advertising ______ enormous influence on consumer behaviour.</div></div>
+      <div class="exercise-item"><div class="exercise-num">3</div><div>The city has ______ a dramatic transformation over the past twenty years.</div></div>
+      <div class="exercise-item"><div class="exercise-num">4</div><div>The investment ______ substantial profits in its first year.</div></div>
+      <div class="exercise-item"><div class="exercise-num">5</div><div>Both sides finally ______ an agreement after lengthy negotiations.</div></div>
+      <div class="exercise-item"><div class="exercise-num">6</div><div>Individuals must ______ responsibility for reducing their carbon footprint.</div></div>
+    </div>
+    <div class="answers-panel" id="answers-o">
+      <div class="answer-row"><strong>1.</strong>&nbsp; <strong>poses</strong> — pose challenges/opportunities</div>
+      <div class="answer-row"><strong>2.</strong>&nbsp; <strong>exerts</strong> — exert influence</div>
+      <div class="answer-row"><strong>3.</strong>&nbsp; <strong>undergone</strong> — undergo a transformation</div>
+      <div class="answer-row"><strong>4.</strong>&nbsp; <strong>yielded</strong> — yield profits</div>
+      <div class="answer-row"><strong>5.</strong>&nbsp; <strong>reached</strong> — reach an agreement</div>
+      <div class="answer-row"><strong>6.</strong>&nbsp; <strong>bear</strong> — bear responsibility</div>
+    </div>
+  </div>
+</div>
+
+<!-- ── SECTION 16: NEW WRITING TASK 1 EXERCISES ───────────────── -->
+<div class="section" id="writing2">
+  <div class="section-label">16 — Writing Task 1: New Exercises</div>
+  <h2>IELTS Writing Task 1 — Practice</h2>
+  <p style="margin-bottom:24px;">Two new question types: a process diagram and a bar chart. Write at least 150 words for each. Use the structure: introduction → overview → detail paragraph 1 → detail paragraph 2.</p>
+
+  <!-- TASK 1E: Rainwater Collection -->
+  <div class="img-desc-card">
+    <div class="img-desc-scene">
+      <h4>Task 1E — Process Diagram</h4>
+      <div class="task1-prompt">The diagram shows how rainwater is collected for the use of drinking water in an Australian town. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</div>
+    </div>
+    <div class="task1-diagram">
+      <img src="img/rainwater-collection.webp" alt="Process diagram showing rainwater collection system for drinking water in an Australian town">
+    </div>
+    <div class="img-desc-body">
+      <h4 style="margin-bottom:10px;">YOUR ANSWER (150+ WORDS)</h4>
+      <textarea style="width:100%;min-height:160px;border:1px solid var(--border);border-radius:8px;padding:12px;font-family:'Inter',sans-serif;font-size:14px;background:var(--surface-2);color:var(--text);resize:vertical;" placeholder="Write your Task 1 answer here. Remember: introduction, overview, and two detail paragraphs."></textarea>
+
+      <div class="exercise-block" style="margin-top:16px;">
+        <div class="exercise-header">
+          <div>
+            <div class="exercise-label">Key Vocabulary</div>
+            <div class="exercise-title">Process diagrams — Rainwater</div>
+          </div>
+          <button class="answer-toggle" onclick="toggleAnswers('rain')">Show Key Phrases</button>
+        </div>
+        <div class="answers-panel" id="answers-rain">
+          <div class="answer-row"><strong>Process language:</strong> Initially / First / At the first stage / Following this / Subsequently / In the next step / Finally</div>
+          <div class="answer-row"><strong>Passive voice:</strong> "Rainwater <strong>is collected</strong> from rooftops" / "The water <strong>is filtered</strong> through..." / "Chemicals <strong>are added</strong> to..."</div>
+          <div class="answer-row"><strong>Key verbs:</strong> collect, drain, filter, store, treat, purify, supply, distribute, add chemicals, flow through</div>
+          <div class="answer-row"><strong>Overview ideas:</strong> "Overall, the process involves [X] main stages, beginning with the collection of rainwater and ending with its delivery as drinking water." / "The system transforms raw rainwater into potable water through filtration and chemical treatment."</div>
+          <div class="answer-row"><strong>Detail language:</strong> "Rainwater falls on the rooftops of houses and is channelled through drains into an underground pipe system." / "The water then passes through a water filter before being stored in a large storage tank." / "At the treatment stage, chemicals are added to purify the water." / "The treated water is then distributed to households as drinking water."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TASK 1F: Bar Chart -->
+  <div class="img-desc-card">
+    <div class="img-desc-scene">
+      <h4>Task 1F — Bar Chart</h4>
+      <div class="task1-prompt">The chart below shows the expenditure of two countries on consumer goods in 2010. Summarise the information by selecting and reporting the main features, and make comparisons where relevant.</div>
+    </div>
+    <div class="task1-diagram">
+      <img src="img/consumer-goods-bar.png" alt="Bar chart comparing France and UK expenditure on consumer goods (cars, computers, books, perfume, cameras) in 2010">
+    </div>
+    <div class="img-desc-body">
+      <h4 style="margin-bottom:10px;">YOUR ANSWER (150+ WORDS)</h4>
+      <textarea style="width:100%;min-height:160px;border:1px solid var(--border);border-radius:8px;padding:12px;font-family:'Inter',sans-serif;font-size:14px;background:var(--surface-2);color:var(--text);resize:vertical;" placeholder="Write your Task 1 answer here. Include an introduction, overview, and two detail paragraphs."></textarea>
+
+      <div class="exercise-block" style="margin-top:16px;">
+        <div class="exercise-header">
+          <div>
+            <div class="exercise-label">Key Vocabulary</div>
+            <div class="exercise-title">Bar charts — Comparing data</div>
+          </div>
+          <button class="answer-toggle" onclick="toggleAnswers('bar')">Show Key Phrases</button>
+        </div>
+        <div class="answers-panel" id="answers-bar">
+          <div class="answer-row"><strong>Introduction:</strong> "The bar chart <strong>compares</strong> the expenditure of France and the UK on five categories of consumer goods in 2010, measured in pounds sterling."</div>
+          <div class="answer-row"><strong>Overview:</strong> "Overall, the UK spent more than France on cars, books, and cameras, while France had higher expenditure on computers and perfume. Cars were the highest-spending category for both countries."</div>
+          <div class="answer-row"><strong>Comparing:</strong> spent more/less than · exceeded · outspent · was higher/lower · was roughly equal · there was a significant/marginal difference</div>
+          <div class="answer-row"><strong>Approximating:</strong> approximately · roughly · around · just under · just over · nearly · close to</div>
+          <div class="answer-row"><strong>Describing amounts:</strong> "The UK spent approximately £450,000 on cars, compared to around £400,000 by France." / "French expenditure on computers stood at roughly £380,000, which was slightly higher than the UK figure of £350,000."</div>
+          <div class="answer-row"><strong>Highlighting gaps:</strong> "The most significant difference was in cameras, where the UK (£360,000) spent more than double the French figure (£150,000)." / "Spending on perfume was relatively low in both countries, though France (£200,000) outspent the UK (£140,000)."</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIPS -->
+  <div class="tip-box" style="margin-top:24px;">
+    <strong>Process diagram tips:</strong><br>
+    • Use passive voice throughout: "water <strong>is collected</strong>," "chemicals <strong>are added</strong>"<br>
+    • Sequence with: "initially," "following this," "subsequently," "at the next stage," "finally"<br>
+    • Don't list every detail — group related steps<br><br>
+    <strong>Bar chart tips:</strong><br>
+    • Never describe every bar individually — group and compare<br>
+    • Use "while" / "whereas" to contrast within one sentence<br>
+    • Approximate numbers: "roughly," "approximately," "just under/over"<br>
+    • The overview should name the overall winner + biggest difference
   </div>
 </div>
 
@@ -2353,7 +2554,7 @@ ul.bullet li { padding: 3px 0; }
 
 <script>
 // ── NAV ACTIVE STATE ──────────────────────────────────────────
-const sections = ['essay','corrections','grammar','exercises','ex-corrections','speaking','speaking-fb','vocab','collocations','images','listening','hw-corrections'];
+const sections = ['essay','corrections','grammar','exercises','ex-corrections','speaking','speaking-fb','vocab','collocations','images','listening','hw-corrections','perfect-tenses','synonyms','phrasals','writing2'];
 const pills = document.querySelectorAll('.nav-pill');
 function updateNav() {
   const navH = 60;
