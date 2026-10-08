@@ -1,0 +1,1411 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Amalia — IELTS Speaking Part 1</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+:root {
+  --bg: #f8f7f3; --surface: #ffffff; --surface-2: #f0ede6;
+  --border: #e0dbd0; --text: #1c1a14; --text-2: #4a4640; --text-3: #88827a;
+  --accent: #7b2d8e; --accent-light: #f5eaf8;
+  --green: #2d6a4f; --green-light: #e6f4ec;
+  --blue: #1a4e8a; --blue-light: #e8f0fb;
+  --amber: #7a4f0a; --amber-light: #fef5e0;
+  --coral: #c04a1c; --coral-light: #fceee8;
+  --teal: #0d7377; --teal-light: #e4f5f5;
+  --nav-h: 56px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #16140e; --surface: #201d16; --surface-2: #2a261c;
+    --border: #38342a; --text: #f0ece2; --text-2: #c2bdb0; --text-3: #7a7468;
+    --accent: #c478d4; --accent-light: #2a102e;
+    --green: #52b788; --green-light: #0d2418;
+    --blue: #6daaf0; --blue-light: #0e1f38;
+    --amber: #fbbf24; --amber-light: #1c1200;
+    --coral: #e06840; --coral-light: #2c1508;
+    --teal: #2dd4bf; --teal-light: #0a2626;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #16140e; --surface: #201d16; --surface-2: #2a261c;
+  --border: #38342a; --text: #f0ece2; --text-2: #c2bdb0; --text-3: #7a7468;
+  --accent: #c478d4; --accent-light: #2a102e;
+  --green: #52b788; --green-light: #0d2418;
+  --blue: #6daaf0; --blue-light: #0e1f38;
+  --amber: #fbbf24; --amber-light: #1c1200;
+  --coral: #e06840; --coral-light: #2c1508;
+  --teal: #2dd4bf; --teal-light: #0a2626;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 64px; }
+body {
+  background: var(--bg); color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 15px; line-height: 1.75; padding-inline: 16px;
+}
+
+/* NAV */
+nav {
+  position: sticky; top: 0; z-index: 100;
+  background: var(--surface); border-bottom: 1px solid var(--border);
+  margin-inline: -16px; padding: 0 16px;
+  display: flex; align-items: center; gap: 12px; height: var(--nav-h);
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+}
+nav::-webkit-scrollbar { display: none; }
+nav a {
+  white-space: nowrap; text-decoration: none; font-size: 13px; font-weight: 500;
+  color: var(--text-3); padding: 6px 14px; border-radius: 20px;
+  transition: all .2s;
+}
+nav a:hover { color: var(--text); background: var(--surface-2); }
+nav a.active { background: var(--accent); color: #fff; }
+
+.wrap { max-width: 840px; margin: 0 auto; padding-block: 32px; }
+
+/* HEADER */
+.hero {
+  text-align: center; padding: 48px 0 36px;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif; font-size: clamp(28px, 5vw, 42px);
+  font-weight: 700; color: var(--accent); margin-bottom: 8px;
+}
+.hero .sub {
+  font-size: 16px; color: var(--text-2); max-width: 600px; margin: 0 auto;
+}
+.hero .badge {
+  display: inline-block; margin-top: 14px; padding: 4px 14px;
+  background: var(--accent-light); color: var(--accent);
+  border-radius: 16px; font-size: 13px; font-weight: 600;
+}
+
+/* SECTION */
+section { margin-bottom: 40px; }
+.stitle {
+  font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700;
+  color: var(--accent); margin-bottom: 16px; padding-bottom: 8px;
+  border-bottom: 2px solid var(--border);
+}
+
+/* CARDS */
+.topic-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; margin-bottom: 20px; overflow: hidden;
+}
+.topic-header {
+  background: var(--accent); color: #fff; padding: 14px 20px;
+  font-size: 18px; font-weight: 700; cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center;
+  user-select: none;
+}
+.topic-header .arrow { transition: transform .25s; font-size: 14px; }
+.topic-card.open .topic-header .arrow { transform: rotate(180deg); }
+.topic-body { display: none; padding: 20px; }
+.topic-card.open .topic-body { display: block; }
+
+/* QUESTIONS */
+.q-list { list-style: none; margin-bottom: 18px; }
+.q-list li {
+  padding: 8px 0; border-bottom: 1px solid var(--border);
+  font-size: 15px; color: var(--text);
+}
+.q-list li:last-child { border-bottom: none; }
+.q-list li::before { content: "Q: "; font-weight: 700; color: var(--accent); }
+
+/* WORD BANK */
+.word-bank {
+  background: var(--blue-light); border: 1px solid var(--blue);
+  border-radius: 8px; padding: 16px 20px; margin-bottom: 18px;
+}
+.word-bank h4 {
+  font-size: 14px; font-weight: 700; color: var(--blue);
+  text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px;
+}
+.wb-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 6px 16px;
+}
+.wb-item {
+  font-size: 14px; color: var(--text);
+}
+.wb-item strong { color: var(--blue); }
+.wb-item .syn { color: var(--text-3); font-size: 13px; font-style: italic; }
+
+/* EXAMPLE ANSWERS */
+.examples {
+  background: var(--green-light); border: 1px solid var(--green);
+  border-radius: 8px; padding: 16px 20px; margin-bottom: 18px;
+}
+.examples h4 {
+  font-size: 14px; font-weight: 700; color: var(--green);
+  text-transform: uppercase; letter-spacing: .5px; margin-bottom: 10px;
+}
+.ex-q {
+  font-weight: 600; color: var(--text); margin-top: 12px; margin-bottom: 4px;
+  font-size: 14px;
+}
+.ex-q:first-of-type { margin-top: 0; }
+.ex-a {
+  font-size: 14px; color: var(--text-2); padding-left: 14px;
+  border-left: 3px solid var(--green); margin-bottom: 8px;
+  line-height: 1.6;
+}
+.ex-a em { color: var(--green); font-style: normal; font-weight: 600; }
+
+/* TIPS */
+.tip-box {
+  background: var(--amber-light); border: 1px solid var(--amber);
+  border-radius: 8px; padding: 16px 20px; margin-bottom: 18px;
+}
+.tip-box h4 {
+  font-size: 14px; font-weight: 700; color: var(--amber);
+  text-transform: uppercase; letter-spacing: .5px; margin-bottom: 8px;
+}
+.tip-box ul { padding-left: 18px; }
+.tip-box li { font-size: 14px; color: var(--text-2); margin-bottom: 4px; }
+
+/* STRATEGY SECTION */
+.strat-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: 24px; margin-bottom: 18px;
+}
+.strat-card h3 {
+  font-size: 17px; font-weight: 700; color: var(--accent); margin-bottom: 10px;
+}
+.strat-card p, .strat-card li {
+  font-size: 14px; color: var(--text-2); line-height: 1.7;
+}
+.strat-card ul { padding-left: 18px; margin-top: 8px; }
+.strat-card li { margin-bottom: 6px; }
+
+.phrase-table {
+  width: 100%; border-collapse: collapse; margin: 12px 0;
+  font-size: 14px;
+}
+.phrase-table th {
+  background: var(--accent); color: #fff; padding: 10px 14px;
+  text-align: left; font-weight: 600;
+}
+.phrase-table td {
+  padding: 8px 14px; border-bottom: 1px solid var(--border);
+  color: var(--text-2);
+}
+.phrase-table tr:nth-child(even) td { background: var(--surface-2); }
+
+/* FOOTER */
+footer {
+  text-align: center; padding: 40px 0 24px;
+  color: var(--text-3); font-size: 13px;
+  border-top: 1px solid var(--border); margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+  .wb-grid { grid-template-columns: 1fr; }
+  .topic-header { font-size: 16px; padding: 12px 16px; }
+  .topic-body { padding: 16px; }
+}
+</style>
+</head><body>
+
+<nav id="topnav">
+  <a href="#strategies" class="active">Strategies</a>
+  <a href="#core">Core Topics</a>
+  <a href="#lifestyle">Lifestyle</a>
+  <a href="#interests">Interests</a>
+  <a href="#community">Community</a>
+  <a href="#media">Media</a>
+  <a href="#practice">Practice Plan</a>
+</nav>
+
+<div class="wrap">
+
+<div class="hero">
+  <h1>IELTS Speaking Part 1</h1>
+  <div class="sub">Word &amp; Phrase Bank &bull; Example Answers &bull; Practice Guide</div>
+  <div class="badge">Prepared for Amalia</div>
+</div>
+
+<!-- ======================== STRATEGIES ======================== -->
+<section id="strategies">
+<h2 class="stitle">Part 1 Strategy Guide</h2>
+
+<div class="strat-card">
+<h3>What is Part 1?</h3>
+<p>The examiner asks you <strong>4&ndash;6 questions</strong> on <strong>2&ndash;3 familiar topics</strong> (work, home, hobbies, etc.). It lasts <strong>4&ndash;5 minutes</strong>. This is a warm-up &mdash; your answers should be natural, not rehearsed speeches.</p>
+</div>
+
+<div class="strat-card">
+<h3>The Golden Rule: Answer + Extend</h3>
+<p>Never give a one-word answer. Use this formula:</p>
+<ul>
+<li><strong>Direct answer</strong> (1 sentence) &mdash; answer the question clearly</li>
+<li><strong>Extension</strong> (1&ndash;2 sentences) &mdash; add a reason, example, or contrast</li>
+</ul>
+<p style="margin-top:10px;"><strong>Bad:</strong> "Do you like reading?" &rarr; "Yes, I do."</p>
+<p><strong>Good:</strong> "Yes, I'm <em>quite keen on</em> reading. I <em>tend to</em> read fiction before bed because it helps me unwind after a long day."</p>
+</div>
+
+<div class="strat-card">
+<h3>Key Phrases to Sound Natural</h3>
+<table class="phrase-table">
+<tr><th>Function</th><th>Phrases</th></tr>
+<tr><td>Giving opinions</td><td>I'd say... / I suppose... / I reckon... / To be honest... / Personally...</td></tr>
+<tr><td>Adding reasons</td><td>mainly because... / the reason is... / that's partly due to...</td></tr>
+<tr><td>Giving examples</td><td>for instance... / such as... / like... / a good example would be...</td></tr>
+<tr><td>Contrasting</td><td>although... / having said that... / on the other hand... / mind you...</td></tr>
+<tr><td>Frequency</td><td>from time to time / on a regular basis / every now and then / hardly ever</td></tr>
+<tr><td>Hedging</td><td>I suppose... / it depends on... / not necessarily... / more or less...</td></tr>
+<tr><td>Showing enthusiasm</td><td>I'm really into... / I'm passionate about... / I'm a big fan of...</td></tr>
+<tr><td>Time markers</td><td>these days / back when I was younger / over the years / recently</td></tr>
+</table>
+</div>
+
+<div class="strat-card">
+<h3>Common Mistakes to Avoid</h3>
+<ul>
+<li><strong>Over-answering</strong> &mdash; Part 1 answers should be 2&ndash;4 sentences, not a 1-minute monologue</li>
+<li><strong>Memorised scripts</strong> &mdash; examiners notice immediately; it lowers your score</li>
+<li><strong>"Yes/No" only</strong> &mdash; always extend with a reason or example</li>
+<li><strong>Repeating the question word-for-word</strong> &mdash; paraphrase: "Do you like sport?" &rarr; "I'm <em>quite into</em> sport, actually..."</li>
+<li><strong>Using "I think" for every answer</strong> &mdash; vary it: I suppose, I'd say, I reckon, in my view</li>
+<li><strong>Flat intonation</strong> &mdash; show interest in what you're saying</li>
+</ul>
+</div>
+</section>
+
+<!-- ======================== CORE TOPICS ======================== -->
+<section id="core">
+<h2 class="stitle">Core Topics</h2>
+
+<!-- WORK -->
+<div class="topic-card open" id="t-work">
+<div class="topic-header" onclick="toggleCard(this)">Work <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>What is your job?</li>
+<li>Where do you work?</li>
+<li>Why did you choose that job?</li>
+<li>Is it a popular job in your country?</li>
+<li>Do you like your job?</li>
+<li>Do you get on well with your colleagues?</li>
+<li>What was your first day like?</li>
+<li>What responsibilities do you have at work?</li>
+<li>If you had the chance, would you change your job?</li>
+<li>Do you plan to continue with your job in the future?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>rewarding</strong> <span class="syn">(= satisfying, fulfilling)</span></div>
+<div class="wb-item"><strong>demanding</strong> <span class="syn">(= challenging, tough)</span></div>
+<div class="wb-item"><strong>a nine-to-five job</strong> <span class="syn">(= regular office hours)</span></div>
+<div class="wb-item"><strong>career prospects</strong> <span class="syn">(= future opportunities)</span></div>
+<div class="wb-item"><strong>work-life balance</strong> <span class="syn">(= time for work and personal life)</span></div>
+<div class="wb-item"><strong>to be in charge of</strong> <span class="syn">(= to be responsible for)</span></div>
+<div class="wb-item"><strong>to get along with</strong> <span class="syn">(= to have a good relationship with)</span></div>
+<div class="wb-item"><strong>a team player</strong> <span class="syn">(= someone who cooperates well)</span></div>
+<div class="wb-item"><strong>to make a living</strong> <span class="syn">(= to earn money to survive)</span></div>
+<div class="wb-item"><strong>job satisfaction</strong> <span class="syn">(= enjoyment from your work)</span></div>
+<div class="wb-item"><strong>a dead-end job</strong> <span class="syn">(= no promotion prospects)</span></div>
+<div class="wb-item"><strong>freelance</strong> <span class="syn">(= self-employed, independent)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">What is your job?</div>
+<div class="ex-a">I <em>work as</em> a marketing coordinator at a tech company. I'm mainly <em>in charge of</em> managing our social media campaigns and coordinating with the design team.</div>
+
+<div class="ex-q">Do you like your job?</div>
+<div class="ex-a"><em>On the whole</em>, yes &mdash; I find it <em>quite rewarding</em> because I get to be creative. <em>Having said that</em>, it can be <em>rather demanding</em> during peak seasons when we have tight deadlines.</div>
+
+<div class="ex-q">Would you change your job?</div>
+<div class="ex-a"><em>To be honest</em>, I'm fairly content with what I'm doing <em>at the moment</em>. But if I <em>had the chance</em>, I'd love to move into UX design because I'm <em>really into</em> understanding how people interact with products.</div>
+</div>
+
+<div class="tip-box">
+<h4>Tips for "Work" questions</h4>
+<ul>
+<li>Don't just name your job &mdash; say what you <em>actually do</em> day to day</li>
+<li>Use "work as" not "work like" &mdash; "I work <strong>as</strong> a teacher" (not "like a teacher")</li>
+<li>For hypothetical questions (would you change?), use conditionals: "If I had the chance, I'd..."</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- STUDY -->
+<div class="topic-card" id="t-study">
+<div class="topic-header" onclick="toggleCard(this)">Study <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>What do you study?</li>
+<li>Where do you study that?</li>
+<li>Why did you choose that subject?</li>
+<li>Is it a popular subject in your country?</li>
+<li>Do you like that subject?</li>
+<li>Do you get on with your classmates?</li>
+<li>What was your first day like?</li>
+<li>What are the main aspects of your subject?</li>
+<li>If you had the chance, would you change subject?</li>
+<li>Do you plan to get a job in the same field as your subject?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>major in</strong> <span class="syn">(= specialise in)</span></div>
+<div class="wb-item"><strong>coursework</strong> <span class="syn">(= assignments, essays)</span></div>
+<div class="wb-item"><strong>a steep learning curve</strong> <span class="syn">(= difficult at first)</span></div>
+<div class="wb-item"><strong>to pursue a degree</strong> <span class="syn">(= to study for a qualification)</span></div>
+<div class="wb-item"><strong>hands-on experience</strong> <span class="syn">(= practical, real-world)</span></div>
+<div class="wb-item"><strong>career-oriented</strong> <span class="syn">(= focused on future job)</span></div>
+<div class="wb-item"><strong>academic pressure</strong> <span class="syn">(= stress from studies)</span></div>
+<div class="wb-item"><strong>fellow students</strong> <span class="syn">(= classmates, peers)</span></div>
+<div class="wb-item"><strong>to broaden my horizons</strong> <span class="syn">(= to expand knowledge)</span></div>
+<div class="wb-item"><strong>to fall behind</strong> <span class="syn">(= to not keep up)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">What do you study?</div>
+<div class="ex-a">I'm currently <em>pursuing a degree</em> in Business Administration at the local university. It covers everything from marketing to finance, which I find <em>really stimulating</em>.</div>
+
+<div class="ex-q">Why did you choose that subject?</div>
+<div class="ex-a"><em>Mainly because</em> I've always been interested in how companies operate. I also felt it was a <em>career-oriented</em> subject that would give me <em>plenty of options</em> after graduation.</div>
+
+<div class="ex-q">Do you plan to get a job in the same field?</div>
+<div class="ex-a"><em>I'd like to think so</em>, yes. I'm hoping to go into project management once I finish my degree, <em>although</em> I'm still <em>keeping my options open</em>.</div>
+</div>
+</div>
+</div>
+
+<!-- HOMETOWN -->
+<div class="topic-card" id="t-hometown">
+<div class="topic-header" onclick="toggleCard(this)">Hometown <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>Where is your hometown?</li>
+<li>Do you like your hometown?</li>
+<li>Do you often visit your hometown?</li>
+<li>What is your hometown like?</li>
+<li>What is the oldest place in your hometown?</li>
+<li>What is there for a foreigner to do or see in your hometown?</li>
+<li>How could your hometown be improved?</li>
+<li>Has your hometown changed much since you were a child?</li>
+<li>Is there good public transportation in your hometown?</li>
+<li>Do you think your hometown is a good place to bring up children?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>bustling</strong> <span class="syn">(= lively, busy)</span></div>
+<div class="wb-item"><strong>picturesque</strong> <span class="syn">(= beautiful, scenic)</span></div>
+<div class="wb-item"><strong>a hidden gem</strong> <span class="syn">(= undiscovered, special place)</span></div>
+<div class="wb-item"><strong>to be situated</strong> <span class="syn">(= to be located)</span></div>
+<div class="wb-item"><strong>a close-knit community</strong> <span class="syn">(= people who know each other well)</span></div>
+<div class="wb-item"><strong>urban sprawl</strong> <span class="syn">(= city expansion)</span></div>
+<div class="wb-item"><strong>cost of living</strong> <span class="syn">(= how expensive life is)</span></div>
+<div class="wb-item"><strong>to undergo renovation</strong> <span class="syn">(= to be rebuilt, updated)</span></div>
+<div class="wb-item"><strong>cultural heritage</strong> <span class="syn">(= traditions, history)</span></div>
+<div class="wb-item"><strong>commuter town</strong> <span class="syn">(= people travel to a bigger city for work)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">What is your hometown like?</div>
+<div class="ex-a">It's a fairly <em>bustling</em> city with about half a million people. It's <em>well known for</em> its historic centre and there are <em>plenty of</em> cafes and parks. <em>Having said that</em>, the traffic can be <em>quite hectic</em> during rush hour.</div>
+
+<div class="ex-q">Has your hometown changed much?</div>
+<div class="ex-a"><em>Absolutely</em> &mdash; it's changed <em>beyond recognition</em> in the last decade. They've built a new shopping centre and the old industrial area has been <em>converted into</em> a modern residential district.</div>
+
+<div class="ex-q">Is it a good place to bring up children?</div>
+<div class="ex-a"><em>I'd say</em> it's a <em>mixed bag</em>. On one hand, there are excellent schools and <em>a close-knit community</em>. On the other hand, the <em>cost of living</em> has gone up <em>significantly</em> in recent years.</div>
+</div>
+</div>
+</div>
+
+<!-- HOME -->
+<div class="topic-card" id="t-home">
+<div class="topic-header" onclick="toggleCard(this)">Home <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>Where is your home?</li>
+<li>Do you live in a house or a flat?</li>
+<li>Who do you live with?</li>
+<li>Are there many rooms in your home?</li>
+<li>What is your favourite room?</li>
+<li>How are the walls decorated?</li>
+<li>What would you change about your home?</li>
+<li>Do you plan to live there in the future?</li>
+<li>What facilities are there near your home?</li>
+<li>What is your neighbourhood like?</li>
+<li>Do most people live in houses in your country?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>cosy</strong> <span class="syn">(= warm, comfortable, snug)</span></div>
+<div class="wb-item"><strong>spacious</strong> <span class="syn">(= roomy, large)</span></div>
+<div class="wb-item"><strong>well-furnished</strong> <span class="syn">(= nicely decorated with furniture)</span></div>
+<div class="wb-item"><strong>on the outskirts</strong> <span class="syn">(= on the edge of the city)</span></div>
+<div class="wb-item"><strong>within walking distance</strong> <span class="syn">(= close enough to walk)</span></div>
+<div class="wb-item"><strong>a stone's throw from</strong> <span class="syn">(= very near)</span></div>
+<div class="wb-item"><strong>to do up</strong> <span class="syn">(= to renovate, to redecorate)</span></div>
+<div class="wb-item"><strong>natural light</strong> <span class="syn">(= sunlight, daylight)</span></div>
+<div class="wb-item"><strong>to overlook</strong> <span class="syn">(= to have a view of)</span></div>
+<div class="wb-item"><strong>high-rise</strong> <span class="syn">(= tall apartment building)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">What is your favourite room?</div>
+<div class="ex-a"><em>Without a doubt</em>, my bedroom. It's not particularly <em>spacious</em>, but it's incredibly <em>cosy</em> and gets <em>plenty of natural light</em> in the morning. I've hung a few prints on the walls, which makes it feel more personal.</div>
+
+<div class="ex-q">What would you change about your home?</div>
+<div class="ex-a">If I could, I'd <em>do up</em> the kitchen &mdash; it's a bit outdated. I'd love to have a bigger counter space and maybe an island in the middle. <em>Other than that</em>, I'm pretty happy with it.</div>
+</div>
+</div>
+</div>
+
+</section>
+
+<!-- ======================== LIFESTYLE ======================== -->
+<section id="lifestyle">
+<h2 class="stitle">Lifestyle Topics</h2>
+
+<!-- DAILY ROUTINE -->
+<div class="topic-card" id="t-routine">
+<div class="topic-header" onclick="toggleCard(this)">Daily Routine <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>What is your typical day like?</li>
+<li>What do you usually do in the mornings?</li>
+<li>Do you have the same routine every day?</li>
+<li>What do you usually do at the weekends?</li>
+<li>Would you like to change your daily routine?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>an early bird</strong> <span class="syn">(= morning person)</span></div>
+<div class="wb-item"><strong>a night owl</strong> <span class="syn">(= someone who stays up late)</span></div>
+<div class="wb-item"><strong>to stick to a routine</strong> <span class="syn">(= to follow a regular pattern)</span></div>
+<div class="wb-item"><strong>to sleep in</strong> <span class="syn">(= to wake up late)</span></div>
+<div class="wb-item"><strong>to run errands</strong> <span class="syn">(= to do small tasks: shopping, bank, etc.)</span></div>
+<div class="wb-item"><strong>hectic</strong> <span class="syn">(= very busy, rushed)</span></div>
+<div class="wb-item"><strong>to unwind</strong> <span class="syn">(= to relax, de-stress)</span></div>
+<div class="wb-item"><strong>to commute</strong> <span class="syn">(= to travel to work/school)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">What is your typical day like?</div>
+<div class="ex-a">I'm <em>a bit of an early bird</em>, so I usually get up around 6:30. I tend to start the day with a quick workout, then have breakfast and <em>commute</em> to work. My evenings are usually spent cooking dinner and <em>unwinding</em> with a book or a series.</div>
+</div>
+</div>
+</div>
+
+<!-- FOOD -->
+<div class="topic-card" id="t-food">
+<div class="topic-header" onclick="toggleCard(this)">Food &amp; Meals <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>What is your favourite meal?</li>
+<li>Have you always had the same meals?</li>
+<li>Are there any foods you dislike?</li>
+<li>What is the most common meal in your country?</li>
+<li>Do you have a healthy diet? What is your opinion of fast food?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>home-cooked meal</strong> <span class="syn">(= food prepared at home)</span></div>
+<div class="wb-item"><strong>a balanced diet</strong> <span class="syn">(= healthy variety of food)</span></div>
+<div class="wb-item"><strong>to have a sweet tooth</strong> <span class="syn">(= to love sugary food)</span></div>
+<div class="wb-item"><strong>to grab a bite</strong> <span class="syn">(= to eat quickly)</span></div>
+<div class="wb-item"><strong>mouth-watering</strong> <span class="syn">(= delicious-looking)</span></div>
+<div class="wb-item"><strong>to eat out</strong> <span class="syn">(= to dine at a restaurant)</span></div>
+<div class="wb-item"><strong>a fussy eater</strong> <span class="syn">(= picky about food)</span></div>
+<div class="wb-item"><strong>a staple food</strong> <span class="syn">(= basic, everyday food)</span></div>
+<div class="wb-item"><strong>to try one's hand at</strong> <span class="syn">(= to attempt cooking something new)</span></div>
+<div class="wb-item"><strong>takeaway</strong> <span class="syn">(= food ordered to eat at home)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">What is your favourite meal?</div>
+<div class="ex-a">I'm a <em>big fan of</em> Italian food, especially pasta. There's a <em>mouth-watering</em> mushroom risotto my mum makes that I absolutely love. I've actually been <em>trying my hand at</em> cooking it myself recently.</div>
+
+<div class="ex-q">Do you have a healthy diet?</div>
+<div class="ex-a">I try to, but I'll be honest &mdash; I <em>have a bit of a sweet tooth</em>. I <em>make an effort</em> to eat plenty of vegetables and fruit, but <em>every now and then</em> I can't resist a slice of cake.</div>
+</div>
+</div>
+</div>
+
+<!-- CLOTHES -->
+<div class="topic-card" id="t-clothes">
+<div class="topic-header" onclick="toggleCard(this)">Clothes <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>Do you care about fashion?</li>
+<li>What kind of clothes do you usually wear?</li>
+<li>Do you prefer comfortable clothes or fashionable clothes?</li>
+<li>Do you ever buy clothes online?</li>
+<li>Has your style changed over the years?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>casual</strong> <span class="syn">(= informal, relaxed)</span></div>
+<div class="wb-item"><strong>smart / smart-casual</strong> <span class="syn">(= tidy but not formal)</span></div>
+<div class="wb-item"><strong>to dress up</strong> <span class="syn">(= to wear formal/nice clothes)</span></div>
+<div class="wb-item"><strong>to suit someone</strong> <span class="syn">(= to look good on someone)</span></div>
+<div class="wb-item"><strong>a bargain</strong> <span class="syn">(= something bought cheaply)</span></div>
+<div class="wb-item"><strong>wardrobe</strong> <span class="syn">(= collection of clothes)</span></div>
+<div class="wb-item"><strong>brand-conscious</strong> <span class="syn">(= caring about labels)</span></div>
+<div class="wb-item"><strong>to keep up with trends</strong> <span class="syn">(= to follow fashion)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">Do you care about fashion?</div>
+<div class="ex-a"><em>Not particularly</em>, to be honest. I <em>tend to go for</em> comfort over style. <em>Having said that</em>, I do like to look <em>presentable</em> and I enjoy browsing shops <em>from time to time</em>.</div>
+</div>
+</div>
+</div>
+
+<!-- SHOPPING -->
+<div class="topic-card" id="t-shopping">
+<div class="topic-header" onclick="toggleCard(this)">Shopping <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>Do you like shopping?</li>
+<li>How often do you go shopping?</li>
+<li>Do you prefer shopping online or in stores?</li>
+<li>What do you usually shop for?</li>
+<li>Are there good shopping facilities near your home?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>window shopping</strong> <span class="syn">(= looking without buying)</span></div>
+<div class="wb-item"><strong>to splash out on</strong> <span class="syn">(= to spend a lot on)</span></div>
+<div class="wb-item"><strong>value for money</strong> <span class="syn">(= worth what you paid)</span></div>
+<div class="wb-item"><strong>to browse</strong> <span class="syn">(= to look around casually)</span></div>
+<div class="wb-item"><strong>retail therapy</strong> <span class="syn">(= shopping to feel better)</span></div>
+<div class="wb-item"><strong>to be on sale</strong> <span class="syn">(= reduced price)</span></div>
+<div class="wb-item"><strong>an impulse buy</strong> <span class="syn">(= unplanned purchase)</span></div>
+<div class="wb-item"><strong>a shopaholic</strong> <span class="syn">(= someone who loves shopping)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">Do you prefer online or in-store shopping?</div>
+<div class="ex-a"><em>It depends on what I'm buying</em>. For everyday things like groceries, I prefer going to the shop because I like to pick things out myself. But for electronics or books, I <em>tend to</em> order online because there's a wider selection and it's more convenient.</div>
+</div>
+</div>
+</div>
+
+<!-- GOING OUT / EVENINGS -->
+<div class="topic-card" id="t-evenings">
+<div class="topic-header" onclick="toggleCard(this)">Evenings &amp; Going Out <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>What do you usually do in the evenings?</li>
+<li>Do you prefer spending evenings at home or going out?</li>
+<li>What do you like to do when you go out?</li>
+<li>Do you prefer going out on your own or with friends?</li>
+<li>How often do you go out in a week?</li>
+<li>Where do most young people in your country like to go out?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>a homebody</strong> <span class="syn">(= prefers staying in)</span></div>
+<div class="wb-item"><strong>to socialise</strong> <span class="syn">(= to spend time with others)</span></div>
+<div class="wb-item"><strong>to catch up with</strong> <span class="syn">(= to meet and talk with someone)</span></div>
+<div class="wb-item"><strong>nightlife</strong> <span class="syn">(= evening entertainment)</span></div>
+<div class="wb-item"><strong>to have a quiet night in</strong> <span class="syn">(= to relax at home)</span></div>
+<div class="wb-item"><strong>to recharge my batteries</strong> <span class="syn">(= to rest and recover energy)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">What do you usually do in the evenings?</div>
+<div class="ex-a"><em>It depends on the day</em>, really. During the week, I'm usually <em>pretty tired</em> so I tend to <em>have a quiet night in</em> &mdash; maybe watch something or read. At weekends, though, I like to <em>catch up with</em> friends over dinner.</div>
+</div>
+</div>
+</div>
+
+<!-- WEATHER -->
+<div class="topic-card" id="t-weather">
+<div class="topic-header" onclick="toggleCard(this)">Weather <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>What's the weather like in your country?</li>
+<li>What's your favourite type of weather?</li>
+<li>Does the weather affect your mood?</li>
+<li>Do you check the weather forecast?</li>
+<li>What do you do when the weather is bad?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>mild</strong> <span class="syn">(= not too hot, not too cold)</span></div>
+<div class="wb-item"><strong>harsh / severe</strong> <span class="syn">(= extreme, very cold/hot)</span></div>
+<div class="wb-item"><strong>humid</strong> <span class="syn">(= damp, sticky air)</span></div>
+<div class="wb-item"><strong>overcast</strong> <span class="syn">(= cloudy, grey sky)</span></div>
+<div class="wb-item"><strong>scorching</strong> <span class="syn">(= extremely hot)</span></div>
+<div class="wb-item"><strong>freezing</strong> <span class="syn">(= extremely cold)</span></div>
+<div class="wb-item"><strong>to pour down</strong> <span class="syn">(= to rain heavily)</span></div>
+<div class="wb-item"><strong>under the weather</strong> <span class="syn">(= feeling a bit ill)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">What's the weather like in your country?</div>
+<div class="ex-a">We have <em>quite distinct</em> seasons. Summers can be <em>scorching</em> &mdash; sometimes over 35 degrees. Winters are <em>fairly mild</em> compared to northern countries, but it can get <em>quite chilly</em> at night.</div>
+</div>
+</div>
+</div>
+
+<!-- TRANSPORT -->
+<div class="topic-card" id="t-transport">
+<div class="topic-header" onclick="toggleCard(this)">Transport <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>How do you usually travel to work/school?</li>
+<li>What's the public transport like in your city?</li>
+<li>Do you prefer driving or using public transport?</li>
+<li>Would you like to have a car in the future?</li>
+<li>Have you ever had a long journey?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>to commute</strong> <span class="syn">(= to travel to work regularly)</span></div>
+<div class="wb-item"><strong>rush hour</strong> <span class="syn">(= busy travel time)</span></div>
+<div class="wb-item"><strong>congestion / traffic jam</strong> <span class="syn">(= too many cars)</span></div>
+<div class="wb-item"><strong>to get stuck in traffic</strong> <span class="syn">(= delayed by traffic)</span></div>
+<div class="wb-item"><strong>convenient</strong> <span class="syn">(= easy, practical)</span></div>
+<div class="wb-item"><strong>eco-friendly</strong> <span class="syn">(= good for environment)</span></div>
+<div class="wb-item"><strong>to hail a taxi</strong> <span class="syn">(= to stop/call a taxi)</span></div>
+<div class="wb-item"><strong>to carpool</strong> <span class="syn">(= to share a car ride)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">How do you usually travel to work?</div>
+<div class="ex-a">I usually take the metro because it's the most <em>convenient</em> option. It takes about 25 minutes door to door. I <em>used to</em> drive, but the <em>congestion</em> during <em>rush hour</em> was unbearable, so I switched.</div>
+</div>
+</div>
+</div>
+
+</section>
+
+<!-- ======================== INTERESTS ======================== -->
+<section id="interests">
+<h2 class="stitle">Interests &amp; Hobbies</h2>
+
+<!-- HOBBIES -->
+<div class="topic-card" id="t-hobbies">
+<div class="topic-header" onclick="toggleCard(this)">Hobbies &amp; Leisure <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>What do you do in your free time?</li>
+<li>Have you always had the same hobbies?</li>
+<li>Is there a hobby you'd like to take up?</li>
+<li>How much free time do you have?</li>
+<li>Do people in your country have a lot of leisure time?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>to take up</strong> <span class="syn">(= to start a hobby)</span></div>
+<div class="wb-item"><strong>to give up</strong> <span class="syn">(= to stop doing something)</span></div>
+<div class="wb-item"><strong>to be into / keen on</strong> <span class="syn">(= to enjoy, to like)</span></div>
+<div class="wb-item"><strong>to kill time</strong> <span class="syn">(= to pass time doing something)</span></div>
+<div class="wb-item"><strong>to dabble in</strong> <span class="syn">(= to try without being serious)</span></div>
+<div class="wb-item"><strong>a pastime</strong> <span class="syn">(= an activity done for fun)</span></div>
+<div class="wb-item"><strong>to get the hang of</strong> <span class="syn">(= to learn how to do something)</span></div>
+<div class="wb-item"><strong>to lose track of time</strong> <span class="syn">(= to forget how long you've been doing it)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">What do you do in your free time?</div>
+<div class="ex-a">I'm <em>really into</em> photography. I <em>took it up</em> a couple of years ago and I've been hooked ever since. I love going out at the weekend to capture street scenes. I also <em>dabble in</em> painting <em>from time to time</em>.</div>
+
+<div class="ex-q">Is there a hobby you'd like to take up?</div>
+<div class="ex-a"><em>I've been meaning to</em> learn to play the guitar for ages. I actually bought one last year, but I haven't <em>got the hang of</em> it yet because I don't <em>set aside</em> enough time to practise.</div>
+</div>
+</div>
+</div>
+
+<!-- SPORT -->
+<div class="topic-card" id="t-sport">
+<div class="topic-header" onclick="toggleCard(this)">Sport <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>Do you play any sports?</li>
+<li>What sports are popular in your country?</li>
+<li>Do you prefer watching or playing sports?</li>
+<li>Did you do sports as a child?</li>
+<li>Do you think exercise is important?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>to work out</strong> <span class="syn">(= to exercise)</span></div>
+<div class="wb-item"><strong>to keep fit / stay in shape</strong> <span class="syn">(= to maintain fitness)</span></div>
+<div class="wb-item"><strong>a spectator sport</strong> <span class="syn">(= a sport people like to watch)</span></div>
+<div class="wb-item"><strong>an avid fan</strong> <span class="syn">(= very enthusiastic supporter)</span></div>
+<div class="wb-item"><strong>to take part in</strong> <span class="syn">(= to participate)</span></div>
+<div class="wb-item"><strong>to train / to practise</strong> <span class="syn">(= to prepare for a sport)</span></div>
+<div class="wb-item"><strong>team sports vs individual sports</strong></div>
+<div class="wb-item"><strong>sedentary lifestyle</strong> <span class="syn">(= inactive, sitting a lot)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">Do you play any sports?</div>
+<div class="ex-a">Yes, I play tennis <em>on a regular basis</em> &mdash; usually twice a week. I find it's a great way to <em>stay in shape</em> and blow off steam after work. I also go jogging <em>every now and then</em>.</div>
+</div>
+</div>
+</div>
+
+<!-- READING -->
+<div class="topic-card" id="t-reading">
+<div class="topic-header" onclick="toggleCard(this)">Reading <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>Do you like reading?</li>
+<li>What kind of books do you read?</li>
+<li>Do you prefer paper books or e-books?</li>
+<li>Did you read a lot as a child?</li>
+<li>Do people in your country read a lot?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>a page-turner</strong> <span class="syn">(= a book you can't put down)</span></div>
+<div class="wb-item"><strong>a bookworm</strong> <span class="syn">(= someone who reads a lot)</span></div>
+<div class="wb-item"><strong>a bestseller</strong> <span class="syn">(= a very popular book)</span></div>
+<div class="wb-item"><strong>to get lost in a book</strong> <span class="syn">(= to be fully absorbed)</span></div>
+<div class="wb-item"><strong>fiction / non-fiction</strong></div>
+<div class="wb-item"><strong>to skim / to browse</strong> <span class="syn">(= to read quickly/casually)</span></div>
+<div class="wb-item"><strong>gripping</strong> <span class="syn">(= exciting, hard to stop)</span></div>
+<div class="wb-item"><strong>thought-provoking</strong> <span class="syn">(= makes you think deeply)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">Do you like reading?</div>
+<div class="ex-a"><em>I'd say I'm a bit of a bookworm</em>, actually. I <em>tend to</em> read before bed every night. I'm mostly into <em>fiction</em> &mdash; especially psychological thrillers. There's nothing better than <em>getting lost in</em> a really <em>gripping</em> story.</div>
+</div>
+</div>
+</div>
+
+<!-- MUSIC -->
+<div class="topic-card" id="t-music">
+<div class="topic-header" onclick="toggleCard(this)">Music <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>Do you like music?</li>
+<li>What kind of music do you listen to?</li>
+<li>Do you play any musical instruments?</li>
+<li>Has your taste in music changed over the years?</li>
+<li>Do you prefer listening to music alone or with others?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>catchy</strong> <span class="syn">(= easy to remember, stays in your head)</span></div>
+<div class="wb-item"><strong>soothing</strong> <span class="syn">(= calming, relaxing)</span></div>
+<div class="wb-item"><strong>upbeat</strong> <span class="syn">(= lively, cheerful)</span></div>
+<div class="wb-item"><strong>to be a huge fan of</strong> <span class="syn">(= to really enjoy)</span></div>
+<div class="wb-item"><strong>to stream music</strong> <span class="syn">(= to listen online)</span></div>
+<div class="wb-item"><strong>live performance</strong> <span class="syn">(= concert, gig)</span></div>
+<div class="wb-item"><strong>lyrics</strong> <span class="syn">(= the words of a song)</span></div>
+<div class="wb-item"><strong>melody / tune</strong> <span class="syn">(= the musical notes)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">What kind of music do you listen to?</div>
+<div class="ex-a">I <em>listen to a wide range</em> of music, but I'm <em>particularly fond of</em> indie and alternative rock. I like songs with meaningful <em>lyrics</em> and <em>catchy</em> melodies. <em>Having said that</em>, when I'm studying, I tend to put on <em>something more soothing</em> like jazz.</div>
+</div>
+</div>
+</div>
+
+<!-- ART -->
+<div class="topic-card" id="t-art">
+<div class="topic-header" onclick="toggleCard(this)">Art <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>Are you good at art?</li>
+<li>Did you learn art at school when you were a child?</li>
+<li>What kind of art do you like?</li>
+<li>Is art popular in your country?</li>
+<li>Have you ever been to an art gallery?</li>
+<li>Do you think children can benefit from going to art galleries?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>creative</strong> <span class="syn">(= imaginative, inventive)</span></div>
+<div class="wb-item"><strong>an exhibition</strong> <span class="syn">(= a public display of art)</span></div>
+<div class="wb-item"><strong>contemporary art</strong> <span class="syn">(= modern art)</span></div>
+<div class="wb-item"><strong>to appreciate</strong> <span class="syn">(= to understand the value of)</span></div>
+<div class="wb-item"><strong>self-expression</strong> <span class="syn">(= showing feelings through art)</span></div>
+<div class="wb-item"><strong>visually stunning</strong> <span class="syn">(= very beautiful to look at)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">Are you good at art?</div>
+<div class="ex-a"><em>Not really</em>, I'm afraid! I <em>did study</em> art at school, but I was never <em>particularly talented</em> at drawing. <em>Having said that</em>, I do <em>appreciate</em> art when I see it &mdash; I went to a <em>contemporary art exhibition</em> last month and found it <em>really thought-provoking</em>.</div>
+</div>
+</div>
+</div>
+
+<!-- BICYCLES -->
+<div class="topic-card" id="t-bicycles">
+<div class="topic-header" onclick="toggleCard(this)">Bicycles <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>Do you have a bike?</li>
+<li>How often do you use it?</li>
+<li>How old were you when you learned to ride a bike?</li>
+<li>Do many people in your country use bicycles?</li>
+<li>Do you think using bicycles should be encouraged?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>cycle lane</strong> <span class="syn">(= dedicated path for bikes)</span></div>
+<div class="wb-item"><strong>to cycle to work</strong> <span class="syn">(= to commute by bike)</span></div>
+<div class="wb-item"><strong>eco-friendly / green</strong> <span class="syn">(= good for the environment)</span></div>
+<div class="wb-item"><strong>to get around</strong> <span class="syn">(= to travel/move from place to place)</span></div>
+<div class="wb-item"><strong>carbon footprint</strong> <span class="syn">(= amount of CO2 you produce)</span></div>
+<div class="wb-item"><strong>bike-sharing scheme</strong> <span class="syn">(= public bicycle rental service)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">Do you think using bicycles should be encouraged?</div>
+<div class="ex-a"><em>Definitely</em>. Cycling is a great way to <em>reduce your carbon footprint</em> and <em>stay in shape</em> at the same time. I think cities should invest more in <em>cycle lanes</em> and <em>bike-sharing schemes</em> to make it safer and more accessible.</div>
+</div>
+</div>
+</div>
+
+</section>
+
+<!-- ======================== COMMUNITY ======================== -->
+<section id="community">
+<h2 class="stitle">People &amp; Community</h2>
+
+<!-- FAMILY -->
+<div class="topic-card" id="t-family">
+<div class="topic-header" onclick="toggleCard(this)">Family &amp; Friends <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>Do you have a large family?</li>
+<li>How often do you see your family?</li>
+<li>What do you enjoy doing with your family?</li>
+<li>Who are you closest to in your family?</li>
+<li>Do you prefer spending time with family or friends?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>close-knit family</strong> <span class="syn">(= family who are very close)</span></div>
+<div class="wb-item"><strong>extended family</strong> <span class="syn">(= grandparents, aunts, cousins etc.)</span></div>
+<div class="wb-item"><strong>to get together</strong> <span class="syn">(= to meet up, to gather)</span></div>
+<div class="wb-item"><strong>to look up to</strong> <span class="syn">(= to admire, to respect)</span></div>
+<div class="wb-item"><strong>bond</strong> <span class="syn">(= connection, relationship)</span></div>
+<div class="wb-item"><strong>upbringing</strong> <span class="syn">(= how you were raised)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">Do you have a large family?</div>
+<div class="ex-a"><em>Fairly</em>, yes. I have two siblings and quite a big <em>extended family</em>. We're a <em>close-knit</em> bunch &mdash; we <em>get together</em> for lunch most Sundays, which I really value because it keeps the <em>bond</em> strong.</div>
+</div>
+</div>
+</div>
+
+<!-- NEIGHBOURS -->
+<div class="topic-card" id="t-neighbours">
+<div class="topic-header" onclick="toggleCard(this)">Neighbours &amp; Neighbourhood <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>Do you know your neighbours?</li>
+<li>How often do you talk to your neighbours?</li>
+<li>What's your neighbourhood like?</li>
+<li>Do you think it's important to have good neighbours?</li>
+<li>Has your neighbourhood changed recently?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>to get along with</strong> <span class="syn">(= to have a good relationship)</span></div>
+<div class="wb-item"><strong>a sense of community</strong> <span class="syn">(= feeling of belonging)</span></div>
+<div class="wb-item"><strong>residential area</strong> <span class="syn">(= where people live)</span></div>
+<div class="wb-item"><strong>to keep to oneself</strong> <span class="syn">(= to be private, not socialise much)</span></div>
+<div class="wb-item"><strong>amenities</strong> <span class="syn">(= facilities, services nearby)</span></div>
+<div class="wb-item"><strong>to pop round</strong> <span class="syn">(= to visit briefly)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">Do you know your neighbours?</div>
+<div class="ex-a"><em>I know a few of them</em>, but not terribly well. The couple next door are lovely &mdash; they sometimes <em>pop round</em> for coffee. <em>Other than that</em>, most people in my building <em>tend to keep to themselves</em>, which is quite common in big cities.</div>
+</div>
+</div>
+</div>
+
+<!-- BIRTHDAYS -->
+<div class="topic-card" id="t-birthdays">
+<div class="topic-header" onclick="toggleCard(this)">Birthdays <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>Do you usually celebrate your birthdays?</li>
+<li>How did you celebrate your last birthday?</li>
+<li>Which birthdays are the most important ones in your country?</li>
+<li>Do you think children should celebrate their birthdays with a party?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>to throw a party</strong> <span class="syn">(= to organise a celebration)</span></div>
+<div class="wb-item"><strong>milestone birthday</strong> <span class="syn">(= a big one: 18th, 30th, etc.)</span></div>
+<div class="wb-item"><strong>to mark the occasion</strong> <span class="syn">(= to celebrate something)</span></div>
+<div class="wb-item"><strong>a low-key celebration</strong> <span class="syn">(= simple, not a big event)</span></div>
+<div class="wb-item"><strong>to make a fuss</strong> <span class="syn">(= to give lots of attention)</span></div>
+<div class="wb-item"><strong>to treat someone to</strong> <span class="syn">(= to pay for someone's meal/gift)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">How did you celebrate your last birthday?</div>
+<div class="ex-a">It was quite a <em>low-key celebration</em>, actually. I went out for dinner with a few close friends and they <em>treated me to</em> a lovely meal. I'm not one for big parties &mdash; I prefer something more intimate.</div>
+</div>
+</div>
+</div>
+
+<!-- CHILDHOOD -->
+<div class="topic-card" id="t-childhood">
+<div class="topic-header" onclick="toggleCard(this)">Childhood <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>Did you enjoy your childhood?</li>
+<li>What is your first memory of your childhood?</li>
+<li>Did you have a lot of friends when you were a child?</li>
+<li>What did you enjoy doing as a child?</li>
+<li>Do you think it is better for children to grow up in the city or in the countryside?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>to grow up</strong> <span class="syn">(= to become older)</span></div>
+<div class="wb-item"><strong>carefree</strong> <span class="syn">(= without worries)</span></div>
+<div class="wb-item"><strong>upbringing</strong> <span class="syn">(= the way you were raised)</span></div>
+<div class="wb-item"><strong>vivid memory</strong> <span class="syn">(= very clear, detailed memory)</span></div>
+<div class="wb-item"><strong>to look back on</strong> <span class="syn">(= to remember, reflect on)</span></div>
+<div class="wb-item"><strong>mischievous</strong> <span class="syn">(= naughty in a playful way)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">Did you enjoy your childhood?</div>
+<div class="ex-a"><em>Absolutely</em>. When I <em>look back on</em> it, it was a very <em>carefree</em> time. I spent most of my days outdoors playing with the neighbourhood kids. We were quite <em>mischievous</em> &mdash; always climbing trees and getting into trouble!</div>
+</div>
+</div>
+</div>
+
+<!-- HAPPINESS -->
+<div class="topic-card" id="t-happiness">
+<div class="topic-header" onclick="toggleCard(this)">Happiness <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>Are you a happy person?</li>
+<li>What makes you happy?</li>
+<li>What did you enjoy doing when you were younger?</li>
+<li>Is happiness important to you?</li>
+<li>Are people in your country generally happy?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>to be content with</strong> <span class="syn">(= satisfied, at peace with)</span></div>
+<div class="wb-item"><strong>well-being</strong> <span class="syn">(= state of being healthy and happy)</span></div>
+<div class="wb-item"><strong>to bring joy</strong> <span class="syn">(= to make someone happy)</span></div>
+<div class="wb-item"><strong>to look on the bright side</strong> <span class="syn">(= to be optimistic)</span></div>
+<div class="wb-item"><strong>fulfilling</strong> <span class="syn">(= satisfying, rewarding)</span></div>
+<div class="wb-item"><strong>quality of life</strong> <span class="syn">(= standard of living and happiness)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">What makes you happy?</div>
+<div class="ex-a">Simple things, really &mdash; spending time with people I care about, a good cup of coffee, being outdoors. I try to <em>look on the bright side</em> and I've found that being grateful for small things <em>brings me the most joy</em>.</div>
+</div>
+</div>
+</div>
+
+<!-- PETS -->
+<div class="topic-card" id="t-pets">
+<div class="topic-header" onclick="toggleCard(this)">Pets <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>Do you have a pet?</li>
+<li>What kind of pets are popular in your country?</li>
+<li>Did you have a pet as a child?</li>
+<li>Would you like to have a pet in the future?</li>
+<li>Do you think children should have pets?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>an animal lover</strong> <span class="syn">(= someone who loves animals)</span></div>
+<div class="wb-item"><strong>to look after / to care for</strong> <span class="syn">(= to take care of)</span></div>
+<div class="wb-item"><strong>a responsibility</strong> <span class="syn">(= something you must do/manage)</span></div>
+<div class="wb-item"><strong>companionship</strong> <span class="syn">(= friendship, company)</span></div>
+<div class="wb-item"><strong>to adopt</strong> <span class="syn">(= to take in a pet from a shelter)</span></div>
+<div class="wb-item"><strong>loyal</strong> <span class="syn">(= faithful, devoted)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">Do you think children should have pets?</div>
+<div class="ex-a"><em>I'd say</em> yes, <em>provided that</em> the parents are willing to help. Having a pet teaches children about <em>responsibility</em> and <em>compassion</em>. I had a dog growing up and the <em>companionship</em> was wonderful.</div>
+</div>
+</div>
+</div>
+
+</section>
+
+<!-- ======================== MEDIA ======================== -->
+<section id="media">
+<h2 class="stitle">Media &amp; Technology</h2>
+
+<!-- TV -->
+<div class="topic-card" id="t-tv">
+<div class="topic-header" onclick="toggleCard(this)">TV <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>Do you watch TV?</li>
+<li>What kind of programmes do you watch?</li>
+<li>How much time do you spend watching TV?</li>
+<li>Do you prefer watching TV or streaming services?</li>
+<li>Did you watch a lot of TV as a child?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>to binge-watch</strong> <span class="syn">(= to watch many episodes at once)</span></div>
+<div class="wb-item"><strong>a documentary</strong> <span class="syn">(= factual programme)</span></div>
+<div class="wb-item"><strong>addictive</strong> <span class="syn">(= hard to stop watching)</span></div>
+<div class="wb-item"><strong>a box set / a series</strong> <span class="syn">(= a TV show with multiple seasons)</span></div>
+<div class="wb-item"><strong>on-demand</strong> <span class="syn">(= available to watch anytime)</span></div>
+<div class="wb-item"><strong>to channel-surf</strong> <span class="syn">(= to flip through TV channels)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">Do you watch TV?</div>
+<div class="ex-a"><em>Not traditional TV</em>, no. I mostly use streaming services like Netflix. I <em>tend to binge-watch</em> series at the weekend &mdash; I just finished a really <em>gripping</em> crime drama. <em>During the week</em>, I don't have much time, so I might watch the odd <em>documentary</em>.</div>
+</div>
+</div>
+</div>
+
+<!-- INTERNET -->
+<div class="topic-card" id="t-internet">
+<div class="topic-header" onclick="toggleCard(this)">Internet &amp; Computers <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>How often do you use the internet?</li>
+<li>What do you use the internet for?</li>
+<li>Do you use a computer for your work or study?</li>
+<li>Do you think children should use the internet?</li>
+<li>How has the internet changed your life?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>to be glued to a screen</strong> <span class="syn">(= to look at a screen constantly)</span></div>
+<div class="wb-item"><strong>digital literacy</strong> <span class="syn">(= ability to use technology)</span></div>
+<div class="wb-item"><strong>social media platforms</strong></div>
+<div class="wb-item"><strong>to scroll through</strong> <span class="syn">(= to browse a feed)</span></div>
+<div class="wb-item"><strong>cybersecurity</strong> <span class="syn">(= online safety)</span></div>
+<div class="wb-item"><strong>tech-savvy</strong> <span class="syn">(= good with technology)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">How often do you use the internet?</div>
+<div class="ex-a"><em>Pretty much constantly</em>, if I'm honest! I use it for work, for staying in touch with friends, and for entertainment. I try not to <em>spend too long scrolling through</em> social media, but it's hard to resist sometimes.</div>
+</div>
+</div>
+</div>
+
+<!-- NEWSPAPERS -->
+<div class="topic-card" id="t-newspapers">
+<div class="topic-header" onclick="toggleCard(this)">Newspapers <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>Do you read newspapers?</li>
+<li>How do you usually get your news?</li>
+<li>Do you think newspapers will disappear in the future?</li>
+<li>Are newspapers popular in your country?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>to keep up with the news</strong> <span class="syn">(= to stay informed)</span></div>
+<div class="wb-item"><strong>a reliable source</strong> <span class="syn">(= trustworthy information)</span></div>
+<div class="wb-item"><strong>breaking news</strong> <span class="syn">(= urgent, latest news)</span></div>
+<div class="wb-item"><strong>biased</strong> <span class="syn">(= not balanced, one-sided)</span></div>
+<div class="wb-item"><strong>fake news / misinformation</strong></div>
+<div class="wb-item"><strong>headlines</strong> <span class="syn">(= main titles of articles)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">How do you usually get your news?</div>
+<div class="ex-a"><em>Mainly</em> through news apps on my phone. I <em>glance at the headlines</em> in the morning and read a few articles that catch my eye. I <em>hardly ever</em> buy a physical newspaper these days, although I do think they're <em>more reliable</em> than random social media posts.</div>
+</div>
+</div>
+</div>
+
+<!-- FLOWERS -->
+<div class="topic-card" id="t-flowers">
+<div class="topic-header" onclick="toggleCard(this)">Flowers <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>Do you like flowers?</li>
+<li>Do you ever buy flowers?</li>
+<li>When was the last time you gave someone flowers?</li>
+<li>Are flowers important in your culture?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>in bloom</strong> <span class="syn">(= flowering, open)</span></div>
+<div class="wb-item"><strong>bouquet</strong> <span class="syn">(= a bunch of flowers)</span></div>
+<div class="wb-item"><strong>fragrant</strong> <span class="syn">(= sweet-smelling)</span></div>
+<div class="wb-item"><strong>to brighten up</strong> <span class="syn">(= to make cheerful)</span></div>
+<div class="wb-item"><strong>to have a green thumb</strong> <span class="syn">(= to be good at gardening)</span></div>
+<div class="wb-item"><strong>symbolic</strong> <span class="syn">(= having meaning)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">Do you like flowers?</div>
+<div class="ex-a">Yes, I do. I think they really <em>brighten up</em> a room. I don't really <em>have a green thumb</em>, but I like buying <em>bouquets</em> for special occasions. I'm <em>particularly fond of</em> sunflowers &mdash; they always make me smile.</div>
+</div>
+</div>
+</div>
+
+<!-- DICTIONARIES -->
+<div class="topic-card" id="t-dictionaries">
+<div class="topic-header" onclick="toggleCard(this)">Dictionaries <span class="arrow">&#9660;</span></div>
+<div class="topic-body">
+
+<ul class="q-list">
+<li>Do you ever use a dictionary?</li>
+<li>Do you prefer paper or online dictionaries?</li>
+<li>Did you use a dictionary when you were younger?</li>
+<li>Do you think dictionaries are useful for learning a language?</li>
+</ul>
+
+<div class="word-bank">
+<h4>Word &amp; Phrase Bank</h4>
+<div class="wb-grid">
+<div class="wb-item"><strong>to look up a word</strong> <span class="syn">(= to search for a definition)</span></div>
+<div class="wb-item"><strong>bilingual / monolingual</strong></div>
+<div class="wb-item"><strong>to expand one's vocabulary</strong> <span class="syn">(= to learn more words)</span></div>
+<div class="wb-item"><strong>handy</strong> <span class="syn">(= useful, convenient)</span></div>
+<div class="wb-item"><strong>at one's fingertips</strong> <span class="syn">(= easily available)</span></div>
+</div>
+</div>
+
+<div class="examples">
+<h4>Example Answers</h4>
+<div class="ex-q">Do you ever use a dictionary?</div>
+<div class="ex-a"><em>All the time</em>! I mainly use an app on my phone &mdash; it's incredibly <em>handy</em> to have a dictionary <em>at my fingertips</em>. I prefer <em>monolingual</em> dictionaries because they force me to think in English, which helps me <em>expand my vocabulary</em> faster.</div>
+</div>
+</div>
+</div>
+
+</section>
+
+<!-- ======================== PRACTICE PLAN ======================== -->
+<section id="practice">
+<h2 class="stitle">Practice Plan &amp; Improvement Tips</h2>
+
+<div class="strat-card">
+<h3>Daily Practice Routine (15&ndash;20 minutes)</h3>
+<ul>
+<li><strong>Pick a topic card</strong> above and answer all the questions out loud. Time yourself &mdash; aim for 15&ndash;30 seconds per answer.</li>
+<li><strong>Record yourself</strong> on your phone. Listen back and check: Did you extend? Did you use any phrases from the word bank? Was your grammar accurate?</li>
+<li><strong>Learn 3 new phrases</strong> from the word banks each day. Use them in sentences about your life.</li>
+<li><strong>Shadow a native speaker</strong> &mdash; find a YouTube video of someone answering Part 1 questions and repeat what they say, copying their intonation.</li>
+</ul>
+</div>
+
+<div class="strat-card">
+<h3>Weekly Activities</h3>
+<ul>
+<li><strong>Monday &amp; Thursday:</strong> Practise 2 topic cards (answer all questions aloud + record)</li>
+<li><strong>Tuesday &amp; Friday:</strong> Review word banks &mdash; create example sentences using 5 new phrases</li>
+<li><strong>Wednesday:</strong> Listen to a podcast or news in English for 15 minutes. Note any useful vocabulary.</li>
+<li><strong>Saturday:</strong> Do a full mock Part 1 &mdash; ask someone to read you random questions from 3 different topics</li>
+<li><strong>Sunday:</strong> Watch an English film or series (with English subtitles) and note 5 natural expressions</li>
+</ul>
+</div>
+
+<div class="strat-card">
+<h3>Self-Assessment Checklist</h3>
+<p>After each practice, ask yourself:</p>
+<ul>
+<li>Did I answer the question directly? (not go off-topic)</li>
+<li>Did I extend with a reason, example, or contrast?</li>
+<li>Did I use at least 2 advanced phrases? (not just "I think")</li>
+<li>Did I avoid repeating the question word-for-word?</li>
+<li>Was my answer 2&ndash;4 sentences? (not too short, not too long)</li>
+<li>Did I sound natural and confident? (not rehearsed)</li>
+<li>Did I use a variety of tenses correctly?</li>
+</ul>
+</div>
+
+<div class="strat-card">
+<h3>Useful Resources</h3>
+<ul>
+<li><strong>Cambridge Dictionary Online</strong> &mdash; check pronunciation and example sentences</li>
+<li><strong>BBC Learning English</strong> &mdash; free videos and podcasts for natural English</li>
+<li><strong>IELTS Liz / IELTS Simon</strong> &mdash; sample answers and examiner tips for each part</li>
+<li><strong>Podcasts:</strong> "6 Minute English" (BBC), "All Ears English" &mdash; great for picking up idioms</li>
+<li><strong>Shadowing technique:</strong> Watch TED Talks with subtitles, pause after each sentence, repeat aloud</li>
+</ul>
+</div>
+
+<div class="strat-card">
+<h3>Pronunciation Tips</h3>
+<ul>
+<li><strong>Word stress matters:</strong> "phoPHOgraphy" not "photoGRAPHy" &mdash; wrong stress confuses listeners</li>
+<li><strong>Connected speech:</strong> Practise linking words together naturally: "sort of" &rarr; "sortuv", "kind of" &rarr; "kinda"</li>
+<li><strong>Intonation:</strong> Rise at the end of yes/no questions, fall at the end of statements. Avoid flat tone.</li>
+<li><strong>Contractions:</strong> Use them! "I'm", "I'd", "I've", "I'll" sound more natural than full forms</li>
+<li><strong>Fillers:</strong> Instead of "um" or "uh", use: "well...", "let me think...", "that's a good question..."</li>
+</ul>
+</div>
+
+</section>
+
+<footer>
+  Prepared for Amalia &bull; IELTS Speaking Part 1 &bull; Word &amp; Phrase Bank
+</footer>
+
+</div>
+
+<script>
+function toggleCard(header) {
+  header.parentElement.classList.toggle('open');
+}
+
+// Nav scroll highlight
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('nav a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 80) current = s.id;
+  });
+  navLinks.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+});
+</script>
+</body></html>
